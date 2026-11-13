@@ -11,14 +11,14 @@ accessibility/browser review; privacy/rights review through the clean-source rou
 
 12. [x] Save and verify the reviewed source checkpoint and private GitHub backup.
     November 13: fresh-history candidate prepared as `sam-mcclanahan/starbase430-site`,
-    initially private; source visibility approved November 13. Current checks: 118 tests, 144
+    initially private; source visibility approved November 13. Snapshot checks: 118 tests, 144
     browser checks and 46 axe scans; no confirmed failures, 42 retained
     scanner-inconclusive contrast findings. Fresh production/preview structure
     checks cover 11 pages each; all hard budgets pass. npm reports zero known
     advisories after compatible build-dependency patches.
 13. [x] Obtain explicit approval before making this repository public.
     November 13: Sam approved public visibility for starbase430-site only; the
-    historical repository stays private and deployment remains deferred.
+    historical repository stayed private; deployment was separately approved in item 14.
     Final source/history/hosted-log review covered 111 approved source files;
     Source checks passed at cc32e7f. Native secret scanning and push protection
     are enabled. Main requires the GitHub Actions Privacy and release checks
@@ -44,14 +44,118 @@ The initial launch includes three approved Logs. Library/media projects and
 optional IndieWeb expansions remain post-launch. Public-source preparation and
 private backups do not authorize deployment or visibility changes.
 
-## Post-launch local hosting milestones
+## Post-launch backlog
+
+The launch countdown is closed at 15/15. This backlog does not reopen it or
+create a deadline for every idea. Planned work records agreed directions;
+exploratory options require selection before implementation. New articles,
+community submissions, deployment, and DNS cutovers retain their approval steps.
+Private drafts, research, masters, and historical issues remain outside this
+public repository; this list carries forward task summaries only.
+
+### Backlog consolidation
+
+- [x] Carry forward the earlier post-launch plans into this active roadmap.
+  November 13: retained content, Training, discovery, and local/public hosting
+  goals without importing private writing or archive history. Clarified dated
+  pre-launch documentation. Implementation of the remaining items is separate.
+
+### Planned maintenance
+
+- [ ] **Review FSE time data before January 1, 2027.** The current publication
+  formatter deliberately rejects dates on or after that boundary. Review IERS
+  sources, record the next supported interval, and independently verify offsets
+  before extending it. Preserve the epoch and existing publication dates.
+  Follow [FSE maintenance](docs/fse-time-standard.md#when-updating-the-data).
+- [ ] **Create more room below the Pablo illustration's hard size limit.** The
+  launch total is 511,433 bytes, leaving 567 below the 512,000-byte ceiling.
+  Investigate compression or simplification while preserving the approved
+  portrait, controls, reduced motion, static alternatives, and accessibility.
+  Measure savings and run relevant checks; retain both existing thresholds.
+
+Use the existing automated privacy, accessibility, structure, and budget checks
+for ongoing changes. Focus human review on changed interactions and shared
+patterns rather than restarting a manual checklist for each article.
+
+### Planned content, deferred until ready
+
+- [ ] Finish the library article's editorial review, metadata, completion date,
+  and approval. Keep its source and assets in private authoring storage until
+  reviewed and deliberately promoted to the public repository.
+- [ ] Complete more of the underlying media project before finishing
+  **Owning our media**. Preserve its private draft/research; it has no release
+  deadline and is not a dependency for another article.
+
+### Planned Training experiences
+
+Use **Training** as the public-facing umbrella for future game experiences.
+These agreed concepts still need bounded mechanics, routes, and implementation
+plans before development:
+
+- [ ] **We Built the Same Arcade Game Two Ways: With and Without JavaScript**:
+  compare a pure HTML/CSS experience with a separately chosen lightweight
+  JavaScript version of the same concept. Write a development Log covering
+  functionality, accessibility, resource size, maintainability, and limitations.
+  Keep the no-JavaScript version and explanation directly accessible.
+- [ ] **Command Decisions**: an HTML-only branching decision experience using
+  semantic static pages and ordinary links. Avoid required timers, reflex
+  actions, scripting, or CSS-dependent decisions.
+
+Retain static portability, privacy, meaningful alternatives, draft isolation,
+and the existing Small Web budgets. The current dependency checker permits
+reviewed Pablo scripts specifically; other scripts are rejected. Supporting a
+Training script requires explicit resource accounting and regression coverage
+before implementation, without bypassing the checker.
+
+### Community and discovery
+
+The [current-state submission table](docs/current-state.md#community-submissions-and-membership)
+is the canonical status record. Participation below reflects specific approvals;
+future applications, contact, account changes, and publication remain separate.
+
+- [x] Research a focused community/discovery shortlist and review compatibility
+  with the site's content, presentation, and disclosed workflow.
+- [x] Measure Home for the 512KB Club and submit the listing.
+  November 13: historical Firefox measurement 21.11 kB / 4 requests; corrected
+  plain-text v2 self-tested and resent after the first archive body appeared blank.
+- [ ] Confirm official 512KB Club membership. V2 archive-body confirmation is
+  also unverified; neither SMTP acceptance nor an archive entry proves membership.
+- [x] Submit the Geekring application and preserve its administration secret
+  privately outside the source repository.
+- [ ] Confirm Geekring acceptance and its public site number, then prepare
+  homepage navigation. Keep it off the homepage until acceptance.
+- [x] Check Marginalia indexing and submit
+  [crawl request #842](https://github.com/MarginaliaSearch/submit-site-to-marginalia-search/issues/842).
+- [ ] Confirm actual indexed pages in Marginalia. Crawl scheduling or issue
+  closure alone does not complete this item.
+- [x] Publish the homepage h-card and GitHub `rel="me"` link, verify the reciprocal
+  public profile link, and complete domain-based sign-in.
+- [x] Join the IndieWeb Webring, publish its homepage links, verify its live link
+  check and public-directory entry, and publish the reviewed Outpost styling.
+  November 13: main `e10826c`, release 43498505433; all 33 live files match and
+  both ring redirects pass. Home remains 24,365 conservative bytes, with no new
+  images or scripts.
+- [x] Prepare success-only monitoring prompts for Dot for the three pending
+  destinations. The [plans and dates](docs/current-state.md#prepared-dot-monitoring-plans)
+  are recorded; actual scheduling/execution in Dot is not independently confirmed.
+- [ ] Evaluate further IndieAuth and Webmention features only where they add clear
+  value. RelMeAuth already supports our membership; a dedicated auth server is
+  not required. Identify any companion service before implementation.
+
+Wiby was deprioritized as a weaker design fit. XXIIVV and Merveilles remain
+unpursued research candidates, not commitments. Neocities is not a hosting or
+membership requirement. The No-JS Club was excluded from the Links-page plan.
+No additional submissions or announcements are authorized by this backlog.
+
+### Planned local and public homelab hosting
 
 - [ ] Serve the checked production build on the home network and verify offline
-  local reading; retain an independently restorable copy.
+  local reading; retain an independently restorable copy and test restoration.
 - [ ] **Serve the public Starbase 430 website from home.** Sam explicitly
   confirmed this as a learning goal November 13, 2026. Test an isolated public
   homelab service, HTTPS, availability, backup/recovery, and rollback before a
   separately approved domain cutover. Preserve article URLs and RSS identity;
   GitHub Pages may remain an optional fallback. See [hosting](docs/hosting.md).
 
-These milestones do not expand the initial launch countdown.
+The local mirror is a prerequisite for the public-hosting experiment, not a
+substitute for completing that learning milestone.

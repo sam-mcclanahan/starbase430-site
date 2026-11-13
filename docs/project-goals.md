@@ -37,3 +37,13 @@
   learning milestone. This is more than a backup or local-preview exercise.
 - Preserve the domain, article URLs, RSS identity, and an independently restorable
   static build when changing hosts. See [hosting](hosting.md) for acceptance steps.
+
+## Post-launch directions
+
+Maintain the existing privacy, portability, accessibility, resource budgets,
+and deliberate publication process as the site grows. Carry forward approved
+content and Training plans, and evaluate community/discovery and IndieWeb
+features without making optional services prerequisites for reading the site.
+The [active backlog](../roadmap.md#post-launch-backlog) distinguishes agreed
+work, deferred content, and exploratory options. Private writing stays outside
+this public source repository until reviewed for promotion.
