@@ -1,0 +1,11 @@
+{
+  "limit": 20,
+  "all": {
+    "label": "Starbase 430 RSS feed",
+    "title": "Starbase 430: Log",
+    "description": "Our project stories, notes, and updates.",
+    "url": "/feed.xml",
+    "homePath": "/",
+    "collection": "logEntries"
+  }
+}

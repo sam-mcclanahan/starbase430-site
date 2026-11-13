@@ -1,0 +1,27 @@
+# Dependencies
+/node_modules
+
+# Generated site output and caches
+_site/
+.cache/
+review/pablo-images*/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Test and coverage output
+coverage/
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Local accessibility reports and browser artifacts
+.a11y/
+
+# Private authoring stays outside published source
+_private/

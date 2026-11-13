@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: "Pablo: interactive polargraph illustration"
+description: An optional JavaScript-powered illustration of Pablo’s pen, chains, and counterweights, with a static fallback and ordinary navigation links.
+permalink: /log/pablo-the-polargraph/interactive/
+draft: false
+eleventyExcludeFromCollections: true
+navKey: log
+polargraph: true
+---
+
+<header class="page-header">
+  <p class="eyebrow">Optional interactive illustration</p>
+  <h1>Pablo’s interactive polargraph illustration</h1>
+  {% if draft %}<p class="draft-note"><strong>Unpublished draft:</strong> This illustration is available in local preview only.</p>{% endif %}
+  <p><strong>Requirements:</strong> The interactive pen controls, live chain readouts, and drawing animation require JavaScript and SVG support in a modern browser. No account, plug-in, or installation is needed. Use a mouse, touch, or the keyboard controls described below.</p>
+  <p><a href="/log/pablo-the-polargraph/#chapter-interactive-simulation">Back to the Pablo retrospective</a></p>
+</header>
+
+<section class="content-section" aria-labelledby="how-pablo-works">
+  <h2 id="how-pablo-works">How Pablo works</h2>
+  <p>Pablo positions a pen by changing the lengths of two chains, one running from each upper corner of the drawing board to the pen holder. Two motors feed the chains in or out. Working together, they move the pen across the paper. Counterweights keep the chains under tension, rising as more chain feeds toward the pen. A small servo lifts the pen between strokes so it can move without leaving a connecting line.</p>
+</section>
+
+{% include "partials/pablo-polargraph.njk" %}
+
+<section class="content-section" aria-labelledby="what-the-simulation-shows">
+  <h2 id="what-the-simulation-shows">What the simulation shows</h2>
+  <p>Select <strong>Draw Tesla</strong> to watch the pen trace a portrait of Nikola Tesla in 705 separate strokes. The chains, counterweights, and length readouts change as it draws. Travel between strokes leaves no ink.</p>
+  <p>You can also move the pen by dragging on the paper, using the position sliders, or focusing the drawing board and pressing the arrow keys. Hold Shift for larger steps; press Space to start or pause drawing. <strong>Clear</strong> removes the drawing, and <strong>Reset</strong> restores the completed portrait and starting pen position.</p>
+  <p>With reduced motion enabled, <strong>Draw Tesla</strong> displays the completed portrait immediately. The simulation illustrates the mechanism rather than reproducing Pablo’s exact dimensions or drawing speed.</p>
+  <p>The Tesla portrait was traced from a photograph of <a href="https://en.wikipedia.org/wiki/Nikola_Tesla" title="en:Nikola Tesla">Nikola Tesla</a> (1856-1943) at age 40, available through <a href="https://commons.wikimedia.org/wiki/File:N.Tesla.JPG">Wikimedia Commons</a>, where it is listed as public domain.</p>
+</section>
+
+<p><a href="/log/pablo-the-polargraph/#chapter-interactive-simulation">Back to the Pablo retrospective</a></p>

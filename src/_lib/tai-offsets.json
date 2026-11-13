@@ -1,0 +1,201 @@
+{
+  "checkedAt": "2026-11-08",
+  "validUntil": "2027-01-01T00:00:00Z",
+  "sources": [
+    "https://hpiers.obspm.fr/iers/bul/bulc/UTC-TAI.history",
+    "https://hpiers.obspm.fr/iers/bul/bulc/bulletinc.dat"
+  ],
+  "bulletin": "IERS Bulletin C 72, July 6, 2026: no leap second at end of December 2026. Conservative review boundary is January 1, 2027; conversions at or beyond it fail until data is reviewed.",
+  "segments": [
+    {
+      "start": "1961-01-01",
+      "baseNs": "1422818000",
+      "referenceMjd": 37300,
+      "driftNsPerDay": "1296000"
+    },
+    {
+      "start": "1961-08-01",
+      "baseNs": "1372818000",
+      "referenceMjd": 37300,
+      "driftNsPerDay": "1296000"
+    },
+    {
+      "start": "1962-01-01",
+      "baseNs": "1845858000",
+      "referenceMjd": 37665,
+      "driftNsPerDay": "1123200"
+    },
+    {
+      "start": "1963-11-01",
+      "baseNs": "1945858000",
+      "referenceMjd": 37665,
+      "driftNsPerDay": "1123200"
+    },
+    {
+      "start": "1964-01-01",
+      "baseNs": "3240130000",
+      "referenceMjd": 38761,
+      "driftNsPerDay": "1296000"
+    },
+    {
+      "start": "1964-04-01",
+      "baseNs": "3340130000",
+      "referenceMjd": 38761,
+      "driftNsPerDay": "1296000"
+    },
+    {
+      "start": "1964-09-01",
+      "baseNs": "3440130000",
+      "referenceMjd": 38761,
+      "driftNsPerDay": "1296000"
+    },
+    {
+      "start": "1965-01-01",
+      "baseNs": "3540130000",
+      "referenceMjd": 38761,
+      "driftNsPerDay": "1296000"
+    },
+    {
+      "start": "1965-03-01",
+      "baseNs": "3640130000",
+      "referenceMjd": 38761,
+      "driftNsPerDay": "1296000"
+    },
+    {
+      "start": "1965-07-01",
+      "baseNs": "3740130000",
+      "referenceMjd": 38761,
+      "driftNsPerDay": "1296000"
+    },
+    {
+      "start": "1965-09-01",
+      "baseNs": "3840130000",
+      "referenceMjd": 38761,
+      "driftNsPerDay": "1296000"
+    },
+    {
+      "start": "1966-01-01",
+      "baseNs": "4313170000",
+      "referenceMjd": 39126,
+      "driftNsPerDay": "2592000"
+    },
+    {
+      "start": "1968-02-01",
+      "baseNs": "4213170000",
+      "referenceMjd": 39126,
+      "driftNsPerDay": "2592000"
+    },
+    {
+      "start": "1972-01-01",
+      "baseNs": "10000000000"
+    },
+    {
+      "start": "1972-07-01",
+      "baseNs": "11000000000"
+    },
+    {
+      "start": "1973-01-01",
+      "baseNs": "12000000000"
+    },
+    {
+      "start": "1974-01-01",
+      "baseNs": "13000000000"
+    },
+    {
+      "start": "1975-01-01",
+      "baseNs": "14000000000"
+    },
+    {
+      "start": "1976-01-01",
+      "baseNs": "15000000000"
+    },
+    {
+      "start": "1977-01-01",
+      "baseNs": "16000000000"
+    },
+    {
+      "start": "1978-01-01",
+      "baseNs": "17000000000"
+    },
+    {
+      "start": "1979-01-01",
+      "baseNs": "18000000000"
+    },
+    {
+      "start": "1980-01-01",
+      "baseNs": "19000000000"
+    },
+    {
+      "start": "1981-07-01",
+      "baseNs": "20000000000"
+    },
+    {
+      "start": "1982-07-01",
+      "baseNs": "21000000000"
+    },
+    {
+      "start": "1983-07-01",
+      "baseNs": "22000000000"
+    },
+    {
+      "start": "1985-07-01",
+      "baseNs": "23000000000"
+    },
+    {
+      "start": "1988-01-01",
+      "baseNs": "24000000000"
+    },
+    {
+      "start": "1990-01-01",
+      "baseNs": "25000000000"
+    },
+    {
+      "start": "1991-01-01",
+      "baseNs": "26000000000"
+    },
+    {
+      "start": "1992-07-01",
+      "baseNs": "27000000000"
+    },
+    {
+      "start": "1993-07-01",
+      "baseNs": "28000000000"
+    },
+    {
+      "start": "1994-07-01",
+      "baseNs": "29000000000"
+    },
+    {
+      "start": "1996-01-01",
+      "baseNs": "30000000000"
+    },
+    {
+      "start": "1997-07-01",
+      "baseNs": "31000000000"
+    },
+    {
+      "start": "1999-01-01",
+      "baseNs": "32000000000"
+    },
+    {
+      "start": "2006-01-01",
+      "baseNs": "33000000000"
+    },
+    {
+      "start": "2009-01-01",
+      "baseNs": "34000000000"
+    },
+    {
+      "start": "2012-07-01",
+      "baseNs": "35000000000"
+    },
+    {
+      "start": "2015-07-01",
+      "baseNs": "36000000000"
+    },
+    {
+      "start": "2017-01-01",
+      "baseNs": "37000000000"
+    }
+  ]
+}

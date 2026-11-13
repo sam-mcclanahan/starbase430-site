@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+title: Home
+navKey: home
+---
+
+<header class="page-header page-header--home">
+  <p class="eyebrow" aria-hidden="true">Personal archive / Project node</p>
+  <h1>Starbase 430</h1>
+  <p>{{ site.description }}</p>
+</header>
+
+<div class="content-section">
+  <p>We document what we build, modify, and repair, along with what we learn in the process. Our projects range from fabric arts and cosplay to small electronics and smart-home experiments.</p>
+  <p>This site brings together finished projects, work in progress, and older builds we’re revisiting. We write not just about what we’ve created, but also about the choices, revisions, and useful discoveries we made along the way.</p>
+</div>
+
+<section class="panel panel--silver" aria-labelledby="log-heading">
+  <p class="panel__code" aria-hidden="true">LOG</p>
+  <h2 id="log-heading">Recent Log entries</h2>
+  {% if collections.logEntries.length %}
+    <ol class="record-list">
+      {% for entry in collections.logEntries %}
+        {% if loop.index <= 3 %}
+          {% set entryAuthor = authors[entry.data.author] %}
+          <li>
+            <h3><a href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
+            <p class="record-list__meta">
+              By <a href="{{ entryAuthor.url }}" rel="author">{{ entryAuthor.name }}</a>
+              · {% if entry.data.draft %}Draft date: {% endif %}<time datetime="{{ entry.date | htmlDateString }}">{{ entry.date | readableDate }}</time>
+            </p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p>We’re preparing our first entries. They’ll appear here when they’re published.</p>
+  {% endif %}
+  <p><a class="section-link" href="/log/">Browse the Log</a></p>
+</section>

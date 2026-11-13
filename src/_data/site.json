@@ -1,0 +1,28 @@
+{
+  "name": "Starbase 430",
+  "url": "https://starbase430.com",
+  "timeZone": "America/New_York",
+  "description": "We’re Sam and Brea. Starbase 430 is our independent-web workshop for maker projects shaped by curiosity, joyful fandom, and a fondness for optimistic futures.",
+  "navigation": [
+    {
+      "key": "home",
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "key": "log",
+      "label": "Log",
+      "url": "/log/"
+    },
+    {
+      "key": "about",
+      "label": "About",
+      "url": "/about/"
+    },
+    {
+      "key": "links",
+      "label": "Links",
+      "url": "/links/"
+    }
+  ]
+}

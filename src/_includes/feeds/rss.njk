@@ -1,0 +1,32 @@
+{%- set feedItems = collections[feed.collection] | take(feeds.limit) -%}
+{%- set feedUrl = feed.url | htmlBaseUrl(site.url) -%}
+{%- set homeUrl = feed.homePath | htmlBaseUrl(site.url) -%}
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>{{ feed.title | xmlEscape | safe }}</title>
+    <link>{{ homeUrl | xmlEscape | safe }}</link>
+    <atom:link href="{{ feedUrl | xmlEscape | safe }}" rel="self" type="application/rss+xml" />
+    <description>{{ feed.description | xmlEscape | safe }}</description>
+    <language>en</language>
+    {%- if feedItems.length %}
+    <lastBuildDate>{{ feedItems | getNewestCollectionItemDate | rfc822DateUtc }}</lastBuildDate>
+    {%- endif %}
+    {%- for entry in feedItems %}
+    {%- set entryUrl = entry.url | htmlBaseUrl(site.url) %}
+    <item>
+      <title>{{ entry.data.title | xmlEscape | safe }}</title>
+      <link>{{ entryUrl | xmlEscape | safe }}</link>
+      <guid isPermaLink="true">{{ entryUrl | xmlEscape | safe }}</guid>
+      <pubDate>{{ entry.date | rfc822DateUtc }}</pubDate>
+      <dc:creator>{{ authors[entry.data.author].name | xmlEscape | safe }}</dc:creator>
+      <category>{{ entry.data.feedCategory | xmlEscape | safe }}</category>
+      <description>{{ entry.data.description | xmlEscape | safe }}</description>
+      <content:encoded><![CDATA[{{ entry.content | polargraphFeedFallback | xmlValidate("RSS entry content") | renderTransforms(entry.data.page, site.url) | cdataSafe | safe }}]]></content:encoded>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>

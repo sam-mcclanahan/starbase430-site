@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: Log
+description: The Starbase 430 mission log from Sam and Brea.
+navKey: log
+eleventyExcludeFromCollections: true
+---
+{% from "macros/log-label.njk" import logLabel %}
+
+<header class="page-header">
+  <p class="eyebrow" aria-hidden="true">Chronological archive / Recent records</p>
+  <h1>Mission Log</h1>
+  <p>Notes from our workshop: things we’re making, ideas we’re testing, and older projects worth another look. We share what worked, what changed, and what we learned along the way.</p>
+</header>
+
+<p><a class="section-link" href="{{ feeds.all.url }}">{{ feeds.all.label }}</a></p>
+
+{% if collections.logEntries.length %}
+  <ol class="card-grid">
+    {% for entry in collections.logEntries %}
+      <li class="card-grid__item">
+        <article class="collection-card">
+          {% set entryAuthor = authors[entry.data.author] %}
+          <p class="collection-card__code">{{ logLabel(entry.date, entry.data.draft) }}</p>
+          <h2><a href="{{ entry.url }}">{{ entry.data.title }}</a></h2>
+          <p class="collection-card__meta">
+            By <a href="{{ entryAuthor.url }}" rel="author">{{ entryAuthor.name }}</a>,
+            {% if entry.data.draft %}Draft date: {% endif %}<time datetime="{{ entry.date | htmlDateString }}">{{ entry.date | readableDate }}</time>
+          </p>
+          <p class="collection-card__summary">{{ entry.data.description }}</p>
+        </article>
+      </li>
+    {% endfor %}
+  </ol>
+{% else %}
+  <p>No log entries have been published yet.</p>
+{% endif %}

@@ -1,0 +1,7 @@
+---
+permalink: /log/feed.xml
+eleventyExcludeFromCollections: true
+feedKey: all
+---
+{%- set feed = feeds[feedKey] -%}
+{%- include "feeds/rss.njk" -%}

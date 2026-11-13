@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-11-10",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Apollo_11_insignia.png",
+  "sourceDownload": "https://upload.wikimedia.org/wikipedia/commons/2/27/Apollo_11_insignia.png",
+  "source": {
+    "width": 5380,
+    "height": 5432,
+    "bytes": 18861864,
+    "sha256": "569537a02dccb01df1a7d49ba0976dd6af84de40e6e7e2d744623fdd0c1a79cd"
+  },
+  "processing": "Sharp autoOrient; resize by width without enlargement; sRGB; full composition and original colors; metadata stripped",
+  "versions": {
+    "aom": "3.15.1",
+    "archive": "3.8.9",
+    "cairo": "1.18.6",
+    "cgif": "0.5.4",
+    "exif": "0.6.26",
+    "expat": "2.8.5",
+    "ffi": "3.8.0",
+    "fontconfig": "2.18.3",
+    "freetype": "2.14.3",
+    "fribidi": "1.0.17",
+    "glib": "2.90.0",
+    "harfbuzz": "14.5.0",
+    "heif": "1.23.5",
+    "highway": "1.4.0",
+    "imagequant": "2.4.1",
+    "lcms": "2.19.1",
+    "mozjpeg": "0826579",
+    "pango": "1.58.2",
+    "pixman": "0.46.4",
+    "png": "1.6.58",
+    "proxy-libintl": "0.5",
+    "rsvg": "2.63.2",
+    "tiff": "4.7.2",
+    "uhdr": "2.0.2",
+    "vips": "8.18.7",
+    "webp": "1.6.0",
+    "xml2": "2.15.4",
+    "zlib-ng": "2.3.3",
+    "sharp": "0.35.5"
+  },
+  "images": [
+    {
+      "file": "apollo11-insignia-320.avif",
+      "width": 320,
+      "height": 323,
+      "bytes": 13325,
+      "sha256": "1799a4538963dc5d4dda994aad0d98fc77a41f1483048fa679b4dcbe556a35f0",
+      "settings": {
+        "quality": 50,
+        "effort": 6,
+        "chromaSubsampling": "4:4:4"
+      }
+    },
+    {
+      "file": "apollo11-insignia-320.webp",
+      "width": 320,
+      "height": 323,
+      "bytes": 23340,
+      "sha256": "57bac247675448fe39c8866613fbcda297788d8e8b91448a47295323044c32e4",
+      "settings": {
+        "quality": 75,
+        "effort": 6
+      }
+    }
+  ],
+  "releaseApproval": {
+    "date": "2026-11-12",
+    "assetDirectory": "src/assets/images/fse",
+    "outputDirectory": "assets/images/fse",
+    "note": "Approved with FSE article for release builds; public deployment remains deferred."
+  }
+}

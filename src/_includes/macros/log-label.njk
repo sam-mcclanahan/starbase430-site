@@ -1,0 +1,7 @@
+{% macro logLabel(publicationDate, isDraft) -%}
+{%- if isDraft -%}
+DRAFT LOG
+{%- else -%}
+STARBASE LOG {{ publicationDate | fseTimestamp }} <a class="log-era" href="/log/first-step-epoch/" aria-label="FSE: First Step Epoch, how our Log timestamps work">FSE</a>
+{%- endif -%}
+{%- endmacro %}

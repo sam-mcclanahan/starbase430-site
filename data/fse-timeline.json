@@ -1,0 +1,306 @@
+{
+  "epoch": "1969-07-21T02:56:15Z",
+  "scale": "Elapsed TAI SI seconds from chosen UTC epoch converted using historical IERS offsets; pre-1961 entries use explicitly approximate UT1-to-TT reconstructions.",
+  "approximation": "Unknown second: italic approximation sign and finest decimal rounding invariant across the source day/minute window; pre-1961 estimates capped at whole Ms. Documented second-level instants keep six places. Underlying windows retained internally.",
+  "timelineStart": "1960-01-01",
+  "reviewedThrough": "2026-11-12",
+  "slotCount": 20,
+  "selectedMilestoneDates": [
+    "1960-08-20",
+    "1961-04-12T06:07Z",
+    "1965-07-01",
+    "1969-07-21T02:56:15Z",
+    "1972-12-14",
+    "1974-11-24",
+    "1978-07-25",
+    "1980-05-08",
+    "1985-05-16",
+    "1989-08-25T03:56Z",
+    "1992-01-09",
+    "1996-07-05",
+    "2002-09-17",
+    "2003-04-14",
+    "2006-01-15",
+    "2010-05-06",
+    "2013-10-23",
+    "2015-09-14T09:50:45Z",
+    "2019-04-10",
+    "2022-09-26T23:14:24Z"
+  ],
+  "timelineMode": "release",
+  "events": [
+    {
+      "date": "1960-08-20",
+      "title": "Belka and Strelka return safely to Earth",
+      "field": "Spaceflight",
+      "summary": "Belka and Strelka return safely after an orbital flight, helping prepare the way for human spaceflight.",
+      "source": "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question49.html",
+      "sourceNotes": "NASA StarChild gives August 19 launch and return one day later, August 20, 1960. NASA SP-4012 table (NTRS 19700011921) corroborates reentry 8/20/60. Return day only; do not substitute launch day or infer a landing time. Avoid the source’s overbroad claim about first living creatures returned from space: earlier suborbital flights carried survivors. Checked November 12, 2026."
+    },
+    {
+      "date": "1961-04-12T06:07Z",
+      "title": "Gagarin launches on the first human orbital flight",
+      "field": "Spaceflight",
+      "summary": "Vostok 1 carries Yuri Gagarin into orbit, opening the era of human spaceflight.",
+      "source": "https://www.esa.int/About_Us/50_years_of_ESA/50_years_of_humans_in_space/The_flight_of_Vostok_1",
+      "sourceNotes": "ESA chronology gives April 12, 1961 launch at 06:07 UTC. Retain minute-only precision; no invented :00 seconds. Source rechecked November 12, 2026."
+    },
+    {
+      "date": "1965-07-01",
+      "title": "Cosmic microwave background findings published",
+      "field": "Cosmology",
+      "summary": "Penzias and Wilson report background radiation that provides powerful evidence for the Big Bang.",
+      "source": "https://physicstoday.aip.org/news/a-bang-not-a-whimper",
+      "sourceNotes": "Journal issue date, explicitly identified by the contemporary AIP account; not an observation timestamp."
+    },
+    {
+      "date": "1969-07-21T02:56:15Z",
+      "title": "Armstrong takes the first step onto the Moon",
+      "field": "Spaceflight",
+      "summary": "A person steps onto another world. This is the chosen zero point for First Step Epoch.",
+      "source": "https://airandspace.si.edu/explore/stories/apollo-missions/apollo-11-moon-landing/apollo-11-timeline",
+      "sourceNotes": "Chosen FSE convention retained unchanged; not a new determination of the historical instant."
+    },
+    {
+      "date": "1972-12-14",
+      "title": "Gene Cernan completes the final Apollo moonwalk",
+      "field": "Spaceflight",
+      "summary": "Gene Cernan reenters Apollo 17’s lunar module after the final moonwalk of the Apollo era.",
+      "source": "https://www.nasa.gov/history/50-years-ago-apollo-17-heads-home-to-earth/",
+      "sourceNotes": "December 14 UTC is the final Apollo 17 EVA/return day. NASA SP-4029 lists 05:40:56 UTC as cabin repressurization, not a second-level timestamp of Cernan’s last footstep; retain day precision for this milestone. NASA’s Remembering Gene Cernan confirms his distinction as last human to leave footprints on the Moon. Treat last-person wording as of the November 2026 review, not a prediction about future missions. Checked November 12, 2026."
+    },
+    {
+      "date": "1974-11-24",
+      "title": "Lucy sheds light on human origins",
+      "field": "Human origins",
+      "summary": "A 3.2-million-year-old skeleton discovered in Ethiopia provides remarkable evidence of how our early relatives walked upright.",
+      "source": "https://iho.asu.edu/aboutLucy",
+      "sourceNotes": "ASU Institute of Human Origins dates the discovery by Donald Johanson and Tom Gray at Hadar to November 24, 1974. Smithsonian AL 288-1 anatomy supports upright walking. No clock time supplied. The date is the discovery, not the fossil’s geological age or later publication. Checked November 12, 2026."
+    },
+    {
+      "date": "1978-07-25",
+      "title": "Louise Brown is born following IVF",
+      "field": "Medicine",
+      "summary": "The first birth following in vitro fertilization turns years of reproductive research into a new medical possibility.",
+      "source": "https://www.nobelprize.org/prizes/medicine/2010/press-release/",
+      "sourceNotes": "Nobel Assembly’s 2010 medicine account confirms Louise Brown’s birth on July 25, 1978. Birth date, not embryo transfer or announcement. No clock time inferred. Rechecked November 12, 2026."
+    },
+    {
+      "date": "1980-05-08",
+      "title": "Smallpox is declared eradicated",
+      "field": "Public health",
+      "summary": "Vaccination, surveillance, and international cooperation eliminate a devastating human disease.",
+      "source": "https://www.who.int/publications/i/item/WHA33-3",
+      "sourceNotes": "World Health Assembly declaration date, not the last case or earlier certification."
+    },
+    {
+      "date": "1985-05-16",
+      "title": "Antarctic ozone-hole findings published",
+      "field": "Atmospheric science",
+      "summary": "Long-term measurements reveal severe seasonal ozone loss, helping motivate an international response.",
+      "source": "https://www.bas.ac.uk/media/beyondtheice/discovering-a-hole-in-the-ozone-layer/",
+      "sourceNotes": "Publication date confirmed by BAS’s fortieth-anniversary account."
+    },
+    {
+      "date": "1989-08-25T03:56Z",
+      "title": "First close-up exploration of Neptune",
+      "field": "Planetary exploration",
+      "summary": "Voyager 2 reaches Neptune, revealing intricate rings, powerful storms, and an unexpectedly active moon, Triton.",
+      "source": "https://science.nasa.gov/mission/voyager/voyager-2/",
+      "sourceNotes": "NASA mission history documents closest approach August 25, 1989 at 03:56 UT. Retain minute precision without inventing seconds. This timestamp marks the Neptune encounter; the scientific findings describe the wider encounter and subsequent analysis, not simultaneous discoveries. Reviewed November 12, 2026."
+    },
+    {
+      "date": "1992-01-09",
+      "title": "The first confirmed exoplanet system reported",
+      "field": "Astronomy",
+      "summary": "Wolszczan and Frail’s pulsar-planet paper establishes that planetary systems exist beyond our own.",
+      "source": "https://www.nature.com/nature/volumes/355/issues/6356",
+      "sourceNotes": "Journal publication date; distinguish these pulsar planets from 1995’s first confirmed planet around a Sun-like star."
+    },
+    {
+      "date": "1996-07-05",
+      "title": "Dolly is born",
+      "field": "Biotechnology",
+      "summary": "The first mammal cloned from an adult cell changes our understanding of cellular development.",
+      "source": "https://www.research.ed.ac.uk/en/publications/dolly-at-roslin-a-collective-memory-event/",
+      "sourceNotes": "Birth date; public announcement followed in 1997."
+    },
+    {
+      "date": "2002-09-17",
+      "title": "The reported exoplanet tally reaches 100",
+      "field": "Astronomy",
+      "summary": "A contemporary announcement of Tau¹ Gruis’s planet marks the rapid growth of exoplanet discovery.",
+      "source": "https://www.sciencedaily.com/releases/2002/09/020923065358.htm",
+      "sourceNotes": "PPARC announcement reproduced by ScienceDaily: September 17 within release; republication September 23. Historical reported tally, not a universal catalog ordering."
+    },
+    {
+      "date": "2003-04-14",
+      "title": "Human Genome Project completion announced",
+      "field": "Genomics",
+      "summary": "An international collaboration delivers a foundational human reference sequence, opening new routes into biology and medicine.",
+      "source": "https://www.genome.gov/27555238/april-2013-the-10year-anniversary-of-the-human-genome-project-commemorating-reflecting",
+      "sourceNotes": "Announcement date; essentially complete reference, not gap-free sequencing."
+    },
+    {
+      "date": "2006-01-15",
+      "title": "First comet samples returned to Earth",
+      "field": "Planetary exploration",
+      "summary": "Stardust delivers dust collected from comet Wild 2, bringing material from an ancient Solar System body into laboratories on Earth.",
+      "source": "https://science.nasa.gov/mission/stardust/",
+      "sourceNotes": "NASA dates Sample Return Capsule return to January 15, 2006. This card uses the return day, not the January 2004 comet encounter or later laboratory findings. Day-only precision; no clock time inferred. Reviewed November 12, 2026."
+    },
+    {
+      "date": "2010-05-06",
+      "title": "Neanderthal genome findings announced",
+      "field": "Human origins",
+      "summary": "Ancient DNA reveals evidence of interbreeding, giving researchers a new way to investigate human history.",
+      "source": "https://www.mpg.de/617258/pressRelease20100430",
+      "sourceNotes": "Max Planck announcement; journal issue followed May 7. Draft genome, not a gap-free sequence."
+    },
+    {
+      "date": "2013-10-23",
+      "title": "The 1,000-exoplanet catalog milestone reported",
+      "field": "Astronomy",
+      "summary": "The Extrasolar Planets Encyclopaedia reaches a thousand worlds, showing how quickly the field has expanded.",
+      "source": "https://iac.es/en/outreach/news/exoplanets-discover-number-1000",
+      "sourceNotes": "IAC report date, not an asserted crossing instant; named catalog because totals differ."
+    },
+    {
+      "date": "2015-09-14T09:50:45Z",
+      "title": "Gravitational waves directly detected",
+      "field": "Physics",
+      "summary": "LIGO detects ripples from merging black holes, opening a new way to observe the universe.",
+      "source": "https://ligo.org/faq/",
+      "sourceNotes": "Detection at 09:50:45 UTC, at source’s stated precision; announcement February 2016."
+    },
+    {
+      "date": "2019-04-10",
+      "title": "The first black-hole image released",
+      "field": "Astronomy",
+      "summary": "A worldwide telescope network resolves bright emission surrounding the shadow of M87’s central black hole.",
+      "source": "https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole",
+      "sourceNotes": "Release date; observations were collected in 2017."
+    },
+    {
+      "date": "2022-09-26T23:14:24Z",
+      "title": "First asteroid-deflection demonstration",
+      "field": "Planetary defense",
+      "summary": "DART impacts Dimorphos, demonstrating a technique for changing an asteroid’s orbit.",
+      "source": "https://ntrs.nasa.gov/citations/20230015804",
+      "sourceNotes": "NASA DART Final Technical Report records physical impact on September 26, 2022 at 23:14:24 UTC. Not Earth receipt time or the October confirmation announcement. Orbital change established through subsequent observations. Retain documented whole-second precision. Reviewed November 12, 2026."
+    }
+  ],
+  "cardCopy": {
+    "1965-07-01": {
+      "title": "The Big Bang’s afterglow discovered",
+      "summary": "Penzias and Wilson identify the cosmic microwave background, providing powerful evidence that the universe began in a hot, dense state.",
+      "datePrefix": "Published ",
+      "source": "https://en.wikipedia.org/wiki/Discovery_of_cosmic_microwave_background_radiation",
+      "desktopAnchorPercent": 10.52
+    },
+    "1969-07-21T02:56:15Z": {
+      "title": "First step on the Moon",
+      "summary": "Armstrong steps onto another world, setting FSE’s zero point.",
+      "datePrefix": ""
+    },
+    "1960-08-20": {
+      "title": "First animals return safely from orbit",
+      "summary": "Belka and Strelka return alive from Earth orbit, demonstrating that animals could survive the journey into space and back.",
+      "datePrefix": "",
+      "source": "https://en.wikipedia.org/wiki/Belka_and_Strelka",
+      "desktopAnchorPercent": 13.92
+    },
+    "1961-04-12T06:07Z": {
+      "title": "First human in space",
+      "summary": "Yuri Gagarin orbits Earth aboard Vostok 1, opening the era of human spaceflight.",
+      "datePrefix": "Launched ",
+      "desktopAnchorPercent": 35.34
+    },
+    "1972-12-14": {
+      "title": "Most recent person to walk on the Moon",
+      "summary": "Gene Cernan reenters Apollo 17’s lunar module after the final moonwalk of the Apollo era.",
+      "datePrefix": ""
+    },
+    "1974-11-24": {
+      "title": "Lucy sheds light on human origins",
+      "summary": "A 3.2-million-year-old skeleton discovered in Ethiopia provides remarkable evidence of how our early relatives walked upright.",
+      "datePrefix": "Discovered ",
+      "source": "https://en.wikipedia.org/wiki/Lucy_(hominid)"
+    },
+    "1978-07-25": {
+      "title": "First child born through IVF",
+      "summary": "Louise Brown’s birth demonstrates that fertilization outside the body can lead to a successful pregnancy, opening a new chapter in reproductive medicine.",
+      "datePrefix": ""
+    },
+    "1980-05-08": {
+      "title": "Smallpox declared eradicated",
+      "summary": "Vaccination, surveillance, and international cooperation eliminate a devastating human disease, demonstrating what a worldwide scientific effort can achieve.",
+      "datePrefix": "Declared "
+    },
+    "1985-05-16": {
+      "title": "Antarctic ozone hole findings published",
+      "summary": "British Antarctic Survey scientists reveal severe seasonal ozone loss above Antarctica, helping set the stage for international action to protect Earth’s atmosphere.",
+      "datePrefix": "Published "
+    },
+    "1989-08-25T03:56Z": {
+      "title": "First close-up exploration of Neptune",
+      "summary": "Voyager 2 reaches Neptune, revealing intricate rings, powerful storms, and an unexpectedly active moon, Triton.",
+      "datePrefix": "Closest approach "
+    },
+    "1992-01-09": {
+      "title": "First planets confirmed beyond our Solar System",
+      "summary": "Aleksander Wolszczan and Dale Frail report planets orbiting a pulsar, establishing that our Solar System is not the only planetary system.",
+      "datePrefix": "Published ",
+      "source": "https://www.nature.com/articles/355145a0"
+    },
+    "1996-07-05": {
+      "title": "First mammal cloned from an adult cell",
+      "summary": "Dolly’s birth demonstrates that the genetic material in a specialized adult cell can support the development of a whole animal, changing our understanding of cellular development.",
+      "datePrefix": "Born ",
+      "source": "https://roslinfoundation.uk/dolly-the-sheep/"
+    },
+    "2002-09-17": {
+      "title": "Exoplanet discoveries reach 100",
+      "summary": "Astronomers announce a planet orbiting Tau¹ Gruis, bringing the reported tally to 100 and revealing a growing diversity of planetary systems.",
+      "datePrefix": "Announced "
+    },
+    "2003-04-14": {
+      "title": "Human Genome Project completed",
+      "summary": "An international collaboration completes a landmark human reference sequence, opening new ways to investigate biology, disease, and our shared ancestry.",
+      "datePrefix": "Announced ",
+      "source": "https://www.genome.gov/11006929/2003-release-international-consortium-completes-hgp"
+    },
+    "2006-01-15": {
+      "title": "First comet samples returned to Earth",
+      "summary": "Stardust delivers dust collected from comet Wild 2, bringing material from an ancient Solar System body into laboratories on Earth.",
+      "datePrefix": "Returned ",
+      "desktopAnchorPercent": 18.25
+    },
+    "2013-10-23": {
+      "title": "Exoplanet catalog reaches 1,000 worlds",
+      "summary": "The Extrasolar Planets Encyclopaedia lists a thousand worlds, showing how rapidly exploration beyond our Solar System has expanded.",
+      "datePrefix": "Reported "
+    },
+    "2015-09-14T09:50:45Z": {
+      "title": "First direct detection of gravitational waves",
+      "summary": "LIGO detects ripples from merging black holes, opening a new way to observe the universe.",
+      "datePrefix": "Detected ",
+      "source": "https://dcc-lho.ligo.org/LIGO-P150914/public"
+    },
+    "2022-09-26T23:14:24Z": {
+      "title": "First asteroid-deflection demonstration",
+      "summary": "DART impacts Dimorphos, demonstrating a technique for changing an asteroid’s orbit.",
+      "datePrefix": "Impact "
+    },
+    "2010-05-06": {
+      "title": "Ancient DNA reveals our Neanderthal connections",
+      "summary": "Researchers reconstruct a draft Neanderthal genome, revealing evidence of interbreeding with modern humans and opening a new way to explore our shared past.",
+      "datePrefix": "Announced "
+    },
+    "2019-04-10": {
+      "title": "First image of a black hole released",
+      "summary": "A worldwide network of radio telescopes reveals the shadow of the black hole in galaxy M87, turning an extraordinary prediction into an observable image.",
+      "datePrefix": "Released "
+    }
+  }
+}

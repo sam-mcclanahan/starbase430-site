@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+---
+
+{% set entryAuthor = authors[author] %}
+{% from "macros/log-label.njk" import logLabel %}
+
+<article class="entry entry--log{% if researchPage %} entry--research{% endif %}">
+  <header class="entry__header">
+    <p class="entry__code">{{ logLabel(page.date, draft) }}</p>
+    <h1>{{ title }}</h1>
+    <p class="entry__summary">{{ description }}</p>
+    <p class="entry__meta">
+      By <a href="{{ entryAuthor.url }}" rel="author">{{ entryAuthor.name }}</a>,
+      {% if draft %}Draft date:{% else %}Published:{% endif %} <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+    </p>
+    {% if draft %}
+      <p class="draft-note"><strong>Unpublished draft:</strong> This page is available in local preview only. Its publication date will be set before release.</p>
+    {% endif %}
+    {% if originalProjectDate or status %}
+      <dl class="entry__details">
+        {% if originalProjectDate %}
+          <dt>Original project date</dt>
+          <dd><time datetime="{{ originalProjectDate }}">{{ originalProjectDate | readableOriginalProjectDate }}</time></dd>
+        {% endif %}
+        {% if status %}<dt>Status</dt><dd>{{ status | projectStatusLabel }}</dd>{% endif %}
+      </dl>
+    {% endif %}
+  </header>
+
+  {{ content | safe }}
+
+  <footer class="entry__footer">
+    <p><a href="/log/">Back to the Log</a></p>
+  </footer>
+</article>
