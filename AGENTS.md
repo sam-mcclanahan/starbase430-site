@@ -3,9 +3,10 @@
 Read `docs/current-state.md`, `docs/project-goals.md`, and `roadmap.md` first.
 Use npm and Node.js 22 or newer. Preserve unrelated local work.
 
-This repository is a reviewed release snapshot with fresh Git history. Keep it
-private until Sam explicitly approves visibility. Source approval does not approve
-hosting, deployment, merging PRs, or publishing additional content.
+This repository is public following Sam’s explicit approval on November 13, 2026.
+It contains a reviewed release snapshot with fresh Git history. Keep the historical
+repository private. Source publication does not approve hosting, deployment,
+merging PRs, or publishing additional content.
 
 Only approved articles and assets belong here. Keep unpublished writing, archival
 masters, internal research, private review reports, and recovery history outside
@@ -29,3 +30,9 @@ independent second check; it runs after upload and cannot undo public exposure.
 Changes to privacy-policy.json, hook/checker code, scanner configuration, or the
 workflow require explicit review. Narrow synthetic exceptions must not become
 blanket test exclusions or allowlists. Keep scanner output redacted.
+
+Main requires the GitHub Actions Privacy and release checks status, including for
+administrators; force pushes and deletion are blocked. Push reviewed changes to
+a branch, wait for CI, then update main through an authorized merge or a checked
+fast-forward. Do not bypass protection. Native secret scanning and push protection
+are enabled in addition to local gates. Website deployment is still deferred.

@@ -19,8 +19,9 @@ Future additions need review; a new root commit does not sanitize careless updat
 
 Use the approved public Git identity and GitHub noreply email. No private email,
 credentials, local master paths, or identifying image metadata belongs in commits.
-The repository remains private until explicit visibility approval. Source pushes,
-site deployment, and domain changes are separate actions. Preserve all third-party
+Sam explicitly approved public visibility on November 13, 2026. Keep the
+historical repository private. Source pushes, site deployment, and domain
+changes are separate actions. Preserve all third-party
 notices and the distinction between MIT software and reserved editorial assets.
 
 ## Automated privacy protection
@@ -66,8 +67,12 @@ secret, write permission, automatic merge, or publishing step is present. Report
 are not uploaded. CI detects problems after a push; local hooks protect before
 upload and can still be bypassed by someone controlling their own clone.
 
-On November 13 GitHub returned 403 for private branch protection, requiring a
-plan upgrade or public visibility. Neither is authorized. CI currently reports
-checks without server-enforced protected-main rules. Enable required status
-checks, force-push/deletion protection, and available native secret/push protection
-when supported and separately configured; do not claim they are active now.
+Before visibility approval GitHub returned 403 for private branch protection on
+this plan. After Sam approved public source on November 13, main protection was
+enabled without a plan upgrade. Main requires Privacy and release checks from
+GitHub Actions (app 15368), with the branch up to date, including administrators.
+Force pushes and deletion are blocked. Push reviewed changes to a branch, wait
+for green CI, then use an authorized merge or checked fast-forward to update main.
+There is no additional required reviewer count; do not bypass the status gate.
+Native GitHub secret scanning and secret push protection are enabled alongside
+local Gitleaks and source/privacy checks. Hosting and deployment remain deferred.

@@ -21,7 +21,8 @@
   provenance/credits. Preserve the original 88-by-31 button and Elbow-star icons.
 - Publish only reviewed source, writing, assets, and documentation. Keep private
   drafts/research and historic development out of this repository and Git history.
-- Keep the repository private until explicit visibility approval. Configure
-  Neocities Supporter, domain/DNS, HTTPS, and deployment only when separately authorized.
+- Public source was explicitly approved November 13, 2026. Keep the historical
+  repository private. Configure Neocities Supporter, domain/DNS, HTTPS, and
+  deployment only when separately authorized.
 - Retain article completion dates through launch rather than resetting all entries
   to deployment day. Hosting and source publication are separate checkpoints.

@@ -1,8 +1,9 @@
 # Current release-source state
 
 Prepared November 13, 2026. This is a new Git repository containing reviewed
-release sources, not a fork or mirror of historical development. It remains
-private until explicit approval to make it public; deployment is separately gated.
+release sources, not a fork or mirror of historical development. Sam explicitly
+approved public source visibility on November 13, 2026. Website deployment
+remains separately gated; the historical repository stays private.
 
 Approved launch entries are website development, Pablo, and First Step Epoch.
 Their completion dates, routes, bylines, and content are retained. Unpublished
@@ -24,8 +25,7 @@ plus dated Pablo assistive-technology evidence. This is bounded evidence, not
 WCAG certification. Snapshot-specific automated results are recorded in the
 roadmap after verification; do not reuse old counts as a new pass.
 
-Remaining launch work: obtain explicit public visibility approval, configure
-hosting and domain/HTTPS, verify the deployed site,
+Remaining launch work: configure hosting and domain/HTTPS, verify the deployed site,
 and obtain final launch sign-off. The historical private repository stays private.
 
 ## Verified release checkpoint, November 13
@@ -46,14 +46,14 @@ the optional illustration at 511,433 bytes, leaving 567 below the hard ceiling.
 
 The GitHub candidate is `sam-mcclanahan/starbase430-site`; its initial history
 contains only the reviewed snapshot, with the approved public Git identity.
-It stays private. No historic branch, tag, PR, stash, or old commit parent is
+It was kept private until Sam’s explicit November 13 approval. No historic branch,
+tag, PR, stash, or old commit parent is
 imported. The separate archive’s old hosted references remain private and are
 no longer a dependency of this source-publication route. Support correspondence
 about the historical repository remains optional and has not been sent.
 
-Launch countdown: 11/15 complete, 4 remaining. Next is explicit approval to make
-this repository public; hosting, hosted verification, and launch sign-off follow.
-Do not infer any visibility or deployment authorization from the private push.
+Launch countdown: 12/15 complete, 3 remaining. Next is separately authorized
+hosting/domain/HTTPS setup, followed by hosted verification and launch sign-off.
 
 ## Automated privacy milestone, November 13
 
@@ -63,9 +63,9 @@ credential scanning, and negative regression fixtures. A read-only Source checks
 workflow independently runs the full suite; it has no deployment or write token.
 Hooks must be explicitly installed in each clone with npm run setup:privacy.
 
-GitHub’s private branch-protection API returned 403 on the current plan. No
-upgrade or visibility change was made; required server-side status enforcement
-is not claimed. CI and local hooks are independent layers, and neither can
+Before public-source approval, GitHub’s private branch-protection API returned
+403 on the current plan. Following approval, public visibility enabled the server
+protections recorded below without a plan upgrade. CI and local hooks cannot
 guarantee recognition of every sensitive statement or replace editorial judgment.
 See release-workflow.md for exact coverage, bypass limits, and future configuration.
 
@@ -100,8 +100,22 @@ reviewed commits use Sam McC and the approved GitHub noreply address. Both hoste
 Actions logs passed pinned credential scanning and contact/personal-path checks;
 standard hosted-runner infrastructure paths are not personal local paths.
 
-The repository is still private. Public visibility needs Sam's explicit approval
-of the reviewed result. Public source makes these articles/assets/documentation
+The repository was still private at that review; Sam subsequently explicitly
+approved visibility on November 13. Public source makes these articles/assets/documentation
 and Git/Actions history readable and copyable before website hosting. It does
 not approve website deployment, DNS changes, or making the archive public.
-Recheck the final documentation commit and its CI before changing visibility.
+The final documentation checkpoint cc32e7f and its hosted logs passed review
+and CI before visibility changed.
+
+## Public-source approval and server protections, November 13
+
+Sam explicitly approved making only sam-mcclanahan/starbase430-site public. The
+historical sam-mcclanahan/starbase430 repository remains private. GitHub Pages
+is unconfigured; the only workflow checks source and does not deploy anything.
+
+GitHub native secret scanning and push protection are enabled. Main requires
+the Privacy and release checks status specifically from GitHub Actions (app
+15368), with the branch up to date; administrators are included. Force pushes
+and deletion of main are blocked. No paid plan upgrade, additional approval
+requirement, deployment credential, or automated publication step was added.
+Use a reviewed branch and green CI before an authorized main update.

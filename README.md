@@ -4,9 +4,9 @@ Source for Sam and Brea’s independent-web workshop: maker projects shaped by
 curiosity, joyful fandom, and optimistic futures. Built with Eleventy, Markdown,
 Nunjucks, npm, and a static green-and-silver space theme.
 
-This repository starts with a reviewed release snapshot. It remains private
-pending explicit visibility approval, and nothing here implies the site has
-been deployed. Historical development and unpublished writing are kept separately.
+This public repository starts with a reviewed release snapshot, approved for
+source publication on November 13, 2026. The website has not been deployed.
+Historical development and unpublished writing are kept separately in private storage.
 
 ## Local setup
 
