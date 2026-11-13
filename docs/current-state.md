@@ -72,3 +72,8 @@ privacy regressions. Approved production/preview structure and hard budgets
 remain unchanged. The source inventory now contains 111 reviewed files.
 The complete local check:all pipeline also passes 144 browser checks and 46 axe
 scans, with zero failures and 42 retained contrast-inconclusive findings.
+
+The first Linux CI run passed privacy, tests, structure, and budgets but caught
+font-dependent overlap between two FSE timeline cards. The Stardust connector now
+anchors at its card top, preserving timeline height, scale, and text size. Commit
+and tag messages also receive a separate redacted Gitleaks scan.

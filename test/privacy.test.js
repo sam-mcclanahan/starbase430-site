@@ -71,9 +71,10 @@ test('bad intermediate commit identity and private commit messages are detected'
  const badMessage=git(root,['commit-tree',tree],Buffer.from(privateEmail+'\n')).toString().trim();assert.throws(()=>inspectCommit(root,badMessage,policy),/message/);
  git(root,['config','user.email',privateEmail]);const badIdentity=git(root,['commit-tree',tree],Buffer.from('No private message\n')).toString().trim();assert.throws(()=>inspectCommit(root,badIdentity,policy),/identity/);
 });
-test('real Gitleaks detects a synthetic credential without returning its value',async t=>{
+test('real Gitleaks detects staged and message-only credentials without returning values',async t=>{
  const token=['ghp','Ab3dE5gH7jK9mN2pQ4sT6vW8yZ1cF0rUoLxS'.slice(0,36)].join('_');const root=await fixture(t,{'note.md':token});
  const config=new URL('../.gitleaks.toml',import.meta.url).pathname;
+ assert.throws(()=>runGitleaks(root,policy,['stdin'],config,'Fixture commit message: '+token),error=>error.message.includes('potential credential')&&!error.message.includes(token));
  assert.throws(()=>runGitleaks(root,policy,['git','--pre-commit','--staged'],config),error=>error.message.includes('potential credential')&&!error.message.includes(token));
 });
 

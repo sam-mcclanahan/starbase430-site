@@ -67,6 +67,7 @@ export function inspectCommit(root,sha,policy){
  const fields=git(root,['show','-s','--format=%an%x00%ae%x00%cn%x00%ce%x00%B',sha]).toString().split('\0');
  checkIdentity(fields[0],fields[1],policy);checkIdentity(fields[2],fields[3],policy,'committer');
  const issues=textIssues(fields.slice(4).join('\0'),policy);if(issues.length)throw new Error('Commit message contains private data (redacted).');
+ return fields.slice(4).join('\0');
 }
 export function inspectTag(root,sha,policy){
  if(git(root,['cat-file','-t',sha]).toString().trim()!=='tag')return;
@@ -75,15 +76,16 @@ export function inspectTag(root,sha,policy){
  if(!line)throw new Error('Annotated tag lacks a reviewed tagger identity.');
  const identity=parseIdentity(line.slice(7));checkIdentity(identity.name,identity.email,policy,'tagger');
  if(textIssues(raw.split('\n\n').slice(1).join('\n\n'),policy).length)throw new Error('Annotated tag message contains private data (redacted).');
+ return raw;
 }
-export function runGitleaks(root,policy,args,configPath){
+export function runGitleaks(root,policy,args,configPath,input){
  const binary=path.join(defaultRoot,'.cache/privacy-tools/gitleaks');
  let v;try{v=execFileSync(binary,['version'],{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();}catch{throw new Error('Pinned Gitleaks missing; run npm run setup:privacy (do not skip privacy checks).');}
  if(v!==policy.gitleaks.version)throw new Error('Gitleaks version does not match the reviewed pin.');
  const temporary=mkdtempSync(path.join(tmpdir(),'starbase-secret-scan-'));
  try {
   const ignore=path.join(temporary,'empty-ignore');writeFileSync(ignore,'');
-  const result=spawnSync(binary,[...args,'--config',configPath,'--gitleaks-ignore-path',ignore,'--redact=100','--no-banner','--ignore-gitleaks-allow','--max-decode-depth=2'],{cwd:root,stdio:'pipe',encoding:'utf8',timeout:120000});
+  const result=spawnSync(binary,[...args,'--config',configPath,'--gitleaks-ignore-path',ignore,'--redact=100','--no-banner','--ignore-gitleaks-allow','--max-decode-depth=2'],{cwd:root,input,stdio:'pipe',encoding:'utf8',timeout:120000});
   if(result.status!==0)throw new Error(result.status===1?'Gitleaks detected a potential credential (details redacted; agent investigation required).':'Gitleaks could not complete; privacy check failed closed.');
  } finally {rmSync(temporary,{recursive:true,force:true});}
 }
@@ -98,7 +100,7 @@ export async function checkPrivacy(mode,{root=defaultRoot,stdin='',remoteUrl=''}
    const config=path.join(temp,'gitleaks.toml');await writeFile(config,git(root,['show',':.gitleaks.toml']));
    runGitleaks(root,policy,['git','--pre-commit','--staged'],config);
   }else if(mode==='history'||mode==='push'){
-   let tips=[];let commits=[];
+   let tips=[];let commits=[];const messages=[];
    if(mode==='push'){
     if(!destinationAllowed(remoteUrl,policy.repository))throw new Error('Push destination is not the approved release repository.');
     for(const line of stdin.trim().split('\n').filter(Boolean)){
@@ -115,13 +117,16 @@ export async function checkPrivacy(mode,{root=defaultRoot,stdin='',remoteUrl=''}
    }else{
     tips=git(root,['for-each-ref','--format=%(objectname)','refs/heads','refs/remotes','refs/tags']).toString().trim().split('\n').filter(Boolean);
     tips.push(git(root,['rev-parse','HEAD']).toString().trim());
-    for(const tag of git(root,['for-each-ref','--format=%(objectname)','refs/tags']).toString().trim().split('\n').filter(Boolean))inspectTag(root,tag,policy);
+    for(const tag of git(root,['for-each-ref','--format=%(objectname)','refs/tags']).toString().trim().split('\n').filter(Boolean))messages.push(inspectTag(root,tag,policy));
     commits=git(root,['rev-list','--all','HEAD']).toString().trim().split('\n').filter(Boolean);
    }
    for(const tip of new Set(tips))inspectAncestry(root,tip,policy);
-   for(const sha of new Set(commits)){inspectCommit(root,sha,policy);await inspectSnapshot(root,sha,policy);}
+   for(const sha of new Set(commits)){messages.push(inspectCommit(root,sha,policy));await inspectSnapshot(root,sha,policy);}
    // Scan complete reachable history too, so a bad intermediate commit cannot hide behind a clean tip.
-   if(tips.length){const config=path.join(temp,'gitleaks.toml');await writeFile(config,await readFile(path.join(defaultRoot,'.gitleaks.toml')));runGitleaks(root,policy,['git','--log-opts='+[...new Set(tips)].join(' ')],config);}
+   if(tips.length){const config=path.join(temp,'gitleaks.toml');await writeFile(config,await readFile(path.join(defaultRoot,'.gitleaks.toml')));runGitleaks(root,policy,['git','--log-opts='+[...new Set(tips)].join(' ')],config);
+    // Git diff scanning does not cover credentials written only in commit/tag messages.
+    if(messages.some(Boolean))runGitleaks(root,policy,['stdin'],config,messages.filter(Boolean).join('\n\n'));
+   }
   }else throw new Error('Usage: check-privacy.js staged | history | push <remote-name> <remote-url>');
   return `Privacy ${mode} checks passed (values redacted).`;
  }finally{await rm(temp,{recursive:true,force:true});}

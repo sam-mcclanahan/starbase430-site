@@ -17,6 +17,9 @@ accessibility/browser review; privacy/rights review through the clean-source rou
     checks cover 11 pages each; all hard budgets pass. npm reports zero known
     advisories after compatible build-dependency patches.
 13. [ ] Obtain explicit approval before making this repository public.
+    Privacy hooks and read-only CI are installed. Required status checks and
+    protected-main rules are unavailable on the current private-repository plan;
+    configure them when supported. Do not change visibility to unlock features.
 14. [ ] Configure hosting, repeatable deployment, domain/DNS, and HTTPS when authorized.
 15. [ ] Verify the deployed site, RSS, draft exclusion, privacy, and hosted resource sizes.
 16. [ ] Record final launch sign-off after live verification.

@@ -47,7 +47,8 @@ rejects non-branch/tag pushes and deletion/non-fast-forward replacement of main,
 and verifies outgoing commit identities, messages, inventories, and files. Its
 ancestry must have only the approved release root; importing the private archive
 is rejected even if merged into a clean tip. Gitleaks scans reachable tip history,
-including intermediate commits, with redaction and without inline-allow or local
+including intermediate commits, plus commit/tag messages through a separate stdin
+scan, with redaction and without inline-allow or local
 ignore-file bypasses. Scanner defaults remain enabled. The agent investigates
 failures; no sensitive values are written to reports or public CI logs.
 
