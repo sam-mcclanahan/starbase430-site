@@ -11,12 +11,15 @@ accessibility/browser review; privacy/rights review through the clean-source rou
 
 12. [x] Save and verify the reviewed source checkpoint and private GitHub backup.
     November 13: fresh-history candidate prepared as `sam-mcclanahan/starbase430-site`,
-    private until explicit visibility approval. Snapshot checks: 106 tests, 144
+    private until explicit visibility approval. Current checks: 118 tests, 144
     browser checks and 46 axe scans; no confirmed failures, 42 retained
     scanner-inconclusive contrast findings. Fresh production/preview structure
     checks cover 11 pages each; all hard budgets pass. npm reports zero known
     advisories after compatible build-dependency patches.
 13. [ ] Obtain explicit approval before making this repository public.
+    Final source/history/hosted-log exposure review completed November 13;
+    111 approved source files, no private archive history or real unpublished drafts.
+    Source checks passed at a5ff68f; documentation refresh requires its own green CI.
     Privacy hooks and read-only CI are installed. Required status checks and
     protected-main rules are unavailable on the current private-repository plan;
     configure them when supported. Do not change visibility to unlock features.
