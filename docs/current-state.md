@@ -5,6 +5,19 @@ release sources, not a fork or mirror of historical development. Sam explicitly
 approved public source visibility on November 13, 2026. Website deployment
 remains separately gated; the historical repository stays private.
 
+## Homepage identity release, November 13
+
+Sam approved publishing the homepage h-card and GitHub rel="me" link while
+holding the Webrings section until the first active membership. The homepage
+identifies Starbase 430 with its canonical URL and approved description, and
+links visibly to Sam on GitHub. Existing external-link accessibility behavior
+is retained. No email, new image, script, profile change, or webring enrollment
+is included. Homepage-only styling does not increase other pages' resources.
+The reciprocal GitHub profile link and domain sign-in still need verification
+before joining the IndieWeb Webring. The held Webrings draft stays outside the
+release sources. Source checks and publication verification are recorded below
+when completed.
+
 ## Latest hosting checkpoint, November 13
 
 Sam explicitly approved the first public deployment and DNS cutover. GitHub Pages

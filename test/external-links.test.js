@@ -3,6 +3,15 @@ import test from "node:test";
 import { externalLinks } from "../src/_lib/external-links.js";
 const origin = "https://starbase430.com";
 
+test("identity links retain rel me through accessible external-link formatting", () => {
+  const html = '<a href="https://github.com/sam-mcclanahan" rel="me">Sam on GitHub</a>';
+  const result = externalLinks(html, origin);
+  assert.match(result, /rel="me noopener"/);
+  assert.match(result, /href="https:\/\/github.com\/sam-mcclanahan"/);
+  assert.match(result, /\(opens in a new tab\)/);
+  assert.equal(externalLinks(result, origin), result);
+});
+
 test("external links retain a screen-reader warning without visual icons, preserve markup, and are idempotent", () => {
   const html = '<a href="https://example.org/?a=1&amp;b=2" rel="author" aria-label="Source"><picture><img src="local.webp" alt="Mission patch"></picture>Source</a>';
   const result = externalLinks(html, origin);

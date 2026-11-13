@@ -12,7 +12,8 @@
     <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" sizes="any">
     <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" sizes="180x180">
     <link rel="stylesheet" href="/assets/css/site.css?v={{ siteCssVersion }}">
-{% if polargraph %}    <style>.polargraph-embed{margin:2rem 0;max-inline-size:100%}.polargraph-embed iframe{display:block;inline-size:100%;max-inline-size:100%;border:1px solid var(--line);border-radius:.5rem;background:var(--panel)}.polargraph-embed figcaption{margin-block-start:.75rem;color:var(--muted);font-size:.9em}</style><script type="module" src="/assets/illustrations/pablo/polargraph-frame.js"></script>
+{% if page.url == "/" %}    <style>.page-header--home h1 a{color:inherit;text-decoration:none}</style>
+{% endif %}{% if polargraph %}    <style>.polargraph-embed{margin:2rem 0;max-inline-size:100%}.polargraph-embed iframe{display:block;inline-size:100%;max-inline-size:100%;border:1px solid var(--line);border-radius:.5rem;background:var(--panel)}.polargraph-embed figcaption{margin-block-start:.75rem;color:var(--muted);font-size:.9em}</style><script type="module" src="/assets/illustrations/pablo/polargraph-frame.js"></script>
 {% endif %}  </head>
   <body class="site-body">
     <a class="skip-link" href="#main-content">Skip to main content</a>
