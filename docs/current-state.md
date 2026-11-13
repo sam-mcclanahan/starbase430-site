@@ -5,6 +5,21 @@ release sources, not a fork or mirror of historical development. Sam explicitly
 approved public source visibility on November 13, 2026. Website deployment
 remains separately gated; the historical repository stays private.
 
+## IndieWeb membership and homepage preview, November 13
+
+Sam added the reciprocal Starbase 430 URL to his public GitHub profile, then
+approved proceeding after the terms and Code of Conduct review. GitHub public-data
+authorization succeeded through IndieLogin. The authenticated webring dashboard
+reports ACTIVE, and its profile refresh imported the approved homepage h-card.
+No wiki contribution, event participation, or additional account scope was used.
+
+The local homepage now prepares the dashboard-provided Previous / IndieWeb
+Webring / Next links using ordinary accessible HTML, existing styles, and the
+standard external-link notice. Geekring remains pending and is excluded from
+this membership section. These navigation changes are not yet published, and
+the webring's link check must run after deployment before claiming the public
+homepage is fully connected. No membership identifier or secret is in source.
+
 ## Homepage identity release, November 13
 
 Sam approved publishing the homepage h-card and GitHub rel="me" link while
@@ -13,9 +28,9 @@ identifies Starbase 430 with its canonical URL and approved description, and
 links visibly to Sam on GitHub. Existing external-link accessibility behavior
 is retained. No email, new image, script, profile change, or webring enrollment
 is included. Homepage-only styling does not increase other pages' resources.
-The reciprocal GitHub profile link and domain sign-in still need verification
-before joining the IndieWeb Webring. The held Webrings draft stays outside the
-release sources. Source checks and publication verification are recorded below
+At this release checkpoint the reciprocal GitHub profile link and domain sign-in
+were still pending; the subsequent membership checkpoint above records completion.
+The earlier pending-status Webrings draft stays outside the release sources. Source checks and publication verification are recorded below
 when completed.
 
 ## Latest hosting checkpoint, November 13
