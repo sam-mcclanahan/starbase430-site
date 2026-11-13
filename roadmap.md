@@ -23,10 +23,28 @@ accessibility/browser review; privacy/rights review through the clean-source rou
     Source checks passed at cc32e7f. Native secret scanning and push protection
     are enabled. Main requires the GitHub Actions Privacy and release checks
     status, including administrators; force pushes and deletion are blocked.
-14. [ ] Configure hosting, repeatable deployment, domain/DNS, and HTTPS when authorized.
+14. [ ] Configure hosting, repeatable deployment, domain/DNS, and HTTPS.
+    November 13: GitHub Pages selected as the first host, Cloudflare for DNS.
+    Prepared a manually triggered, checked release with Sam approval and
+    main-only deployment protection; Pages uses Actions. Independent local
+    release build and static-server smoke checks pass. Domain verification,
+    DNS activation, first deployment, HTTPS,
+    hosted verification, and launch sign-off remain separate checkpoints.
 15. [ ] Verify the deployed site, RSS, draft exclusion, privacy, and hosted resource sizes.
 16. [ ] Record final launch sign-off after live verification.
 
 The initial launch includes three approved Logs. Library/media projects and
 optional IndieWeb expansions remain post-launch. Public-source preparation and
 private backups do not authorize deployment or visibility changes.
+
+## Post-launch local hosting milestones
+
+- [ ] Serve the checked production build on the home network and verify offline
+  local reading; retain an independently restorable copy.
+- [ ] **Serve the public Starbase 430 website from home.** Sam explicitly
+  confirmed this as a learning goal November 13, 2026. Test an isolated public
+  homelab service, HTTPS, availability, backup/recovery, and rollback before a
+  separately approved domain cutover. Preserve article URLs and RSS identity;
+  GitHub Pages may remain an optional fallback. See [hosting](docs/hosting.md).
+
+These milestones do not expand the initial launch countdown.

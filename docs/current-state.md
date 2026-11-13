@@ -119,3 +119,27 @@ the Privacy and release checks status specifically from GitHub Actions (app
 and deletion of main are blocked. No paid plan upgrade, additional approval
 requirement, deployment credential, or automated publication step was added.
 Use a reviewed branch and green CI before an authorized main update.
+
+## GitHub Pages preparation and homelab goal, November 13
+
+Sam approved recording eventual public hosting from home as an explicit learning
+milestone, in addition to a home-network mirror. GitHub Pages is selected for
+the first host; Cloudflare retains registration and DNS. Pages is configured for Actions with a required Sam approval and main-only
+protected deployment environment; source approval does not authorize launch.
+
+The manually triggered Website release workflow prepares only by default. A
+publication request additionally needs a successful checked build, the protected
+github-pages environment, and the canonical custom domain. The independent
+build:release command generates .cache/release-site without a hosting API and
+checks the exact upload directory. Development previews remain separate.
+
+Launch countdown stays 12/15 complete, 3 remaining until domain/HTTPS and the
+actual hosting setup are verified. See hosting.md and the post-launch roadmap.
+
+Preparation checks: 122 tests pass; 144 browser checks and 46 axe scans pass
+with zero confirmed failures and 42 retained inconclusive findings. The source
+inventory is now 115 files. The exact production release contains 33 files and
+11 HTML pages, maximum 511,433 bytes. Nine local static-server routes/resources
+passed independently of GitHub. Hosted CI and a preparation-only workflow run
+will verify the selected main checkpoint before first deployment is considered.
+No deployment or DNS change has been made.

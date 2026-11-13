@@ -22,7 +22,17 @@
 - Publish only reviewed source, writing, assets, and documentation. Keep private
   drafts/research and historic development out of this repository and Git history.
 - Public source was explicitly approved November 13, 2026. Keep the historical
-  repository private. Configure Neocities Supporter, domain/DNS, HTTPS, and
-  deployment only when separately authorized.
+  repository private. GitHub Pages is the chosen first host; Cloudflare retains
+  domain registration and DNS. Deployment and DNS activation remain separately gated.
 - Retain article completion dates through launch rather than resetting all entries
   to deployment day. Hosting and source publication are separate checkpoints.
+
+## Local operation and public homelab learning goal
+
+- Maintain a production build that can be generated and served without GitHub
+  Actions or a hosting-provider API.
+- Keep a working home-network/offline mirror of the published site.
+- Eventually serve the public website from home as an explicit, substantive
+  learning milestone. This is more than a backup or local-preview exercise.
+- Preserve the domain, article URLs, RSS identity, and an independently restorable
+  static build when changing hosts. See [hosting](hosting.md) for acceptance steps.

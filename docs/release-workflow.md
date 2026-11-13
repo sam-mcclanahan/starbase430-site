@@ -75,4 +75,16 @@ Force pushes and deletion are blocked. Push reviewed changes to a branch, wait
 for green CI, then use an authorized merge or checked fast-forward to update main.
 There is no additional required reviewer count; do not bypass the status gate.
 Native GitHub secret scanning and secret push protection are enabled alongside
-local Gitleaks and source/privacy checks. Hosting and deployment remain deferred.
+local Gitleaks and source/privacy checks. Hosting preparation is now authorized; website publication and DNS activation
+remain separately gated. See [hosting](hosting.md).
+
+## Prepared website release workflow
+
+Website release is separate from the read-only Source checks workflow. It runs
+only when manually dispatched on main. Its default publish=false mode prepares
+and uploads a checked production-only artifact, without deploying. The artifact
+is built in a fresh directory and expires after one day; private authoring and
+browser reports never belong in it. Publication needs publish=true, successful
+checks, the protected github-pages approval, and the configured canonical domain.
+No Cloudflare API credential is needed for Pages deployment. Neither a source
+push nor an ordinary preparation run grants first-launch approval.

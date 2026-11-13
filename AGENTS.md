@@ -35,4 +35,11 @@ Main requires the GitHub Actions Privacy and release checks status, including fo
 administrators; force pushes and deletion are blocked. Push reviewed changes to
 a branch, wait for CI, then update main through an authorized merge or a checked
 fast-forward. Do not bypass protection. Native secret scanning and push protection
-are enabled in addition to local gates. Website deployment is still deferred.
+are enabled in addition to local gates. GitHub Pages preparation is authorized;
+website publication and DNS activation still require the launch checkpoint.
+
+Read docs/hosting.md before hosting work. Website release defaults to preparation
+only; never dispatch publish=true or approve its protected environment without
+explicit publication authorization. Keep public homelab hosting as a distinct
+post-launch learning milestone alongside the local mirror. Production artifacts
+must be built with npm run build:release, never from a development-server directory.

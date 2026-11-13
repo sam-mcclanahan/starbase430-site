@@ -19,6 +19,8 @@ npm run dev
 ```
 
 Eleventy prints the local preview URL. `npm run build` generates `_site/`.
+`npm run build:release` creates a fresh, checked production copy in
+`.cache/release-site/`, independently of GitHub or a hosting credential.
 Reading and navigation need no JavaScript; Pablo’s separately linked interactive
 illustration uses optional JavaScript and has static and written alternatives.
 
@@ -46,6 +48,7 @@ image alternatives and differs from browser-selected resource measurements.
 - [Project goals](docs/project-goals.md) and [editorial guide](docs/editorial-guide.md).
 - [Accessibility testing](docs/accessibility-testing.md).
 - [Source publication boundary](docs/release-workflow.md).
+- [Hosting, local mirrors, and eventual public homelab hosting](docs/hosting.md).
 - [FSE time-standard maintenance](docs/fse-time-standard.md).
 - [Image provenance](docs/image-provenance.md) and [image processing](docs/image-optimization.md).
 

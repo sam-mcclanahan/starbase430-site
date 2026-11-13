@@ -5,6 +5,7 @@
     ".githooks/pre-commit",
     ".githooks/pre-push",
     ".github/workflows/checks.yml",
+    ".github/workflows/pages.yml",
     ".gitignore",
     ".gitleaks.toml",
     "AGENTS.md",
@@ -17,6 +18,7 @@
     "docs/editorial-guide.md",
     "docs/fse-photo-provenance.json",
     "docs/fse-time-standard.md",
+    "docs/hosting.md",
     "docs/image-optimization.md",
     "docs/image-provenance.md",
     "docs/pablo-illustration.md",
@@ -32,6 +34,7 @@
     "scripts/accessibility-geometry.js",
     "scripts/build-favicons.js",
     "scripts/build-pablo-tesla.js",
+    "scripts/build-release.js",
     "scripts/check-accessibility.js",
     "scripts/check-output.js",
     "scripts/check-page-budgets.js",
@@ -112,6 +115,7 @@
     "test/publication-dates.test.js",
     "test/reading-layout.test.js",
     "test/release-output.test.js",
+    "test/release-package.test.js",
     "test/site-button.test.js"
   ]
 }

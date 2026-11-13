@@ -20,7 +20,8 @@
     "check:release": "node scripts/check-release-snapshot.js",
     "setup:privacy": "node scripts/setup-privacy.js",
     "check:privacy": "node scripts/check-privacy.js history",
-    "check:staged": "node scripts/check-privacy.js staged"
+    "check:staged": "node scripts/check-privacy.js staged",
+    "build:release": "node scripts/build-release.js"
   },
   "engines": {
     "node": ">=22"
