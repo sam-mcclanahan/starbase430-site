@@ -100,14 +100,39 @@ and 11 HTML pages; the largest page is 511,433 bytes.
 
 GitHub Pages is configured for Actions. The github-pages environment requires
 Sam's approval, permits only main, and disables administrator bypass. No
-publish=true run has been dispatched and no DNS record has been changed.
-Domain verification, the canonical custom domain, and first-publication approval
-remain outstanding.
+publish=true run has been dispatched. Domain ownership is verified; the canonical
+custom domain, routing changes, and first-publication approval remain outstanding.
 
 The preparation-only Website release run at checkpoint 7db5dde passed on GitHub:
 https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43424807083
 Its publishing job was skipped. All 33 uploaded files matched the independently
 built local release byte-for-byte; GitHub reported zero deployments. Source checks
-also passed on main. The two browser accounts require sign-in before domain
-verification can continue. No credentials or DNS verification values are stored
+also passed on main. No credentials or DNS verification values are stored
 in this repository.
+
+## Domain verification and pending cutover, November 13
+
+After Sam signed in, GitHub confirmed starbase430.com as a verified domain on
+his account. Only the account-level GitHub Pages ownership TXT record was added
+at Cloudflare. Retain that record to preserve verification. Existing mail records
+and the proxied registrar holding-page record were unchanged; no www record was
+present. GitHub still reports zero deployments and no repository custom domain.
+
+The launch cutover awaiting explicit approval is:
+
+1. Associate starbase430.com with this repository's Pages settings first.
+2. Replace the registrar holding-page CNAME at @ with DNS-only A records:
+   185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153.
+3. Add DNS-only CNAME www pointing to sam-mcclanahan.github.io, without a
+   repository path. Preserve all mail, unrelated, and ownership TXT records.
+4. Dispatch the approved main release with publish=true and approve its protected
+   environment. Verify canonical/www redirects and certificate issuance, and
+   confirm HTTPS enforcement for the custom domain once available.
+5. Complete the hosted release checks before recording final launch sign-off.
+
+These record values follow [GitHub's custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+This plan initially uses IPv4; IPv6 can be added using GitHub's documented AAAA
+records. No wildcard record or home-network exposure is required. If cutover must
+be rolled back, restore the prior registrar holding-page CNAME and remove the
+new www record; leave mail and ownership verification intact. DNS caches can
+delay either cutover or rollback. HTTPS issuance may require additional time.

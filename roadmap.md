@@ -29,7 +29,8 @@ accessibility/browser review; privacy/rights review through the clean-source rou
     main-only deployment protection; Pages uses Actions. Independent local
     release build and static-server smoke checks pass. Hosted preparation run
     43424807083 passed with publishing skipped; all 33 artifact files matched
-    the local build. Domain verification,
+    the local build. Domain ownership is verified with its isolated TXT record;
+    the holding page and mail routing are unchanged. Canonical domain setup,
     DNS activation, first deployment, HTTPS,
     hosted verification, and launch sign-off remain separate checkpoints.
 15. [ ] Verify the deployed site, RSS, draft exclusion, privacy, and hosted resource sizes.

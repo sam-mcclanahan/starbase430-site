@@ -143,5 +143,8 @@ inventory is now 115 files. The exact production release contains 33 files and
 passed independently of GitHub. Hosted Source checks and preparation-only Website release both passed at
 7db5dde. The release publishing job was skipped; the 33 uploaded files matched
 the independently built local copy byte-for-byte. GitHub reports zero deployments.
-Cloudflare and GitHub browser sign-in are needed for domain verification.
-No deployment or DNS change has been made.
+GitHub account-level ownership of starbase430.com is now verified after adding
+only its ownership TXT record at Cloudflare. Existing holding-page and mail
+routing are unchanged. The repository custom domain remains unset and GitHub
+reports zero deployments. The exact pending routing/deployment cutover and
+rollback are documented in hosting.md; explicit launch approval is still required.
