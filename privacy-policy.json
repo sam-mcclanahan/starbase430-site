@@ -1,0 +1,36 @@
+{
+  "repository": "sam-mcclanahan/starbase430-site",
+  "releaseRoot": "5eb0ed5d0244d8155df6c9eee9d9b2c17460ca5b",
+  "owner": {
+    "name": "Sam McC",
+    "email": "49823326+sam-mcclanahan@users.noreply.github.com"
+  },
+  "serviceCommitters": [
+    {
+      "name": "GitHub",
+      "email": "noreply@github.com"
+    }
+  ],
+  "syntheticEmails": [
+    "test@example.org",
+    "example@example.invalid"
+  ],
+  "maxFileBytes": 2000000,
+  "maxImageBytes": 256000,
+  "maxImageDimension": 1600,
+  "metadataExceptions": {
+    "src/assets/images/starbase430-88x31.png": "46f222aa48f6599e08a9044278b4011c935e10f2bc6c85da9464ccf5d29e7d32"
+  },
+  "reviewedIcons": {
+    "src/assets/icons/favicon.ico": "dc867d5d5823b7848dcb2a5788efec63f97b78d606f1377117cacd6c8995b71d"
+  },
+  "gitleaks": {
+    "version": "8.30.1",
+    "assets": {
+      "darwin_arm64": "b40ab0ae55c505963e365f271a8d3846efbc170aa17f2607f13df610a9aeb6a5",
+      "darwin_x64": "dfe101a4db2255fc85120ac7f3d25e4342c3c20cf749f2c20a18081af1952709",
+      "linux_arm64": "e4a487ee7ccd7d3a7f7ec08657610aa3606637dab924210b3aee62570fb4b080",
+      "linux_x64": "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb"
+    }
+  }
+}

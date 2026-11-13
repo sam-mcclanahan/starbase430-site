@@ -1,0 +1,35 @@
+name: Source checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    name: Privacy and release checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: .cache/a11y-browsers
+    steps:
+      - name: Check out reviewed change without persistent credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Install Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+      - name: Install checksum-pinned privacy scanner
+        run: npm run setup:privacy -- --no-hooks
+      - name: Install test browser
+        run: npx --no-install playwright install --with-deps --only-shell chromium
+      - name: Run privacy, tests, structure, budgets, and accessibility
+        run: npm run check:all

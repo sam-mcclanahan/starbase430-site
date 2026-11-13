@@ -52,3 +52,23 @@ about the historical repository remains optional and has not been sent.
 Launch countdown: 11/15 complete, 4 remaining. Next is explicit approval to make
 this repository public; hosting, hosted verification, and launch sign-off follow.
 Do not infer any visibility or deployment authorization from the private push.
+
+## Automated privacy milestone, November 13
+
+Added pinned Gitleaks 8.30.1, repository-local staged/push hooks, identity and
+release-root ancestry checks, image/metadata and private-path guards, redacted
+credential scanning, and negative regression fixtures. A read-only Source checks
+workflow independently runs the full suite; it has no deployment or write token.
+Hooks must be explicitly installed in each clone with npm run setup:privacy.
+
+GitHub’s private branch-protection API returned 403 on the current plan. No
+upgrade or visibility change was made; required server-side status enforcement
+is not claimed. CI and local hooks are independent layers, and neither can
+guarantee recognition of every sensitive statement or replace editorial judgment.
+See release-workflow.md for exact coverage, bypass limits, and future configuration.
+
+Local verification of the privacy milestone: 118 tests pass, including 12
+privacy regressions. Approved production/preview structure and hard budgets
+remain unchanged. The source inventory now contains 111 reviewed files.
+The complete local check:all pipeline also passes 144 browser checks and 46 axe
+scans, with zero failures and 42 retained contrast-inconclusive findings.

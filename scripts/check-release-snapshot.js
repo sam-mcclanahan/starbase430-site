@@ -2,12 +2,13 @@ import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
+import {prohibitedPath} from './check-privacy.js';
 import {fileURLToPath} from 'node:url';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const excluded=new Set(['.git','node_modules','_site','.cache','.a11y','coverage','_private']);
 export function checkInventory(actual,approved){
  assert.deepEqual([...actual].sort(),[...approved].sort(),'Unexpected or missing source file: review source publication boundary before updating release-manifest.json');
- for(const file of actual)assert.ok(!/(?:^|\/)(?:\.env(?:\.|$)|_draft-assets|research|review|\.git)(?:\/|$)/.test(file),`Private/archive input: ${file}`);
+ for(const file of actual)assert.ok(!prohibitedPath(file),`Private/archive input rejected`);
 }
 export async function checkRelease(){
  const manifest=JSON.parse(await readFile(path.join(root,'release-manifest.json'),'utf8'));

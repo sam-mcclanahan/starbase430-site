@@ -16,8 +16,11 @@
     "review:pablo-images": "node scripts/review-pablo-images.js",
     "check:a11y": "node scripts/check-accessibility.js",
     "setup:a11y": "PLAYWRIGHT_BROWSERS_PATH=.cache/a11y-browsers playwright install --only-shell chromium",
-    "check:all": "npm test && npm run check:release && npm run check:site && npm run check:budgets && npm run check:a11y",
-    "check:release": "node scripts/check-release-snapshot.js"
+    "check:all": "npm test && npm run check:release && npm run check:privacy && npm run check:site && npm run check:budgets && npm run check:a11y",
+    "check:release": "node scripts/check-release-snapshot.js",
+    "setup:privacy": "node scripts/setup-privacy.js",
+    "check:privacy": "node scripts/check-privacy.js history",
+    "check:staged": "node scripts/check-privacy.js staged"
   },
   "engines": {
     "node": ">=22"

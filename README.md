@@ -13,7 +13,8 @@ been deployed. Historical development and unpublished writing are kept separatel
 Use Node.js 22 or newer and npm:
 
 ```sh
-npm ci
+npm ci --ignore-scripts
+npm run setup:privacy
 npm run dev
 ```
 
@@ -28,7 +29,8 @@ npm run setup:a11y
 npm run check:all
 ```
 
-The test browser is a development dependency, downloaded separately. Browser
+The pinned privacy scanner and test browser are development tools, downloaded
+separately. New clones must run `npm run setup:privacy` to enable local hooks. Browser
 checks build fresh production/preview outputs on loopback, block external requests,
 and write ignored reports under `.a11y/`. They do not deploy or change repository
 visibility. Chromium may require permission to launch in a sandboxed agent session.

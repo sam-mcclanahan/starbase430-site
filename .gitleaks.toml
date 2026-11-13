@@ -1,0 +1,4 @@
+title = "Starbase 430 credential detection"
+[extend]
+useDefault = true
+# No blanket allowlist, baseline, or inline allow-comment bypass.

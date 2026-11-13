@@ -17,3 +17,15 @@ automated checks and agent-owned triage for normal articles; focused human revie
 for changed interactions/shared patterns. Do not require a repeated per-article
 manual checklist. Retain the 100,000-byte preference and 512,000-byte hard limit.
 New source files require review and an update to `release-manifest.json`.
+
+## Mandatory privacy gate
+
+After npm ci, run npm run setup:privacy in each local clone to install the pinned
+scanner and repository-local hooks. Never bypass a failed privacy hook with
+--no-verify or skip a missing scanner. The agent owns investigation; do not ask
+Sam to repeat manual checks. Hooks inspect exact staged blobs and outgoing Git
+commits, identities, destination, ancestry, images, and credentials. CI is an
+independent second check; it runs after upload and cannot undo public exposure.
+Changes to privacy-policy.json, hook/checker code, scanner configuration, or the
+workflow require explicit review. Narrow synthetic exceptions must not become
+blanket test exclusions or allowlists. Keep scanner output redacted.

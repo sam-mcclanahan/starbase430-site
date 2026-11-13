@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+root=$(git rev-parse --show-toplevel)
+node_bin=$(git config --local --get starbase.nodePath || command -v node || true)
+if [ -z "$node_bin" ] || [ ! -x "$node_bin" ]; then
+  echo 'Privacy tools are not configured. Run npm run setup:privacy.' >&2
+  exit 1
+fi
+exec "$node_bin" "$root/scripts/check-privacy.js" push "$@"
