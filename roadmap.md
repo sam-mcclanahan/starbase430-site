@@ -1,6 +1,6 @@
 # Release roadmap
 
-Prepared November 13, 2026. **14/15 active launch gates complete, 1 remaining.**
+Prepared November 13, 2026. **15/15 active launch gates complete, 0 remaining.**
 Original item 8 (library article) is deferred until after launch; original numbers
 remain stable. The private historical repository will remain private. A fresh,
 reviewed repository replaces archive visibility conversion as the source route.
@@ -35,9 +35,10 @@ accessibility/browser review; privacy/rights review through the clean-source rou
     Validated TLS passes all four IPv4 endpoints; HTTP and www redirect to
     https://starbase430.com/. Initial cached HTTP content expired as expected.
     Public launch workflow logs passed credential/contact/path scanning.
-16. [ ] Record final launch sign-off after live verification.
-    The live site is open for Sam’s final look; no additional technical blocker
-    was found in the bounded hosted review.
+16. [x] Record final launch sign-off after live verification.
+    November 13: Sam explicitly approved final launch sign-off after the hosted
+    review. Starbase 430 is publicly released at https://starbase430.com/.
+    Subsequent releases retain the manual publication and approval process.
 
 The initial launch includes three approved Logs. Library/media projects and
 optional IndieWeb expansions remain post-launch. Public-source preparation and

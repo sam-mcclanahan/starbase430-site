@@ -30,8 +30,8 @@ loading, and Tesla drawing/pause/readout behavior. These are hosted smoke checks
 combined with the unchanged release's 122 tests, 144 browser checks, and 46 axe
 scans; they are not a fresh assistive-technology audit or WCAG certification.
 
-Hosting and hosted verification are complete: **14/15 complete, 1 remaining**.
-Sam’s final launch sign-off remains open. Public launch workflow logs passed
+Hosting and hosted verification are complete. Sam explicitly approved the final
+launch sign-off November 13: **15/15 complete, 0 remaining**. Public launch workflow logs passed
 credential/contact/path scanning. Earlier
 preparation checkpoints below describe the state before deployment.
 
