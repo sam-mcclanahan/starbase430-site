@@ -5,6 +5,25 @@ release sources, not a fork or mirror of historical development. Sam explicitly
 approved public source visibility on November 13, 2026. Website deployment
 remains separately gated; the historical repository stays private.
 
+## Outpost navigation release, November 13
+
+Sam approved publishing the reviewed Outpost navigation design.
+The homepage-only Outpost navigation styles frame Previous/Next outpost links
+with green directional edges and a silver-framed IndieWeb Webring center link.
+Controls wrap and stack on narrow screens, retain shared visible keyboard focus
+and external-link notices, and use decorative aria-hidden direction arrows.
+No new image, script, animation, or shared stylesheet bytes are added. These
+design changes have passed local review; deployment is pending the checked release.
+
+Verification: all 123 tests, source-inventory/privacy, production/preview structure,
+and hard-budget checks pass. Chromium 158 passes 144 browser checks and 46 axe
+scans, with zero failures and the 42 established contrast-inconclusive findings.
+The app-browser narrow preview shows all controls; keyboard focus traverses
+Previous outpost, the ring home link, Next outpost, and then the ordinary footer.
+Home totals 24,365 conservative bytes; the optional illustration remains 511,433.
+Publication is authorized for these controls only; no membership or account change
+is included. The final hosted verification is recorded after deployment.
+
 ## IndieWeb membership and homepage preview, November 13
 
 Sam added the reciprocal Starbase 430 URL to his public GitHub profile, then
