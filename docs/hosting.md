@@ -100,6 +100,14 @@ and 11 HTML pages; the largest page is 511,433 bytes.
 
 GitHub Pages is configured for Actions. The github-pages environment requires
 Sam's approval, permits only main, and disables administrator bypass. No
-publication workflow has been dispatched and no DNS record has been changed.
+publish=true run has been dispatched and no DNS record has been changed.
 Domain verification, the canonical custom domain, and first-publication approval
 remain outstanding.
+
+The preparation-only Website release run at checkpoint 7db5dde passed on GitHub:
+https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43424807083
+Its publishing job was skipped. All 33 uploaded files matched the independently
+built local release byte-for-byte; GitHub reported zero deployments. Source checks
+also passed on main. The two browser accounts require sign-in before domain
+verification can continue. No credentials or DNS verification values are stored
+in this repository.

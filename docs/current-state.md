@@ -140,6 +140,8 @@ Preparation checks: 122 tests pass; 144 browser checks and 46 axe scans pass
 with zero confirmed failures and 42 retained inconclusive findings. The source
 inventory is now 115 files. The exact production release contains 33 files and
 11 HTML pages, maximum 511,433 bytes. Nine local static-server routes/resources
-passed independently of GitHub. Hosted CI and a preparation-only workflow run
-will verify the selected main checkpoint before first deployment is considered.
+passed independently of GitHub. Hosted Source checks and preparation-only Website release both passed at
+7db5dde. The release publishing job was skipped; the 33 uploaded files matched
+the independently built local copy byte-for-byte. GitHub reports zero deployments.
+Cloudflare and GitHub browser sign-in are needed for domain verification.
 No deployment or DNS change has been made.

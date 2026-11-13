@@ -27,7 +27,9 @@ accessibility/browser review; privacy/rights review through the clean-source rou
     November 13: GitHub Pages selected as the first host, Cloudflare for DNS.
     Prepared a manually triggered, checked release with Sam approval and
     main-only deployment protection; Pages uses Actions. Independent local
-    release build and static-server smoke checks pass. Domain verification,
+    release build and static-server smoke checks pass. Hosted preparation run
+    43424807083 passed with publishing skipped; all 33 artifact files matched
+    the local build. Domain verification,
     DNS activation, first deployment, HTTPS,
     hosted verification, and launch sign-off remain separate checkpoints.
 15. [ ] Verify the deployed site, RSS, draft exclusion, privacy, and hosted resource sizes.
