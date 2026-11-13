@@ -75,8 +75,9 @@ Force pushes and deletion are blocked. Push reviewed changes to a branch, wait
 for green CI, then use an authorized merge or checked fast-forward to update main.
 There is no additional required reviewer count; do not bypass the status gate.
 Native GitHub secret scanning and secret push protection are enabled alongside
-local Gitleaks and source/privacy checks. Hosting preparation is now authorized; website publication and DNS activation
-remain separately gated. See [hosting](hosting.md).
+local Gitleaks and source/privacy checks. Sam separately approved the first website
+deployment and DNS cutover November 13, 2026. Future source pushes never grant
+publication approval. See [hosting](hosting.md).
 
 ## Prepared website release workflow
 

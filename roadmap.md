@@ -1,6 +1,6 @@
 # Release roadmap
 
-Prepared November 13, 2026. **12/15 active launch gates complete, 3 remaining.**
+Prepared November 13, 2026. **14/15 active launch gates complete, 1 remaining.**
 Original item 8 (library article) is deferred until after launch; original numbers
 remain stable. The private historical repository will remain private. A fresh,
 reviewed repository replaces archive visibility conversion as the source route.
@@ -23,18 +23,21 @@ accessibility/browser review; privacy/rights review through the clean-source rou
     Source checks passed at cc32e7f. Native secret scanning and push protection
     are enabled. Main requires the GitHub Actions Privacy and release checks
     status, including administrators; force pushes and deletion are blocked.
-14. [ ] Configure hosting, repeatable deployment, domain/DNS, and HTTPS.
-    November 13: GitHub Pages selected as the first host, Cloudflare for DNS.
-    Prepared a manually triggered, checked release with Sam approval and
-    main-only deployment protection; Pages uses Actions. Independent local
-    release build and static-server smoke checks pass. Hosted preparation run
-    43424807083 passed with publishing skipped; all 33 artifact files matched
-    the local build. Domain ownership is verified with its isolated TXT record;
-    the holding page and mail routing are unchanged. Canonical domain setup,
-    DNS activation, first deployment, HTTPS,
-    hosted verification, and launch sign-off remain separate checkpoints.
-15. [ ] Verify the deployed site, RSS, draft exclusion, privacy, and hosted resource sizes.
+14. [x] Configure hosting, repeatable deployment, domain/DNS, and HTTPS.
+    November 13: Sam approved the first public deployment and DNS cutover.
+    Website release 43426626231 succeeded at e816120 after protected approval.
+    Domain ownership is verified, canonical/www DNS is configured, certificate
+    issuance succeeded, and HTTPS enforcement is enabled. Mail is unchanged.
+    The independent checked build and manual release process are documented.
+15. [x] Verify the deployed site, RSS, draft exclusion, privacy, and hosted resource sizes.
+    All 33 HTTPS files match the approved build; feed aliases and three full entries
+    pass; five source/private paths return 404. Hosted browser smoke checks pass.
+    Validated TLS passes all four IPv4 endpoints; HTTP and www redirect to
+    https://starbase430.com/. Initial cached HTTP content expired as expected.
+    Public launch workflow logs passed credential/contact/path scanning.
 16. [ ] Record final launch sign-off after live verification.
+    The live site is open for Sam’s final look; no additional technical blocker
+    was found in the bounded hosted review.
 
 The initial launch includes three approved Logs. Library/media projects and
 optional IndieWeb expansions remain post-launch. Public-source preparation and

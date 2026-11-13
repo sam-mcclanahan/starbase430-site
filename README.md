@@ -5,7 +5,8 @@ curiosity, joyful fandom, and optimistic futures. Built with Eleventy, Markdown,
 Nunjucks, npm, and a static green-and-silver space theme.
 
 This public repository starts with a reviewed release snapshot, approved for
-source publication on November 13, 2026. The website has not been deployed.
+source publication on November 13, 2026. The website is hosted at
+[starbase430.com](https://starbase430.com/) on GitHub Pages after separate launch approval.
 Historical development and unpublished writing are kept separately in private storage.
 
 ## Local setup

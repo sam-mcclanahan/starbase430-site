@@ -89,7 +89,7 @@ The learning milestone is complete when the public site actually serves from
 home, not merely when a local preview runs. Avoid introducing a database or
 provider-specific runtime as a prerequisite for reading the site.
 
-## Preparation verification, November 13
+## Preparation verification, November 13 (before deployment)
 
 Local verification passed 122 tests, 144 browser checks, and 46 axe scans with
 zero confirmed failures and the 42 retained contrast-inconclusive findings.
@@ -110,7 +110,7 @@ built local release byte-for-byte; GitHub reported zero deployments. Source chec
 also passed on main. No credentials or DNS verification values are stored
 in this repository.
 
-## Domain verification and pending cutover, November 13
+## Domain verification and planned cutover, November 13 (before deployment)
 
 After Sam signed in, GitHub confirmed starbase430.com as a verified domain on
 his account. Only the account-level GitHub Pages ownership TXT record was added
@@ -136,3 +136,50 @@ records. No wildcard record or home-network exposure is required. If cutover mus
 be rolled back, restore the prior registrar holding-page CNAME and remove the
 new www record; leave mail and ownership verification intact. DNS caches can
 delay either cutover or rollback. HTTPS issuance may require additional time.
+
+## First public deployment, November 13
+
+Sam explicitly approved the DNS cutover and first public deployment in Codex.
+The checked main checkpoint e816120 was deployed by [Website release run 43426626231](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43426626231),
+after the protected github-pages approval. The website is available at
+https://starbase430.com/. Future pushes still run source checks only; subsequent
+publication requires the same manual workflow and approval boundary.
+
+Cloudflare's registrar-managed holding-page record could not be edited directly;
+the parking page was disabled through Registrar settings, then the four planned
+DNS-only A records and DNS-only www CNAME were added. All existing mail records
+and the ownership TXT were preserved. Rollback of the website routing would
+remove the new web records and re-enable the registrar parking page, while
+retaining mail and verification. Do not disable WHOIS privacy or DNS security.
+
+GitHub's certificate covers the apex and www names. HTTPS enforcement is enabled;
+TLS validation passed against all four published IPv4 addresses. Initial edge
+certificate propagation briefly failed validation and resolved without any
+security bypass. The initial cached HTTP homepage response expired normally;
+HTTP and www now both redirect to https://starbase430.com/.
+
+All 33 files fetched over validated HTTPS match the independently built release.
+Five source/private URL probes return 404; no authoring source was deployed.
+RSS aliases match and contain exactly the three approved full entries, with
+first-name creators and retained publication timestamps. The same byte-identical
+resources give these conservative uncompressed page totals:
+
+| Page | Bytes |
+| --- | ---: |
+| Home | 21,713 |
+| About | 85,621 |
+| Links | 22,345 |
+| Colophon | 26,856 |
+| Website article | 26,837 |
+| First Step Epoch | 92,652 |
+| Pablo retrospective | 98,724 |
+| Optional Pablo interactive page | 511,433 |
+
+Every ordinary reading page stays below the 100,000-byte preference. The optional
+interactive page passes the 512,000-byte ceiling with only 567 bytes remaining.
+Live browser smoke checks verified focus, article navigation, external-link
+conventions, the timeline, AVIF loading, and Tesla drawing/pause controls. These
+supplement existing local/CI accessibility evidence rather than repeat its full
+manual review. Public deployment/source-check logs also passed the pinned
+credential scanner and personal contact/path checks. See current-state.md and
+the roadmap for final sign-off status.

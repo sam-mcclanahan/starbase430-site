@@ -5,6 +5,36 @@ release sources, not a fork or mirror of historical development. Sam explicitly
 approved public source visibility on November 13, 2026. Website deployment
 remains separately gated; the historical repository stays private.
 
+## Latest hosting checkpoint, November 13
+
+Sam explicitly approved the first public deployment and DNS cutover. GitHub Pages
+release [43426626231](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43426626231)
+succeeded at e816120, including the required protected-environment approval.
+The website is live at https://starbase430.com/. The historical repository remains
+private; preserved authoring/recovery worktrees are unchanged.
+
+Cloudflare retains registration and DNS. Its managed parking page is disabled;
+four DNS-only GitHub Pages A records serve the apex, and www points to
+sam-mcclanahan.github.io. Account-level ownership is verified. Existing mail
+records are unchanged. GitHub issued the certificate for both names and HTTPS
+enforcement is enabled. Validated TLS passed all four IPv4 addresses; HTTP and
+www now redirect to https://starbase430.com/. The initial cached HTTP response
+expired normally.
+
+All 33 HTTPS files match the checked production build byte-for-byte. The three
+full-entry feed items and identical compatibility aliases retain original dates
+and first-name authors. Five source/private paths return 404. Live app-browser
+checks confirmed homepage keyboard focus, internal chapter navigation, external
+link target/explanation conventions, timeline rendering, working-session AVIF
+loading, and Tesla drawing/pause/readout behavior. These are hosted smoke checks,
+combined with the unchanged release's 122 tests, 144 browser checks, and 46 axe
+scans; they are not a fresh assistive-technology audit or WCAG certification.
+
+Hosting and hosted verification are complete: **14/15 complete, 1 remaining**.
+Sam’s final launch sign-off remains open. Public launch workflow logs passed
+credential/contact/path scanning. Earlier
+preparation checkpoints below describe the state before deployment.
+
 Approved launch entries are website development, Pablo, and First Step Epoch.
 Their completion dates, routes, bylines, and content are retained. Unpublished
 library/media drafts, comparison assets, internal notes, and old PR/Git history
@@ -25,8 +55,7 @@ plus dated Pablo assistive-technology evidence. This is bounded evidence, not
 WCAG certification. Snapshot-specific automated results are recorded in the
 roadmap after verification; do not reuse old counts as a new pass.
 
-Remaining launch work: configure hosting and domain/HTTPS, verify the deployed site,
-and obtain final launch sign-off. The historical private repository stays private.
+Remaining launch work is tracked in the latest checkpoint and roadmap. The historical private repository stays private.
 
 ## Verified release checkpoint, November 13
 

@@ -23,7 +23,8 @@
   drafts/research and historic development out of this repository and Git history.
 - Public source was explicitly approved November 13, 2026. Keep the historical
   repository private. GitHub Pages is the chosen first host; Cloudflare retains
-  domain registration and DNS. Deployment and DNS activation remain separately gated.
+  domain registration and DNS. Sam separately approved the first deployment and
+  DNS cutover November 13, 2026. Future releases remain manually approved.
 - Retain article completion dates through launch rather than resetting all entries
   to deployment day. Hosting and source publication are separate checkpoints.
 
