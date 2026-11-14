@@ -66,10 +66,13 @@ public repository; this list carries forward task summaries only.
   the stale About description, added the live URL and discovery topics, and
   verified existing repository and deployment protections. Prepared a visitor-
   oriented README and clarified historical launch documentation for source review.
-- [ ] Review enabling GitHub's dependency graph, Dependabot alerts, and private
-  vulnerability reporting. The November 14 settings-page review confirmed all
-  three are disabled; no setting was changed during presentation cleanup.
-  Keep changes to security settings separate from presentation cleanup.
+- [x] Review and enable GitHub's dependency graph, Dependabot alerts, and private
+  vulnerability reporting. November 14: Sam approved repository-only enablement;
+  settings persisted after reload, Security alerts subscription was saved, and
+  existing email delivery was verified. Added SECURITY.md and its source inventory
+  entry. Automatic dependency submission and dependency-update PRs remain off;
+  the existing low-impact development-alert dismissal preset is unchanged.
+  Website deployment remains separately approved and was not triggered.
 - [ ] **Review FSE time data before January 1, 2027.** The current publication
   formatter deliberately rejects dates on or after that boundary. Review IERS
   sources, record the next supported interval, and independently verify offsets

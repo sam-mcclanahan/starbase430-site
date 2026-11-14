@@ -90,6 +90,9 @@ with the affected URL, steps to reproduce, and relevant browser details. Keep
 credentials, personal information, and private writing out of public reports.
 Discuss substantial changes before opening a pull request.
 
+For suspected security vulnerabilities, follow [the security policy](SECURITY.md)
+and use GitHub's private reporting form rather than a public issue.
+
 For code contributions, follow [the repository instructions](AGENTS.md), install
 the privacy hooks, and run the documented checks. Source changes run CI;
 publishing the website is a separately approved, manual action.
