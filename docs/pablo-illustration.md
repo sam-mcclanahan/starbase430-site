@@ -50,4 +50,5 @@ before/after browser comparisons at widths of 960 and 320 pixels found identical
 pixels for initial, Reset, reduced-motion completion, CSS-off, and JavaScript-off
 views, with no script errors. Private comparison artifacts remain outside this
 release repository. Full-suite validation is recorded in current status. These
-local changes await Sam's preview review; no website deployment is authorized.
+changes were approved by Sam for source integration on November 14. Website
+deployment remains a separate approval and is unchanged.

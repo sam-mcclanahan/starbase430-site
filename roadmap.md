@@ -94,11 +94,11 @@ public repository; this list carries forward task summaries only.
   verified. Do not assume the June leap-second decision. Follow
   [FSE maintenance](docs/fse-time-standard.md#when-updating-the-data).
 - [x] Create more room below the Pablo illustration's hard size limit.
-  November 14 local preview: lossless coordinate encoding and removal of the
+  November 14 approved preview: lossless coordinate encoding and removal of the
   duplicate initial portrait reduced the total from 511,433 to 376,545 bytes,
   leaving 135,455 below the unchanged 512,000-byte ceiling. All approved points,
   static exports, controls, and accessibility alternatives are preserved.
-  Before/after visual checks match; Sam's preview review remains pending.
+  Before/after visual checks match; Sam approved the preview and checked source integration.
   Deployment remains unchanged. See [illustration maintenance](docs/pablo-illustration.md#lossless-size-optimization-november-14-2026).
 
 Use the existing automated privacy, accessibility, structure, and budget checks

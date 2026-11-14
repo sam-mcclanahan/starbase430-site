@@ -208,9 +208,9 @@ Fetch failures or absence do not establish rejection.
   January 1 and 8, 2027. Success requires actual indexed Starbase 430 pages.
   Domain-information pages, screenshots, and pending/closed requests do not count.
 
-## Local Pablo optimization awaiting preview approval
+## Pablo optimization approved for source integration
 
-November 14: the local `codex/pablo-lossless-size` branch implements integer-delta
+November 14: the reviewed `codex/pablo-lossless-size` branch implements integer-delta
 coordinate encoding and generates the initial portrait from the same decoded
 points. The conservative interactive-page total is now 376,545 bytes, down from
 511,433, saving 134,888 and leaving 135,455 below the unchanged 512,000-byte
@@ -228,8 +228,10 @@ Of the 33 production files, only the optimized embedded HTML changed; all other
 files match the baseline. This is automated change-based verification, not a
 new WCAG conformance or assistive-technology certification.
 
-The local preview is running on port 8081 for Sam's review. These changes have
-not been pushed, merged, or deployed; the live site remains at `e10826c`.
+Sam approved the local preview on November 14 and authorized pushing the source,
+opening a PR, and merging after required checks pass. The preview remains on
+port 8081. Source integration does not authorize deployment; the live site
+remains at `e10826c`.
 See [illustration maintenance](pablo-illustration.md#lossless-size-optimization-november-14-2026).
 
 ## Next work and safeguards
@@ -251,8 +253,9 @@ identical to the pre-change production baseline. Timeline regeneration changed
 no article content; the original 94 ERFA vectors and historical offset segments
 remain unchanged. These checks do not claim WCAG certification.
 
-Review the local illustration optimization before a separately approved merge
-or deployment. Recheck FSE data after the January 2027 Bulletin C and before
+The illustration optimization is approved for checked source integration;
+website deployment still requires separate approval. Recheck FSE data after
+the January 2027 Bulletin C and before
 the July 1, 2027 cutoff; the June decision is not assumed. Preserve the chosen epoch, existing dates, and resource thresholds.
 
 The roadmap retains deferred content, Training concepts, a home-network mirror,
