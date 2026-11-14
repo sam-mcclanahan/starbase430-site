@@ -190,6 +190,17 @@ test("frame resizes through its HTML height attribute and ignores untrusted mess
 });
 
 
+test("compact Tesla encoding preserves all approved coordinates and the initial SVG artwork", () => {
+  const sim = simulation();
+  const approved = JSON.parse(readFileSync(new URL("../scripts/tesla-strokes.json", import.meta.url), "utf8"));
+  assert.deepEqual(sim.inspect("TESLA_STROKES"), approved);
+  assert.equal(approved.length, 705);
+  assert.equal(approved.reduce((count, stroke) => count + stroke.length, 0), 6761);
+  const staticSvg = readFileSync(asset("polargraph.svg"), "utf8");
+  const initialInk = staticSvg.match(/<path\b[^>]*\bid="ink"[^>]*\bd="([^"]*)/)[1];
+  assert.equal(sim.element("#ink").attributes.d, initialInk, "initial portrait matches the approved SVG including coordinate rounding");
+});
+
 test("Tesla keeps pen-up travel unmarked and both drawing modes finish the same portrait", () => {
   const animated = simulation(), reduced = simulation(true);
   const strokes = animated.inspect("TESLA_STROKES");
