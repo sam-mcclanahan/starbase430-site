@@ -26,10 +26,28 @@ the historical repository remains private and main still requires the GitHub
 Actions check, including administrators, with force pushes/deletion blocked.
 Secret scanning and push protection remain enabled. Pages retains the canonical
 domain, enforced HTTPS, and the main-only protected manual deployment route.
-The settings-page review also confirmed the dependency graph, Dependabot alerts,
-and private vulnerability reporting are disabled; their enablement is a separate
-backlog review. These metadata changes do not deploy the website. README and maintenance-document
-updates are prepared for source review, alongside the community-status updates.
+The initial settings-page review found the dependency graph, Dependabot alerts,
+and private vulnerability reporting disabled; the subsequently approved
+configuration is recorded below. These metadata changes do not deploy the website.
+README and maintenance-document updates, alongside community-status updates,
+were merged in [PR #4](https://github.com/sam-mcclanahan/starbase430-site/pull/4).
+
+November 14 security configuration: Sam approved enabling the dependency graph,
+Dependabot alerts, and private vulnerability reporting for this public repository
+only. All three were enabled and verified after reloading GitHub's settings.
+Automatic dependency submission and Dependabot security-update PRs remain off;
+no version-update configuration was added. The existing GitHub preset that
+dismisses low-impact development-dependency alerts remains unchanged and does
+not create update PRs. The initial open-alert query returned zero; this is not
+a guarantee against future findings or a substitute for reviewing dismissed alerts.
+
+The repository's custom watch subscription now includes Security alerts.
+Existing account settings deliver watching/custom notifications and Dependabot
+alerts on GitHub and by email; no address is published here. This verifies
+configuration, not delivery of a fabricated test report. [SECURITY.md](../SECURITY.md)
+directs sensitive security concerns to the private form and ordinary bugs to
+Issues. Local hooks, branch protection, secret scanning, push protection, and
+manual website deployment remain in place; no website release was dispatched.
 
 Fresh November 14 checks for that documentation review passed 123 tests, the
 115-file source inventory, privacy-history checks, 11 production/11 preview

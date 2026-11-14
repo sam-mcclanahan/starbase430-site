@@ -79,6 +79,26 @@ local Gitleaks and source/privacy checks. Sam separately approved the first webs
 deployment and DNS cutover November 13, 2026. Future source pushes never grant
 publication approval. See [hosting](hosting.md).
 
+## Dependency alerts and private security reports
+
+On November 14, Sam approved enabling the dependency graph, Dependabot alerts,
+and private vulnerability reporting for this repository. The graph reads the
+existing public manifests and lockfile; automatic dependency submission remains
+disabled. Dependabot security-update PRs are disabled, and no version-update
+configuration is installed. Review and implement dependency fixes deliberately
+through the existing privacy, testing, and protected-branch gates.
+
+GitHub's existing low-impact development-dependency dismissal preset remains
+enabled. Dismissed alerts can still require review; an empty open-alert list is
+not proof that every dependency is safe. No custom rule creates update PRs.
+
+The maintainer's custom repository subscription includes Security alerts, and
+account-level watching/custom and Dependabot email delivery were verified.
+Recheck those preferences when changing maintainers or notification settings.
+[SECURITY.md](../SECURITY.md) provides the private reporting route without exposing
+a contact email. Keep report details private during triage and review any public
+advisory separately; private reporting is not an automatic publication step.
+
 ## Website release workflow
 
 Website release is separate from the read-only Source checks workflow. It runs
