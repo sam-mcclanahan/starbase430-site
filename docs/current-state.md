@@ -26,7 +26,9 @@ the historical repository remains private and main still requires the GitHub
 Actions check, including administrators, with force pushes/deletion blocked.
 Secret scanning and push protection remain enabled. Pages retains the canonical
 domain, enforced HTTPS, and the main-only protected manual deployment route.
-These metadata changes do not deploy the website. README and maintenance-document
+The settings-page review also confirmed the dependency graph, Dependabot alerts,
+and private vulnerability reporting are disabled; their enablement is a separate
+backlog review. These metadata changes do not deploy the website. README and maintenance-document
 updates are prepared for source review, alongside the community-status updates.
 
 Fresh November 14 checks for that documentation review passed 123 tests, the

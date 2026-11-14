@@ -66,9 +66,9 @@ public repository; this list carries forward task summaries only.
   the stale About description, added the live URL and discovery topics, and
   verified existing repository and deployment protections. Prepared a visitor-
   oriented README and clarified historical launch documentation for source review.
-- [ ] Review enabling GitHub Dependabot alerts and a private vulnerability-reporting
-  route. The November 14 audit found Dependabot alerts disabled; it could not
-  verify private vulnerability reporting with the current CLI permissions.
+- [ ] Review enabling GitHub's dependency graph, Dependabot alerts, and private
+  vulnerability reporting. The November 14 settings-page review confirmed all
+  three are disabled; no setting was changed during presentation cleanup.
   Keep changes to security settings separate from presentation cleanup.
 - [ ] **Review FSE time data before January 1, 2027.** The current publication
   formatter deliberately rejects dates on or after that boundary. Review IERS
