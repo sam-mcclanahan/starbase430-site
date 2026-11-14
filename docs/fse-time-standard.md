@@ -1,9 +1,9 @@
 # First Step Epoch: time standard and maintenance
 
 Accepted November 8, 2026, following Sam's explicit request to count elapsed SI
-seconds on TAI. This supersedes the earlier POSIX-based calculation. The site remains private and
-the explanatory article was approved for release builds on November 12, 2026.
-Public deployment remains deferred.
+seconds on TAI. This supersedes the earlier POSIX-based calculation. The
+explanatory article was approved for release builds on November 12, 2026 and
+published with the separately approved website launch on November 13, 2026.
 
 Display unit updated November 12, 2026 at Sam’s request: divide elapsed SI
 seconds by 1,000,000 and display six decimal places. This changes the scale of
@@ -94,8 +94,8 @@ and [SOFA](https://www.iausofa.org/current-software).
 ## Timeline regeneration and early dates
 
 Run `npm run update:fse-timeline` after reviewing conversion/data changes. The
-script regenerates only the marked timeline block from the 25 sourced records
-in `docs/aea-timeline-research.json`; prose outside that block is preserved.
+script regenerates only the marked timeline block from the twenty selected
+records in `data/fse-timeline.json`; prose outside that block is preserved.
 Each event must have a documented calendar day. Titles and source notes identify
 publication, announcement, authorization, and event dates. No month/year-only
 milestones remain. Timeline cards put FSE first and the calendar date plus any

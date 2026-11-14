@@ -1,13 +1,27 @@
 # Starbase 430
 
+<a href="https://starbase430.com/"><img src="src/assets/icons/favicon.svg" width="64" height="64" alt="Visit Starbase 430"></a>
+
 Source for Sam and Brea’s independent-web workshop: maker projects shaped by
 curiosity, joyful fandom, and optimistic futures. Built with Eleventy, Markdown,
 Nunjucks, npm, and a static green-and-silver space theme.
 
-This public repository starts with a reviewed release snapshot, approved for
-source publication on November 13, 2026. The website is hosted at
-[starbase430.com](https://starbase430.com/) on GitHub Pages after separate launch approval.
-Historical development and unpublished writing are kept separately in private storage.
+**Live at [starbase430.com](https://starbase430.com/)** since November 13, 2026.
+[Read the Mission Log](https://starbase430.com/log/) ·
+[RSS feed](https://starbase430.com/feed.xml) ·
+[About Sam and Brea](https://starbase430.com/about/) ·
+[Colophon](https://starbase430.com/colophon/)
+
+The site uses local assets and system fonts, with no analytics or advertising.
+Reading and navigation work without JavaScript. The separately linked Pablo
+simulation uses optional JavaScript and includes static and written alternatives.
+
+Start with [Pablo the Polargraph](https://starbase430.com/log/pablo-the-polargraph/),
+[building for the small web](https://starbase430.com/log/building-starbase-430-for-the-small-web/),
+or [First Step Epoch](https://starbase430.com/log/first-step-epoch/).
+
+This public repository contains reviewed source with independent Git history.
+Historical development and unpublished writing remain in private storage.
 
 ## Local setup
 
@@ -22,8 +36,8 @@ npm run dev
 Eleventy prints the local preview URL. `npm run build` generates `_site/`.
 `npm run build:release` creates a fresh, checked production copy in
 `.cache/release-site/`, independently of GitHub or a hosting credential.
-Reading and navigation need no JavaScript; Pablo’s separately linked interactive
-illustration uses optional JavaScript and has static and written alternatives.
+The npm package is marked `private` to prevent accidental npm publication;
+the GitHub source repository is public.
 
 ## Checks
 
@@ -38,10 +52,20 @@ checks build fresh production/preview outputs on loopback, block external reques
 and write ignored reports under `.a11y/`. They do not deploy or change repository
 visibility. Chromium may require permission to launch in a sandboxed agent session.
 
-Individual commands: `npm test`, `npm run check:release`, `npm run check:site`,
+Individual commands: `npm test`, `npm run check:release`, `npm run check:privacy`, `npm run check:site`,
 `npm run check:budgets`, and `npm run check:a11y`. Conservative uncompressed page
 accounting warns above 100,000 bytes and fails above 512,000 bytes; it counts both
 image alternatives and differs from browser-selected resource measurements.
+
+## Finding your way around
+
+| Directory | Contents |
+| --- | --- |
+| `src/` | Markdown articles, page templates, shared styles, and local assets. |
+| `data/` | Reviewed exploration-timeline data. |
+| `scripts/` | Builds, image processing, privacy checks, and accessibility checks. |
+| `test/` | Automated tests and synthetic fixtures. |
+| `docs/` | Maintenance instructions, project goals, and provenance. |
 
 ## Maintenance
 
@@ -57,6 +81,18 @@ image alternatives and differs from browser-selected resource measurements.
 `data/fse-timeline.json` dataset. `npm run build:favicons` regenerates icons.
 `node scripts/build-pablo-tesla.js` rebuilds the approved illustration exports.
 Review generated changes and page sizes before committing them.
+
+## Bugs and contributions
+
+This is a personal website, maintained by Sam and Brea. If you find a broken
+link or a reproducible bug, [open an issue](https://github.com/sam-mcclanahan/starbase430-site/issues)
+with the affected URL, steps to reproduce, and relevant browser details. Keep
+credentials, personal information, and private writing out of public reports.
+Discuss substantial changes before opening a pull request.
+
+For code contributions, follow [the repository instructions](AGENTS.md), install
+the privacy hooks, and run the documented checks. Source changes run CI;
+publishing the website is a separately approved, manual action.
 
 ## License and content
 

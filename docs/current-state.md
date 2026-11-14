@@ -1,226 +1,164 @@
-# Current release-source state
+# Current project state
 
-Prepared November 13, 2026. This is a new Git repository containing reviewed
-release sources, not a fork or mirror of historical development. Sam explicitly
-approved public source visibility on November 13, 2026. Website deployment
-remains separately gated; the historical repository stays private.
+Updated November 14, 2026. Verification dates and scope are stated below;
+pending community submissions have not been rechecked. Accepted requirements live in
+[project goals](project-goals.md); remaining work lives in the
+[roadmap](../roadmap.md#post-launch-backlog).
 
-## Outpost navigation release, November 13
+## Published website and source
 
-Sam approved publishing the reviewed Outpost navigation design.
-The homepage-only Outpost navigation styles frame Previous/Next outpost links
-with green directional edges and a silver-framed IndieWeb Webring center link.
-Controls wrap and stack on narrow screens, retain shared visible keyboard focus
-and external-link notices, and use decorative aria-hidden direction arrows.
-No new image, script, animation, or shared stylesheet bytes are added. These
-design changes have passed local review; deployment is pending the checked release.
+- Website: https://starbase430.com/; **15/15 launch gates complete**.
+- Public release source: `sam-mcclanahan/starbase430-site`, created from a
+  reviewed snapshot with independent Git history. The historical repository,
+  unpublished writing, masters, research, and recovery worktrees remain private.
+- Latest deployed source: `e10826c`, the reviewed Outpost navigation release.
+  Documentation-only commits after it do not change the deployed website.
+- GitHub Pages hosts the static site; Cloudflare retains registration and DNS.
+  HTTPS is enforced; HTTP and www redirect to the canonical HTTPS apex.
+- Source pushes run checks only. Future website publication requires separate
+  authorization, the manually dispatched release workflow, and its protected
+  deployment approval. See [hosting](hosting.md) and [release workflow](release-workflow.md).
 
-Verification: all 123 tests, source-inventory/privacy, production/preview structure,
-and hard-budget checks pass. Chromium 158 passes 144 browser checks and 46 axe
-scans, with zero failures and the 42 established contrast-inconclusive findings.
-The app-browser narrow preview shows all controls; keyboard focus traverses
-Previous outpost, the ring home link, Next outpost, and then the ordinary footer.
-Home totals 24,365 conservative bytes; the optional illustration remains 511,433.
-Publication is authorized for these controls only; no membership or account change
-is included. The final hosted verification is recorded after deployment.
+November 14 public repository review: corrected the stale About description,
+added the canonical website URL, and set relevant Eleventy, IndieWeb, Small Web,
+maker-project, static-site, personal-website, and accessibility topics. Verified
+the historical repository remains private and main still requires the GitHub
+Actions check, including administrators, with force pushes/deletion blocked.
+Secret scanning and push protection remain enabled. Pages retains the canonical
+domain, enforced HTTPS, and the main-only protected manual deployment route.
+The settings-page review also confirmed the dependency graph, Dependabot alerts,
+and private vulnerability reporting are disabled; their enablement is a separate
+backlog review. These metadata changes do not deploy the website. README and maintenance-document
+updates are prepared for source review, alongside the community-status updates.
 
-## IndieWeb membership and homepage preview, November 13
+Fresh November 14 checks for that documentation review passed 123 tests, the
+115-file source inventory, privacy-history checks, 11 production/11 preview
+structure checks, all hard budgets, 144 Chromium checks, and 46 axe scans.
+There were zero confirmed failures and the 42 established contrast-inconclusive
+findings; this is not a new conformance or screen-reader certification. The
+independent release build contains 33 files, and website/tooling sources are
+unchanged from the deployed checkpoint. All 34 local documentation link targets
+exist and all eight website links in the revised README returned HTTP 200.
+The locked dependency audit reported zero known npm advisories. The local
+test browser was restored in ignored cache; no deployment was performed.
 
-Sam added the reciprocal Starbase 430 URL to his public GitHub profile, then
-approved proceeding after the terms and Code of Conduct review. GitHub public-data
-authorization succeeded through IndieLogin. The authenticated webring dashboard
-reports ACTIVE, and its profile refresh imported the approved homepage h-card.
-No wiki contribution, event participation, or additional account scope was used.
+## Current content and identity
 
-The local homepage now prepares the dashboard-provided Previous / IndieWeb
-Webring / Next links using ordinary accessible HTML, existing styles, and the
-standard external-link notice. Geekring remains pending and is excluded from
-this membership section. These navigation changes are not yet published, and
-the webring's link check must run after deployment before claiming the public
-homepage is fully connected. No membership identifier or secret is in source.
+Three approved Logs are published: website development, Pablo the Polargraph,
+and First Step Epoch. Their original completion dates and first-name bylines
+are retained. Library/media drafts remain in private authoring storage.
 
-## Homepage identity release, November 13
+The canonical full-entry feed is `/feed.xml`, newest 20, with byte-identical
+`/log/feed.xml` and `/projects/feed.xml` compatibility copies. Creators use first
+names without email addresses. FSE labels link to the explanatory article and
+use elapsed TAI SI seconds in megaseconds with six decimal places.
 
-Sam approved publishing the homepage h-card and GitHub rel="me" link while
-holding the Webrings section until the first active membership. The homepage
-identifies Starbase 430 with its canonical URL and approved description, and
-links visibly to Sam on GitHub. Existing external-link accessibility behavior
-is retained. No email, new image, script, profile change, or webring enrollment
-is included. Homepage-only styling does not increase other pages' resources.
-At this release checkpoint the reciprocal GitHub profile link and domain sign-in
-were still pending; the subsequent membership checkpoint above records completion.
-The earlier pending-status Webrings draft stays outside the release sources. Source checks and publication verification are recorded below
-when completed.
+The homepage has a representative h-card for Starbase 430, its canonical URL,
+and approved description. Its visible Sam on GitHub link retains `rel="me"`;
+Sam's public GitHub profile links back to the site. Reciprocal domain sign-in
+through IndieLogin succeeded with public-data-only GitHub authorization.
 
-## Latest hosting checkpoint, November 13
+The active IndieWeb Webring uses homepage Previous outpost / IndieWeb Webring /
+Next outpost links. The reviewed Outpost styling has green directional edges,
+a silver center control, responsive wrapping/stacking, visible keyboard focus,
+and decorative aria-hidden arrows. Styles load on Home only. Ordinary reading
+and navigation require no JavaScript. Geekring is excluded until acceptance.
 
-Sam explicitly approved the first public deployment and DNS cutover. GitHub Pages
-release [43426626231](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43426626231)
-succeeded at e816120, including the required protected-environment approval.
-The website is live at https://starbase430.com/. The historical repository remains
-private; preserved authoring/recovery worktrees are unchanged.
+The static CSS nebula/starfield, system fonts, original identity assets, privacy
+goals, and separate MIT software/content rights remain in effect. Pablo's
+optional interactive page retains keyboard, slider, dragging, drawing,
+reduced-motion, written, PNG, and SVG alternatives.
 
-Cloudflare retains registration and DNS. Its managed parking page is disabled;
-four DNS-only GitHub Pages A records serve the apex, and www points to
-sam-mcclanahan.github.io. Account-level ownership is verified. Existing mail
-records are unchanged. GitHub issued the certificate for both names and HTTPS
-enforcement is enabled. Validated TLS passed all four IPv4 addresses; HTTP and
-www now redirect to https://starbase430.com/. The initial cached HTTP response
-expired normally.
+## Completed release checkpoints
 
-All 33 HTTPS files match the checked production build byte-for-byte. The three
-full-entry feed items and identical compatibility aliases retain original dates
-and first-name authors. Five source/private paths return 404. Live app-browser
-checks confirmed homepage keyboard focus, internal chapter navigation, external
-link target/explanation conventions, timeline rendering, working-session AVIF
-loading, and Tesla drawing/pause/readout behavior. These are hosted smoke checks,
-combined with the unchanged release's 122 tests, 144 browser checks, and 46 axe
-scans; they are not a fresh assistive-technology audit or WCAG certification.
+| Change | Main commit | Successful Website release |
+| --- | --- | --- |
+| First public launch | `e816120` | [43426626231](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43426626231) |
+| Homepage h-card and GitHub identity link | `6f971fe` | [43486294332](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43486294332) |
+| Active IndieWeb membership navigation | `89593ba` | [43490978466](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43490978466) |
+| Reviewed Outpost navigation styling | `e10826c` | [43498505433](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43498505433) |
 
-Hosting and hosted verification are complete. Sam explicitly approved the final
-launch sign-off November 13: **15/15 complete, 0 remaining**. Public launch workflow logs passed
-credential/contact/path scanning. Earlier
-preparation checkpoints below describe the state before deployment.
+All checkpoints above were approved separately. Final launch sign-off was
+recorded at `9b70326`. Earlier preparation, privacy, and domain-cutover history
+remains in Git and the focused hosting/release documents.
 
-Approved launch entries are website development, Pablo, and First Step Epoch.
-Their completion dates, routes, bylines, and content are retained. Unpublished
-library/media drafts, comparison assets, internal notes, and old PR/Git history
-are outside this repository. The first release requires three approved Logs.
+At the November 13 Outpost checkpoint, all 33 live HTTPS files matched the
+independent checked production build. Both ring directions redirected to
+neighboring member sites with the public homepage referrer. The membership
+release also passed the ring's own live link check and public-directory review.
 
-The canonical full-entry feed is `/feed.xml`, newest 20, with identical copies
-at `/log/feed.xml` and `/projects/feed.xml`. Authors use first names and no email.
-Shared FSE labels link to the approved explanatory article. FSE uses elapsed
-TAI SI seconds, with reviewed historical UTC offsets and a fixed lunar epoch.
+Recorded local verification for the reviewed design: 123 tests, 144 Chromium
+browser checks, and 46 axe scans, with zero failures and the 42 established
+contrast-inconclusive findings. Privacy, the 115-file release inventory, fresh
+production/preview structure checks (11 HTML pages each), and hard budgets
+passed. Required hosted CI and release checks also passed. App-browser review
+confirmed narrow layout and keyboard traversal through all three ring controls
+and out to the footer. These are dated observations, not WCAG certification or
+a fresh assistive-technology review.
 
-The static CSS nebula/starfield is shared by all pages. Ordinary reading and
-navigation need no JavaScript. The optional Pablo illustration retains keyboard,
-slider, dragging, animation, reduced-motion, text, PNG, and SVG alternatives.
+Current conservative resource totals at that checkpoint: Home **24,365 bytes**;
+optional Pablo illustration **511,433 bytes**, leaving **567 bytes** below the
+512,000-byte hard ceiling. These generated-file totals differ from Firefox's
+browser-selected uncompressed resource measurements.
 
-The prior representative accessibility review covered Chromium automation,
-contrast triage, native Firefox focus/navigation/disclosures and 200%/400% zoom,
-plus dated Pablo assistive-technology evidence. This is bounded evidence, not
-WCAG certification. Snapshot-specific automated results are recorded in the
-roadmap after verification; do not reuse old counts as a new pass.
+## Community submissions and membership
 
-Remaining launch work is tracked in the latest checkpoint and roadmap. The historical private repository stays private.
+Status below reflects recorded submissions and checks through November 14. Submission,
+archive appearance, crawl scheduling, indexing, and membership are distinct.
 
-## Verified release checkpoint, November 13
+| Destination | Recorded status | Next confirmation |
+| --- | --- | --- |
+| [IndieWeb Webring](https://xn--sr8hvo.ws/directory) | Active, public profile listed, homepage links published, ring link check passed. | Maintain links and public identity when changing the homepage. |
+| [Tech Makers](https://webring.stavros.io/) | [Application PR #5](https://github.com/skorokithakis/webring/pull/5) submitted November 13 with site URL, RSS, and AI-assistance disclosure; acceptance pending. GitHub subscription and existing participating email/in-app delivery verified. | Monitor PR comments and state. A merge requires live-directory verification before membership links; closure without merge requires reading the explanation. Review December 13 if unanswered; no reminder or polling job was created. |
+| [Galactic Webring](https://darkosparko.nekoweb.org/webrings/galactic-webring/) | Declined due to the maintainer's AI-assistance expectations after reviewing the site. Response reviewed November 14, following Sam's November 13 eligibility inquiry. | Closed; no application or artwork work is planned. Static HTML participation was not answered. The private email and headers remain outside this repository. |
+| [512KB Club](https://512kb.club/) | Submitted; acceptance unconfirmed. The original archive entry had no visible patch body. The corrected v2 was self-tested with explicit plain-text MIME headers and resent successfully. | Confirm v2 archive body separately if needed; membership requires an actual official site listing. |
+| [Geekring](https://geekring.net/list.txt) | Application receipt confirmed; acceptance unconfirmed. | Find our domain and assigned site number in the public membership list before adding member links. |
+| [Marginalia Search](https://marginalia-search.com/) | Both hostnames were unknown at the pre-submission check. [Crawl request #842](https://github.com/MarginaliaSearch/submit-site-to-marginalia-search/issues/842) was submitted. | Confirm actual indexed pages; an issue closure or crawl-list entry alone is insufficient. |
 
-The candidate uses an independent npm installation and contains 111 reviewed
-source files. All 118 tests pass, including 12 privacy regressions, synthetic
-draft/asset isolation, and source-inventory rejection checks. The browser suite passes 144 checks and 46
-axe scans with zero confirmed failures; 42 repeated contrast-inconclusive scan
-results retain the established shared-pattern triage. Structure checks pass 11
-production and 11 preview HTML pages. No real private drafts are included.
+The submitted 512KB Club measurement was Sam's Firefox 160.0 measurement on
+November 13 at 10:48 AM EST: **21.11 kB, 4 requests**, cache disabled and page
+fully scrolled. It predates the homepage identity and ring additions; retain it
+as historical evidence rather than presenting it as a current measurement.
 
-Compatible transitive patches update brace-expansion to 1.1.22 and markdown-it
-to 14.3.3; npm reports zero known advisories at snapshot verification. The initial
-snapshot preserved all 33 generated production files byte-for-byte; the subsequent
-Linux timeline correction changes one card anchor without changing article copy.
-The heaviest page remains
-the optional illustration at 511,433 bytes, leaving 567 below the hard ceiling.
+Membership secrets, email credentials, raw mail headers, and private review
+artifacts remain outside the public repository. Do not copy them into status
+notes, issues, or source. No new submission or follow-up is authorized by this table.
 
-The GitHub candidate is `sam-mcclanahan/starbase430-site`; its initial history
-contains only the reviewed snapshot, with the approved public Git identity.
-It was kept private until Sam’s explicit November 13 approval. No historic branch,
-tag, PR, stash, or old commit parent is
-imported. The separate archive’s old hosted references remain private and are
-no longer a dependency of this source-publication route. Support correspondence
-about the historical repository remains optional and has not been sent.
+November 13: Sam added becoming more active in the Fediverse as a post-launch
+goal, using the existing Mastodon account for project sharing and conversation
+at a sustainable pace. Fediring membership is deferred; the prepared eligibility
+inquiry was not sent. No posts, profile changes, or automation were performed.
+See the [community backlog](../roadmap.md#community-and-discovery).
 
-Launch countdown: 12/15 complete, 3 remaining. Next is separately authorized
-hosting/domain/HTTPS setup, followed by hosted verification and launch sign-off.
+Future inquiries follow the [submission guidance](../roadmap.md#future-submission-guidance):
+check workflow eligibility early, disclose assistance accurately, and distinguish
+documentation assistance from how a project was built. An unpublished AI policy
+remains unknown, and a refusal is a compatibility decision rather than a reason
+to conceal the workflow or change the site to qualify.
 
-## Automated privacy milestone, November 13
+## Prepared Dot monitoring plans
 
-Added pinned Gitleaks 8.30.1, repository-local staged/push hooks, identity and
-release-root ancestry checks, image/metadata and private-path guards, redacted
-credential scanning, and negative regression fixtures. A read-only Source checks
-workflow independently runs the full suite; it has no deployment or write token.
-Hooks must be explicitly installed in each clone with npm run setup:privacy.
+Prompts were prepared for Sam to give Dot. Their installation/execution in Dot
+has not been independently confirmed; this repository creates no scheduled jobs.
+All requested checks run at **05:00 America/New_York**, notify only on confirmed
+success, cancel remaining checks after success, and end silently if exhausted.
+Fetch failures or absence do not establish rejection.
 
-Before public-source approval, GitHub’s private branch-protection API returned
-403 on the current plan. Following approval, public visibility enabled the server
-protections recorded below without a plan upgrade. CI and local hooks cannot
-guarantee recognition of every sensitive statement or replace editorial judgment.
-See release-workflow.md for exact coverage, bypass limits, and future configuration.
+- **Geekring and 512KB Club:** November 14, 15, 16, 18, 21, 26, and December 4,
+  2026 (1, 2, 3, 5, 8, 13, and 21 days after submission). Check the official
+  membership lists; mailing-list archive appearance does not establish club membership.
+- **Marginalia:** November 20 and 27; December 4, 11, 18, and 25, 2026;
+  January 1 and 8, 2027. Success requires actual indexed Starbase 430 pages.
+  Domain-information pages, screenshots, and pending/closed requests do not count.
 
-Local verification of the privacy milestone: 118 tests pass, including 12
-privacy regressions. Approved production/preview structure and hard budgets
-remain unchanged. The source inventory now contains 111 reviewed files.
-The complete local check:all pipeline also passes 144 browser checks and 46 axe
-scans, with zero failures and 42 retained contrast-inconclusive findings.
+## Next work and safeguards
 
-The first Linux CI run passed privacy, tests, structure, and budgets but caught
-font-dependent overlap between two FSE timeline cards. The Stardust connector now
-anchors at its card top, preserving timeline height, scale, and text size. Commit
-and tag messages also receive a separate redacted Gitleaks scan.
+Prioritize more headroom for the optional illustration and review FSE's
+conservative January 1, 2027 input boundary before extending publication-date
+coverage. Preserve the chosen epoch, existing dates, and resource thresholds.
 
-## Final public-source exposure review, November 13
-
-Reviewed source checkpoint: `a5ff68f`, followed by this documentation refresh.
-[GitHub Source checks](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43414678223)
-passed on that checkpoint: 118 tests, 144 browser checks, 46 axe scans, zero
-confirmed failures, and 42 retained contrast-inconclusive findings. The earlier
-Linux overlap failure is resolved; its check remains enabled.
-
-The approved exposure boundary includes all 111 source files: three approved
-articles, their optimized assets and illustration alternatives, software, tests,
-licenses, and maintenance/provenance documentation. MIT software and reserved
-editorial/third-party rights remain distinct. Private drafts, source masters,
-internal research, recovery checkouts, and the archive's history remain excluded.
-
-Hosted review found only main, with no tags, PRs, issues, releases, or uploaded
-Actions artifacts; the wiki is disabled and Pages is unconfigured. The three
-reviewed commits use Sam McC and the approved GitHub noreply address. Both hosted
-Actions logs passed pinned credential scanning and contact/personal-path checks;
-standard hosted-runner infrastructure paths are not personal local paths.
-
-The repository was still private at that review; Sam subsequently explicitly
-approved visibility on November 13. Public source makes these articles/assets/documentation
-and Git/Actions history readable and copyable before website hosting. It does
-not approve website deployment, DNS changes, or making the archive public.
-The final documentation checkpoint cc32e7f and its hosted logs passed review
-and CI before visibility changed.
-
-## Public-source approval and server protections, November 13
-
-Sam explicitly approved making only sam-mcclanahan/starbase430-site public. The
-historical sam-mcclanahan/starbase430 repository remains private. GitHub Pages
-is unconfigured; the only workflow checks source and does not deploy anything.
-
-GitHub native secret scanning and push protection are enabled. Main requires
-the Privacy and release checks status specifically from GitHub Actions (app
-15368), with the branch up to date; administrators are included. Force pushes
-and deletion of main are blocked. No paid plan upgrade, additional approval
-requirement, deployment credential, or automated publication step was added.
-Use a reviewed branch and green CI before an authorized main update.
-
-## GitHub Pages preparation and homelab goal, November 13
-
-Sam approved recording eventual public hosting from home as an explicit learning
-milestone, in addition to a home-network mirror. GitHub Pages is selected for
-the first host; Cloudflare retains registration and DNS. Pages is configured for Actions with a required Sam approval and main-only
-protected deployment environment; source approval does not authorize launch.
-
-The manually triggered Website release workflow prepares only by default. A
-publication request additionally needs a successful checked build, the protected
-github-pages environment, and the canonical custom domain. The independent
-build:release command generates .cache/release-site without a hosting API and
-checks the exact upload directory. Development previews remain separate.
-
-Launch countdown stays 12/15 complete, 3 remaining until domain/HTTPS and the
-actual hosting setup are verified. See hosting.md and the post-launch roadmap.
-
-Preparation checks: 122 tests pass; 144 browser checks and 46 axe scans pass
-with zero confirmed failures and 42 retained inconclusive findings. The source
-inventory is now 115 files. The exact production release contains 33 files and
-11 HTML pages, maximum 511,433 bytes. Nine local static-server routes/resources
-passed independently of GitHub. Hosted Source checks and preparation-only Website release both passed at
-7db5dde. The release publishing job was skipped; the 33 uploaded files matched
-the independently built local copy byte-for-byte. GitHub reports zero deployments.
-GitHub account-level ownership of starbase430.com is now verified after adding
-only its ownership TXT record at Cloudflare. Existing holding-page and mail
-routing are unchanged. The repository custom domain remains unset and GitHub
-reports zero deployments. The exact pending routing/deployment cutover and
-rollback are documented in hosting.md; explicit launch approval is still required.
+The roadmap retains deferred content, Training concepts, a home-network mirror,
+and eventual public homelab hosting as distinct milestones. Future IndieWeb
+features remain optional and need their own bounded plans. Continue using the
+automated privacy and change-based accessibility process; do not restart guided
+per-article manual checklists for unchanged components.
