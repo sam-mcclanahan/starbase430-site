@@ -1,6 +1,6 @@
 # Release roadmap
 
-Prepared November 13, 2026. **15/15 active launch gates complete, 0 remaining.**
+Prepared November 13, updated November 14, 2026. **15/15 active launch gates complete, 0 remaining.**
 Original item 8 (library article) is deferred until after launch; original numbers
 remain stable. The private historical repository will remain private. A fresh,
 reviewed repository replaces archive visibility conversion as the source route.
@@ -62,6 +62,14 @@ public repository; this list carries forward task summaries only.
 
 ### Planned maintenance
 
+- [x] Review the public GitHub presentation after launch. November 14: corrected
+  the stale About description, added the live URL and discovery topics, and
+  verified existing repository and deployment protections. Prepared a visitor-
+  oriented README and clarified historical launch documentation for source review.
+- [ ] Review enabling GitHub Dependabot alerts and a private vulnerability-reporting
+  route. The November 14 audit found Dependabot alerts disabled; it could not
+  verify private vulnerability reporting with the current CLI permissions.
+  Keep changes to security settings separate from presentation cleanup.
 - [ ] **Review FSE time data before January 1, 2027.** The current publication
   formatter deliberately rejects dates on or after that boundary. Review IERS
   sources, record the next supported interval, and independently verify offsets
@@ -128,6 +136,27 @@ future applications, contact, account changes, and publication remain separate.
   [crawl request #842](https://github.com/MarginaliaSearch/submit-site-to-marginalia-search/issues/842).
 - [ ] Confirm actual indexed pages in Marginalia. Crawl scheduling or issue
   closure alone does not complete this item.
+- [x] Submit the reviewed Tech Makers application with disclosed AI assistance.
+  November 13: [PR #5](https://github.com/skorokithakis/webring/pull/5) is open;
+  account subscription and existing email/in-app notification delivery verified.
+- [ ] Confirm Tech Makers decision and live membership before preparing homepage
+  links. Review December 13 if unanswered; silence is not rejection. No polling
+  or reminder is scheduled, and no homepage change or deployment is authorized.
+- [x] Prepare Galactic Webring eligibility inquiry about static HTML navigation
+  and disclosed AI assistance. Sam reported sending it November 13.
+- [x] Review Galactic's reply. November 14: participation declined due to the
+  maintainer's AI-assistance expectations after reviewing the site. Close this
+  candidate without an appeal, membership application, or map artwork work.
+  Static HTML participation was not answered; private correspondence stays out
+  of this repository.
+- [ ] **Become more active in the Fediverse.** Use Sam's existing Mastodon
+  account to share occasional project notes, discoveries, and published Logs,
+  and participate in conversations with makers and independent-web communities.
+  Build meaningful connections at a sustainable pace, without posting quotas
+  or treating activity as a prerequisite solely for webring membership.
+  November 13: Fediring is deferred; the prepared eligibility inquiry remains
+  unsent. Revisit membership when useful. No posts, profile changes, inquiry,
+  application, or automation were made or scheduled as part of this backlog item.
 - [x] Publish the homepage h-card and GitHub `rel="me"` link, verify the reciprocal
   public profile link, and complete domain-based sign-in.
 - [x] Join the IndieWeb Webring, publish its homepage links, verify its live link
@@ -146,6 +175,29 @@ Wiby was deprioritized as a weaker design fit. XXIIVV and Merveilles remain
 unpursued research candidates, not commitments. Neocities is not a hosting or
 membership requirement. The No-JS Club was excluded from the Links-page plan.
 No additional submissions or announcements are authorized by this backlog.
+
+### Future submission guidance
+
+- Prioritize communities that explicitly accept the disclosed workflow or show
+  evidence of a compatible approach. A maintainer's own AI use is encouraging
+  evidence, not a guarantee of membership; silence in published rules means unknown.
+- Where AI eligibility is unclear, ask that question before investing in artwork,
+  custom widgets, or integration. Review navigation requirements early too,
+  including whether a destination redirect requires visitor JavaScript.
+- Describe the actual scope of coding, drafting, and editing assistance plainly,
+  with a link to the Colophon. Explain human direction, review, editorial decisions,
+  and approval without implying that assistance is minor. Use words such as
+  "extensive" only when they accurately describe the work; avoid a blanket claim
+  about every article or asset. Never obscure assistance to improve acceptance odds.
+- When relevant, distinguish assistance with writing about a project from the
+  tools used to create that project. A retrospective's present-day documentation
+  workflow does not establish that AI was used in the historical build.
+- Treat a polite refusal as a completed compatibility check. Record the stated
+  reason and any unanswered questions separately, then move on without an appeal
+  or changing the site solely to qualify. No response is not a rejection.
+- Keep private email, raw headers, contact details, and internal review artifacts
+  outside the public source. Record only the approved status summary. Inquiries,
+  applications, profile changes, and publication still require their own approval.
 
 ### Planned local and public homelab hosting
 

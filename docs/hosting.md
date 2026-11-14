@@ -5,6 +5,16 @@ with Cloudflare retaining starbase430.com registration and DNS. Public hosting
 from Sam's homelab is a distinct post-launch learning milestone, not just an
 emergency fallback. Keep the historical repository and private authoring private.
 
+## Current hosting status
+
+The website launched November 13, 2026 at https://starbase430.com/ on GitHub
+Pages. HTTPS is enforced; HTTP and www redirect to the canonical HTTPS apex.
+Cloudflare holds registration and DNS. The initial setup and verification notes
+below are historical evidence, not outstanding launch tasks. See
+[current state](current-state.md#published-website-and-source) for the latest
+recorded deployment and [the roadmap](../roadmap.md#post-launch-backlog) for work
+remaining after launch. Future publication still requires explicit approval.
+
 ## Independent builds and a home-network mirror
 
 The same Eleventy sources must build without GitHub Actions, Cloudflare, or a
@@ -50,7 +60,10 @@ Pages custom domain to equal starbase430.com. This protects our root-relative
 URLs from accidental publication under a repository-path hostname. GitHub's
 configure-pages metadata action is unnecessary for this prebuilt root-domain site.
 
-Before the first deployment:
+### Initial setup (completed November 13, 2026)
+
+These were the first-deployment steps; retain them for recovery or a future
+independently approved hosting setup:
 
 1. Configure GitHub Pages to use Actions and protect the github-pages environment
    with Sam's required approval, no administrator bypass, and main-only releases.

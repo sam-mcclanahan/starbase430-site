@@ -1,7 +1,7 @@
 # Current project state
 
-Updated November 13, 2026. This is the current summary, not a new test run or
-live recheck of pending submissions. Accepted requirements live in
+Updated November 14, 2026. Verification dates and scope are stated below;
+pending community submissions have not been rechecked. Accepted requirements live in
 [project goals](project-goals.md); remaining work lives in the
 [roadmap](../roadmap.md#post-launch-backlog).
 
@@ -18,6 +18,27 @@ live recheck of pending submissions. Accepted requirements live in
 - Source pushes run checks only. Future website publication requires separate
   authorization, the manually dispatched release workflow, and its protected
   deployment approval. See [hosting](hosting.md) and [release workflow](release-workflow.md).
+
+November 14 public repository review: corrected the stale About description,
+added the canonical website URL, and set relevant Eleventy, IndieWeb, Small Web,
+maker-project, static-site, personal-website, and accessibility topics. Verified
+the historical repository remains private and main still requires the GitHub
+Actions check, including administrators, with force pushes/deletion blocked.
+Secret scanning and push protection remain enabled. Pages retains the canonical
+domain, enforced HTTPS, and the main-only protected manual deployment route.
+These metadata changes do not deploy the website. README and maintenance-document
+updates are prepared for source review, alongside the community-status updates.
+
+Fresh November 14 checks for that documentation review passed 123 tests, the
+115-file source inventory, privacy-history checks, 11 production/11 preview
+structure checks, all hard budgets, 144 Chromium checks, and 46 axe scans.
+There were zero confirmed failures and the 42 established contrast-inconclusive
+findings; this is not a new conformance or screen-reader certification. The
+independent release build contains 33 files, and website/tooling sources are
+unchanged from the deployed checkpoint. All 34 local documentation link targets
+exist and all eight website links in the revised README returned HTTP 200.
+The locked dependency audit reported zero known npm advisories. The local
+test browser was restored in ignored cache; no deployment was performed.
 
 ## Current content and identity
 
@@ -80,12 +101,14 @@ browser-selected uncompressed resource measurements.
 
 ## Community submissions and membership
 
-Status below reflects recorded November 13 submissions and checks. Submission,
+Status below reflects recorded submissions and checks through November 14. Submission,
 archive appearance, crawl scheduling, indexing, and membership are distinct.
 
 | Destination | Recorded status | Next confirmation |
 | --- | --- | --- |
 | [IndieWeb Webring](https://xn--sr8hvo.ws/directory) | Active, public profile listed, homepage links published, ring link check passed. | Maintain links and public identity when changing the homepage. |
+| [Tech Makers](https://webring.stavros.io/) | [Application PR #5](https://github.com/skorokithakis/webring/pull/5) submitted November 13 with site URL, RSS, and AI-assistance disclosure; acceptance pending. GitHub subscription and existing participating email/in-app delivery verified. | Monitor PR comments and state. A merge requires live-directory verification before membership links; closure without merge requires reading the explanation. Review December 13 if unanswered; no reminder or polling job was created. |
+| [Galactic Webring](https://darkosparko.nekoweb.org/webrings/galactic-webring/) | Declined due to the maintainer's AI-assistance expectations after reviewing the site. Response reviewed November 14, following Sam's November 13 eligibility inquiry. | Closed; no application or artwork work is planned. Static HTML participation was not answered. The private email and headers remain outside this repository. |
 | [512KB Club](https://512kb.club/) | Submitted; acceptance unconfirmed. The original archive entry had no visible patch body. The corrected v2 was self-tested with explicit plain-text MIME headers and resent successfully. | Confirm v2 archive body separately if needed; membership requires an actual official site listing. |
 | [Geekring](https://geekring.net/list.txt) | Application receipt confirmed; acceptance unconfirmed. | Find our domain and assigned site number in the public membership list before adding member links. |
 | [Marginalia Search](https://marginalia-search.com/) | Both hostnames were unknown at the pre-submission check. [Crawl request #842](https://github.com/MarginaliaSearch/submit-site-to-marginalia-search/issues/842) was submitted. | Confirm actual indexed pages; an issue closure or crawl-list entry alone is insufficient. |
@@ -98,6 +121,18 @@ as historical evidence rather than presenting it as a current measurement.
 Membership secrets, email credentials, raw mail headers, and private review
 artifacts remain outside the public repository. Do not copy them into status
 notes, issues, or source. No new submission or follow-up is authorized by this table.
+
+November 13: Sam added becoming more active in the Fediverse as a post-launch
+goal, using the existing Mastodon account for project sharing and conversation
+at a sustainable pace. Fediring membership is deferred; the prepared eligibility
+inquiry was not sent. No posts, profile changes, or automation were performed.
+See the [community backlog](../roadmap.md#community-and-discovery).
+
+Future inquiries follow the [submission guidance](../roadmap.md#future-submission-guidance):
+check workflow eligibility early, disclose assistance accurately, and distinguish
+documentation assistance from how a project was built. An unpublished AI policy
+remains unknown, and a refusal is a compatibility decision rather than a reason
+to conceal the workflow or change the site to qualify.
 
 ## Prepared Dot monitoring plans
 

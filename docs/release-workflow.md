@@ -1,10 +1,10 @@
 # Source publication and private authoring
 
-The public-source candidate starts with a fresh initial commit. Do not copy Git
+The public repository was launched November 13, 2026 from a reviewed snapshot
+with a fresh initial commit. It is the authoritative website codebase. Do not copy Git
 history, old branches/tags/PRs, private stashes, backups, archival masters, internal
 research, or unpublished prose from the historical private repository.
 
-This repository is the authoritative codebase once the candidate is accepted.
 Keep unpublished writing in private authoring storage. When an article is ready,
 review prose, descriptions, metadata, asset rights, and image metadata; then copy
 only approved source/assets here and update `release-manifest.json`. Commit only
@@ -79,7 +79,7 @@ local Gitleaks and source/privacy checks. Sam separately approved the first webs
 deployment and DNS cutover November 13, 2026. Future source pushes never grant
 publication approval. See [hosting](hosting.md).
 
-## Prepared website release workflow
+## Website release workflow
 
 Website release is separate from the read-only Source checks workflow. It runs
 only when manually dispatched on main. Its default publish=false mode prepares
@@ -88,4 +88,4 @@ is built in a fresh directory and expires after one day; private authoring and
 browser reports never belong in it. Publication needs publish=true, successful
 checks, the protected github-pages approval, and the configured canonical domain.
 No Cloudflare API credential is needed for Pages deployment. Neither a source
-push nor an ordinary preparation run grants first-launch approval.
+push nor an ordinary preparation run authorizes website publication.
