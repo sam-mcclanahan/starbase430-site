@@ -208,6 +208,32 @@ Fetch failures or absence do not establish rejection.
   January 1 and 8, 2027. Success requires actual indexed Starbase 430 pages.
   Domain-information pages, screenshots, and pending/closed requests do not count.
 
+## Pablo optimization approved for source integration
+
+November 14: the reviewed `codex/pablo-lossless-size` branch implements integer-delta
+coordinate encoding and generates the initial portrait from the same decoded
+points. The conservative interactive-page total is now 376,545 bytes, down from
+511,433, saving 134,888 and leaving 135,455 below the unchanged 512,000-byte
+ceiling. Every approved point and stroke is unchanged; the PNG and standalone
+SVG exports remain byte-for-byte identical. The readable contour master,
+controller features, accessibility markup, and resource-loading boundaries are
+preserved; the existing generator updates the reviewed HTML digest.
+
+Validation passed 127 tests, the 118-file inventory, privacy checks, 11 production
+and 11 preview structure checks, hard budgets, 144 Chromium checks, and 46 axe
+scans (zero failures; the same 42 retained inconclusive findings). Ten targeted
+before/after browser comparisons at widths of 960 and 320 pixels matched exactly
+for initial, Reset, reduced-motion completion, CSS-off, and JavaScript-off views.
+Of the 33 production files, only the optimized embedded HTML changed; all other
+files match the baseline. This is automated change-based verification, not a
+new WCAG conformance or assistive-technology certification.
+
+Sam approved the local preview on November 14 and authorized pushing the source,
+opening a PR, and merging after required checks pass. The preview remains on
+port 8081. Source integration does not authorize deployment; the live site
+remains at `e10826c`.
+See [illustration maintenance](pablo-illustration.md#lossless-size-optimization-november-14-2026).
+
 ## Next work and safeguards
 
 November 14 FSE data review: IERS Bulletin C 72 and UTC–TAI history confirm
@@ -227,9 +253,10 @@ identical to the pre-change production baseline. Timeline regeneration changed
 no article content; the original 94 ERFA vectors and historical offset segments
 remain unchanged. These checks do not claim WCAG certification.
 
-Prioritize more headroom for the optional illustration. Recheck FSE data after
-the January 2027 Bulletin C and before the July 1, 2027 cutoff; the June decision
-is not assumed. Preserve the chosen epoch, existing dates, and resource thresholds.
+The illustration optimization is approved for checked source integration;
+website deployment still requires separate approval. Recheck FSE data after
+the January 2027 Bulletin C and before
+the July 1, 2027 cutoff; the June decision is not assumed. Preserve the chosen epoch, existing dates, and resource thresholds.
 
 The roadmap retains deferred content, Training concepts, a home-network mirror,
 and eventual public homelab hosting as distinct milestones. Future IndieWeb
