@@ -26,11 +26,15 @@ notices and the distinction between MIT software and reserved editorial assets.
 
 ## Automated privacy protection
 
-Run `npm run setup:privacy` after npm ci in every local clone. It verifies the
-pinned official Gitleaks archive checksum, installs the CLI under ignored cache,
-and configures repository-local pre-commit/pre-push hooks, Node path, and the
-approved Git identity. It will not overwrite an unrelated hooksPath. CI uses
-`npm run setup:privacy -- --no-hooks` and an ephemeral runner. Never skip hooks
+Maintainers run `npm run setup:privacy` after npm ci in each clone used to
+commit or push to this repository. It verifies the pinned official Gitleaks
+archive checksum, installs the CLI under ignored cache, and configures mandatory
+repository-local pre-commit/pre-push hooks, Node path, and the approved Git
+identity. It will not overwrite an unrelated hooksPath. Visitors can preview
+without configuring Git; unchanged-clone verification and CI use
+`npm run setup:privacy -- --no-hooks`, which installs the scanner without changing
+identity or hooks. See [contribution guidance](../CONTRIBUTING.md). The visitor
+path does not authorize maintainer pushes without hooks. Never skip hooks
 to get past an error. Missing tools, unsupported platforms, and scan errors fail
 closed. A new clone does not inherit local Git hooks automatically.
 

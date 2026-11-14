@@ -4,11 +4,13 @@
   "files": [
     ".githooks/pre-commit",
     ".githooks/pre-push",
+    ".github/ISSUE_TEMPLATE/bug_report.md",
     ".github/workflows/checks.yml",
     ".github/workflows/pages.yml",
     ".gitignore",
     ".gitleaks.toml",
     "AGENTS.md",
+    "CONTRIBUTING.md",
     "LICENSE",
     "LICENSE-SCOPE.md",
     "README.md",

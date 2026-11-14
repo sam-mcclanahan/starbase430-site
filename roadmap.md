@@ -84,6 +84,11 @@ public repository; this list carries forward task summaries only.
   37 seconds. Extended support to July 1, 2027 exclusive, with independent
   boundary vectors and synthetic publication/feed regression coverage. Historical
   offsets, the epoch, article dates, and existing labels remain unchanged.
+- [x] Polish the repository for visitors. November 14: separated visitor preview
+  and no-hooks verification from identity-setting maintainer setup; added release
+  and source-check links, contribution guidance, and a focused bug-report template.
+  Removed nine verified incorporated remote branches and enabled automatic
+  deletion of future merged PR branches. Privacy gates and deployment are unchanged.
 - [ ] **Recheck FSE data after the January 2027 Bulletin C, before July 1, 2027.**
   The formatter rejects dates on or after July 1 until the next interval is
   verified. Do not assume the June leap-second decision. Follow

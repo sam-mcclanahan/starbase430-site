@@ -21,8 +21,14 @@ New source files require review and an update to `release-manifest.json`.
 
 ## Mandatory privacy gate
 
-After npm ci, run npm run setup:privacy in each local clone to install the pinned
-scanner and repository-local hooks. Never bypass a failed privacy hook with
+For each clone used to commit or push to this maintained release repository,
+run npm run setup:privacy after npm ci to install the pinned scanner and mandatory
+repository-local hooks. This intentionally sets the approved maintainer identity.
+Visitors only previewing the source do not need hooks; unchanged-clone verification
+can install the scanner with --no-hooks while retaining the visitor's Git identity.
+See CONTRIBUTING.md. These visitor paths do not authorize maintainer pushes without
+hooks, unapproved identities, or changes to the privacy policy.
+Never bypass a failed privacy hook with
 --no-verify or skip a missing scanner. The agent owns investigation; do not ask
 Sam to repeat manual checks. Hooks inspect exact staged blobs and outgoing Git
 commits, identities, destination, ancestry, images, and credentials. CI is an
