@@ -12,7 +12,7 @@ pending community submissions have not been rechecked. Accepted requirements liv
   reviewed snapshot with independent Git history. The historical repository,
   unpublished writing, masters, research, and recovery worktrees remain private.
 - Latest deployed source: `e10826c`, the reviewed Outpost navigation release.
-  Documentation-only commits after it do not change the deployed website.
+  Later source changes have not been deployed.
 - GitHub Pages hosts the static site; Cloudflare retains registration and DNS.
   HTTPS is enforced; HTTP and www redirect to the canonical HTTPS apex.
 - Source pushes run checks only. Future website publication requires separate
@@ -73,6 +73,31 @@ on November 14. The regular, non-prerelease GitHub release and tag point to
 notes. Required CI and a fresh local privacy-history check passed. This is a
 source milestone; article dates were retained, no website deployment was
 requested, and the latest deployed source remains `e10826c`.
+
+## Visitor setup and repository housekeeping
+
+November 14: separated visitor preview/check instructions from maintainer setup.
+The README now links the first source release and the main-branch source-check
+badge. CONTRIBUTING.md explains the personal-site contribution process and the
+owner-specific privacy gates. The bug-report template asks for affected pages,
+reproduction steps, expectations, and browser details, with a private security
+reporting route. The default maintainer setup still installs mandatory hooks and
+configures the approved Git identity; visitors retain their own identity.
+No privacy policy, hook/checker code, or Actions workflow was changed.
+
+Removed nine obsolete remote branches after verifying eight were ancestors of
+main and the remaining FSE branch exactly matched its merged squash-commit tree.
+Exact-SHA leases protected against deleting a changed branch; the private archive,
+local recovery worktrees, main, and release tags were untouched. Enabled GitHub's
+automatic deletion of head branches after future merged PRs. Website deployment
+remains a separate manual action, with the latest deployment still `e10826c`.
+
+Validation passed 126 tests, the 118-file reviewed source inventory, privacy,
+production/preview structure, and hard page budgets, plus 144 Chromium checks
+and 46 axe scans (zero failures; the same 42 retained inconclusive findings).
+The issue template's YAML front matter and 33 relative documentation links were
+checked. All 33 generated production files remain byte-identical to the reviewed
+baseline. No website, privacy checker, or workflow source changed.
 
 ## Current content and identity
 
@@ -186,8 +211,9 @@ Fetch failures or absence do not establish rejection.
 ## Next work and safeguards
 
 November 14 FSE data review: IERS Bulletin C 72 and UTC–TAI history confirm
-no December 2026 leap second and the unchanged 37-second offset. Local source
-now supports instants before July 1, 2027, extending the previous January 1
+no December 2026 leap second and the unchanged 37-second offset. Merged via
+[PR #6](https://github.com/sam-mcclanahan/starbase430-site/pull/6) at `2d6d26d`,
+source now supports instants before July 1, 2027, extending the previous January 1
 boundary. No historical offsets, epoch, article timestamps, or labels changed.
 Independent exact boundary vectors and a synthetic 2027 publication/feed test
 cover the extension. This source change has not been deployed.

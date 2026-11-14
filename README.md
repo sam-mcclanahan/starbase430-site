@@ -1,5 +1,8 @@
 # Starbase 430
 
+[![Source checks](https://github.com/sam-mcclanahan/starbase430-site/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/sam-mcclanahan/starbase430-site/actions/workflows/checks.yml) ·
+[Release v0.1.0](https://github.com/sam-mcclanahan/starbase430-site/releases/tag/v0.1.0)
+
 <a href="https://starbase430.com/"><img src="src/assets/icons/favicon.svg" width="64" height="64" alt="Visit Starbase 430"></a>
 
 Source for Sam and Brea’s independent-web workshop: maker projects shaped by
@@ -23,34 +26,48 @@ or [First Step Epoch](https://starbase430.com/log/first-step-epoch/).
 This public repository contains reviewed source with independent Git history.
 Historical development and unpublished writing remain in private storage.
 
-## Local setup
+## Preview the site locally
 
-Use Node.js 22 or newer and npm:
+Use Node.js 22 or newer and npm. In your clone, run:
 
 ```sh
 npm ci --ignore-scripts
-npm run setup:privacy
 npm run dev
 ```
 
 Eleventy prints the local preview URL. `npm run build` generates `_site/`.
-`npm run build:release` creates a fresh, checked production copy in
+For a checked production copy, first install the privacy scanner using the
+no-hooks command below, then run `npm run build:release`. It writes
 `.cache/release-site/`, independently of GitHub or a hosting credential.
-The npm package is marked `private` to prevent accidental npm publication;
-the GitHub source repository is public.
+These preview/build commands do not configure Git hooks or change your Git
+identity. You do not need a GitHub account or a hosting credential to preview
+the source after obtaining a copy. The npm package is marked `private` to
+prevent accidental npm publication; the GitHub source repository is public.
 
-## Checks
+## Checks and maintainer setup
+
+To check an unchanged clone without configuring Git hooks or identity:
 
 ```sh
+npm run setup:privacy -- --no-hooks
 npm run setup:a11y
 npm run check:all
 ```
 
 The pinned privacy scanner and test browser are development tools, downloaded
-separately. New clones must run `npm run setup:privacy` to enable local hooks. Browser
-checks build fresh production/preview outputs on loopback, block external requests,
-and write ignored reports under `.a11y/`. They do not deploy or change repository
-visibility. Chromium may require permission to launch in a sandboxed agent session.
+separately. The privacy checks enforce this personal repository's approved
+identities, destination, and source inventory; they are not generic checks for
+new projects or arbitrary contributor commits. See [contribution guidance](CONTRIBUTING.md).
+
+**Maintainers:** before committing or pushing here, run `npm run setup:privacy`
+without `--no-hooks`. It installs mandatory local hooks and sets the clone's Git
+name and email to the approved maintainer identity. Visitors should use the
+preview or no-hooks check instructions above, retaining their own Git identity.
+
+Browser checks build fresh production/preview outputs on loopback, block external
+requests, and write ignored reports under `.a11y/`. They do not deploy or change
+repository visibility. Chromium may require permission to launch in a sandboxed
+agent session.
 
 Individual commands: `npm test`, `npm run check:release`, `npm run check:privacy`, `npm run check:site`,
 `npm run check:budgets`, and `npm run check:a11y`. Conservative uncompressed page
@@ -93,9 +110,11 @@ Discuss substantial changes before opening a pull request.
 For suspected security vulnerabilities, follow [the security policy](SECURITY.md)
 and use GitHub's private reporting form rather than a public issue.
 
-For code contributions, follow [the repository instructions](AGENTS.md), install
-the privacy hooks, and run the documented checks. Source changes run CI;
-publishing the website is a separately approved, manual action.
+For code suggestions, read [CONTRIBUTING.md](CONTRIBUTING.md) before preparing a
+pull request. Maintainer instructions live in [AGENTS.md](AGENTS.md). Keep your own
+Git identity; the contribution guide explains how the maintainer-specific privacy
+checks affect proposed changes. Source changes run CI; publishing the website is
+a separately approved, manual action.
 
 ## License and content
 
