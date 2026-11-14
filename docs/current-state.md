@@ -60,6 +60,20 @@ exist and all eight website links in the revised README returned HTTP 200.
 The locked dependency audit reported zero known npm advisories. The local
 test browser was restored in ignored cache; no deployment was performed.
 
+## GitHub presentation and first tagged release
+
+November 14: Sam selected the original nebula social-preview card. The approved
+1280 × 640 PNG was uploaded to the repository’s social-preview setting and
+verified after reloading. Its editable sources and comparison artifacts remain
+outside this release repository; the card adds no website resources.
+
+Sam approved publishing [v0.1.0 — Starbase 430: first public release](https://github.com/sam-mcclanahan/starbase430-site/releases/tag/v0.1.0)
+on November 14. The regular, non-prerelease GitHub release and tag point to
+`1fa8ddf2540ee522c37451fcaf78a56df44b0ad6`, with the approved launch-summary
+notes. Required CI and a fresh local privacy-history check passed. This is a
+source milestone; article dates were retained, no website deployment was
+requested, and the latest deployed source remains `e10826c`.
+
 ## Current content and identity
 
 Three approved Logs are published: website development, Pablo the Polargraph,
@@ -171,9 +185,25 @@ Fetch failures or absence do not establish rejection.
 
 ## Next work and safeguards
 
-Prioritize more headroom for the optional illustration and review FSE's
-conservative January 1, 2027 input boundary before extending publication-date
-coverage. Preserve the chosen epoch, existing dates, and resource thresholds.
+November 14 FSE data review: IERS Bulletin C 72 and UTC–TAI history confirm
+no December 2026 leap second and the unchanged 37-second offset. Local source
+now supports instants before July 1, 2027, extending the previous January 1
+boundary. No historical offsets, epoch, article timestamps, or labels changed.
+Independent exact boundary vectors and a synthetic 2027 publication/feed test
+cover the extension. This source change has not been deployed.
+
+Validation for this extension passed `npm run check:all`: 126 tests, the
+116-file inventory, privacy-history checks, 11 production and 11 preview
+structure checks, all hard page budgets, 144 Chromium checks, and 46 axe scans.
+There were zero failures and the same 42 retained inconclusive scan findings.
+A fresh independent release build contains the same 33 files, byte-for-byte
+identical to the pre-change production baseline. Timeline regeneration changed
+no article content; the original 94 ERFA vectors and historical offset segments
+remain unchanged. These checks do not claim WCAG certification.
+
+Prioritize more headroom for the optional illustration. Recheck FSE data after
+the January 2027 Bulletin C and before the July 1, 2027 cutoff; the June decision
+is not assumed. Preserve the chosen epoch, existing dates, and resource thresholds.
 
 The roadmap retains deferred content, Training concepts, a home-network mirror,
 and eventual public homelab hosting as distinct milestones. Future IndieWeb

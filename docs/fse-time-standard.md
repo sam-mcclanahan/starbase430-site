@@ -44,13 +44,21 @@ Earth-based atomic reference, not universal observer-independent elapsed time.
 `src/_lib/tai-offsets.json` records the
 [IERS historical relationships](https://hpiers.obspm.fr/iers/bul/bulc/UTC-TAI.history),
 including fractional offsets and rates before 1972 and integer offsets afterward.
-The review also checked IERS Bulletin C 72, dated July 6, 2026, which states
-there will be no leap second at the end of December 2026. The source endpoints
-are mutable; the checked-in snapshot and dated review are the build's authority.
+On November 14, 2026, the latest Bulletin C endpoints at both the Paris
+Observatory and IERS Data Center still supplied
+[Bulletin C 72](https://hpiers.obspm.fr/iers/bul/bulc/bulletinc.72), dated July 6,
+2026. It confirms no leap second at the end of December 2026 and an ongoing
+TAI−UTC offset of 37 seconds. The historical table agrees; no offset segments
+needed changing. The source endpoints are mutable; the checked-in snapshot and
+dated review are the build's authority.
 
-The intentionally conservative supported interval is January 1, 1961 inclusive
-to January 1, 2027 exclusive. Dates outside it fail with an instruction to review
-the data. A future build of an old valid publication date remains reproducible;
+The supported interval is January 1, 1961 inclusive to July 1, 2027 exclusive.
+The extension follows from the confirmed absence of a December step and the
+bulletin's June/December transition schedule. It does not assume a decision on
+the end of June 2027. Recheck the next Bulletin C after its expected January
+2027 publication, and review coverage again before July 1, 2027. Dates outside
+the supported interval fail with an instruction to review the data. A future
+build of an old valid publication date remains reproducible;
 new publication instants outside the range cannot silently use stale offsets.
 Do not extend the boundary based solely on the system date or an assumption
 that no future leap seconds will occur.
@@ -77,6 +85,16 @@ It covers every table transition, pre-1972 rates, the chosen epoch, publication
 examples, and positive leap seconds. Production code is a direct evaluator of
 the IERS data; ERFA code is not copied into it. Tests compare TAI coordinates
 within 1,000 ns to allow serialization of the double-precision oracle output.
+
+The November 14 extension adds exact vectors for the December/January boundary,
+a January publication example, and the final supported June second. These were
+calculated independently with Python's standard-library UTC calendar arithmetic
+and Decimal, using Bulletin C 72's 37-second offset and the unchanged epoch TAI
+coordinate. They are separate from the original 94 PyERFA vectors, which remain
+unchanged. Tests admit the last nanosecond before July 1, reject the boundary
+itself, and reject invented leap seconds. A synthetic 2027 article also verifies
+publication labels and all three feed paths; no real article date is changed.
+
 Additional exact-integer assertions verify the fractional epoch correction,
 consecutive SI seconds across leap seconds, the January 1972 fractional step,
 formatting, New York DST equivalence, and invalid/out-of-range inputs.

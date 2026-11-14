@@ -1,11 +1,12 @@
 {
-  "checkedAt": "2026-11-08",
-  "validUntil": "2027-01-01T00:00:00Z",
+  "checkedAt": "2026-11-14",
+  "validUntil": "2027-07-01T00:00:00Z",
   "sources": [
     "https://hpiers.obspm.fr/iers/bul/bulc/UTC-TAI.history",
-    "https://hpiers.obspm.fr/iers/bul/bulc/bulletinc.dat"
+    "https://hpiers.obspm.fr/iers/bul/bulc/bulletinc.dat",
+    "https://hpiers.obspm.fr/iers/bul/bulc/bulletinc.72"
   ],
-  "bulletin": "IERS Bulletin C 72, July 6, 2026: no leap second at end of December 2026. Conservative review boundary is January 1, 2027; conversions at or beyond it fail until data is reviewed.",
+  "bulletin": "IERS Bulletin C 72, July 6, 2026: no leap second at end of December 2026. Rechecked November 14, 2026 against both IERS latest-bulletin endpoints and UTC-TAI.history: TAI minus UTC remains 37 seconds. With no December step, coverage extends to July 1, 2027 exclusive, the next possible June-end transition. Conversions at or beyond that boundary fail until data is reviewed.",
   "segments": [
     {
       "start": "1961-01-01",
