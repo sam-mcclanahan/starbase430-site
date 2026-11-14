@@ -188,9 +188,25 @@ test("feeds keep newest twenty, alias identity, dates, stable IDs and draft poli
   }
 });
 
+test("newly reviewed 2027 publication dates build with stable FSE labels and full-entry feeds", async (t) => {
+  const temporary = await fixtureRepository(t);
+  await entry(temporary, "log", "reviewed-time", "2027-01-15T09:00:00-05:00");
+  const result = build(temporary, "production");
+  assert.equal(result.status, 0, result.stderr);
+  const html = await readFile(path.join(temporary, "production/log/reviewed-time/index.html"), "utf8");
+  assert.match(html, /\+1814\.180654 Ms/);
+  for (const file of feedPaths) {
+    const xml = await readFile(path.join(temporary, "production", file), "utf8");
+    const item = children(channel(xml), "item")[0];
+    assert.equal(value(item, "pubDate"), "Fri, 15 Jan 2027 14:00:00 GMT");
+    assert.ok(value(item, "link").endsWith("/reviewed-time/"));
+    assert.equal(xml, await readFile(path.join(temporary, "production/feed.xml"), "utf8"));
+  }
+});
+
 test("published timestamps outside reviewed TAI coverage fail the build", async (t) => {
   const temporary = await fixtureRepository(t);
-  await entry(temporary, "log", "unreviewed-time", "2027-01-15T09:00:00-05:00");
+  await entry(temporary, "log", "unreviewed-time", "2027-06-30T20:00:00-04:00");
   const result = build(temporary, "production");
   assert.notEqual(result.status, 0);
   assert.match(result.stderr, /outside reviewed range/);

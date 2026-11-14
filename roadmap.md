@@ -73,11 +73,21 @@ public repository; this list carries forward task summaries only.
   entry. Automatic dependency submission and dependency-update PRs remain off;
   the existing low-impact development-alert dismissal preset is unchanged.
   Website deployment remains separately approved and was not triggered.
-- [ ] **Review FSE time data before January 1, 2027.** The current publication
-  formatter deliberately rejects dates on or after that boundary. Review IERS
-  sources, record the next supported interval, and independently verify offsets
-  before extending it. Preserve the epoch and existing publication dates.
-  Follow [FSE maintenance](docs/fse-time-standard.md#when-updating-the-data).
+- [x] Create and upload the approved nebula GitHub social-preview image.
+  November 14: the 1280 × 640 card was saved and verified in repository settings;
+  editable sources remain outside the public source and website output is unchanged.
+- [x] Publish the first tagged GitHub source release, **v0.1.0**.
+  November 14: Sam approved the notes and publication; tag and regular release
+  point to reviewed commit `1fa8ddf`. Website deployment remains `e10826c`.
+- [x] Review FSE coverage beyond January 1, 2027. November 14: checked IERS
+  Bulletin C 72 and UTC–TAI history; no December 2026 leap second, offset remains
+  37 seconds. Extended support to July 1, 2027 exclusive, with independent
+  boundary vectors and synthetic publication/feed regression coverage. Historical
+  offsets, the epoch, article dates, and existing labels remain unchanged.
+- [ ] **Recheck FSE data after the January 2027 Bulletin C, before July 1, 2027.**
+  The formatter rejects dates on or after July 1 until the next interval is
+  verified. Do not assume the June leap-second decision. Follow
+  [FSE maintenance](docs/fse-time-standard.md#when-updating-the-data).
 - [ ] **Create more room below the Pablo illustration's hard size limit.** The
   launch total is 511,433 bytes, leaving 567 below the 512,000-byte ceiling.
   Investigate compression or simplification while preserving the approved
