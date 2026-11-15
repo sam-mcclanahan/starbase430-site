@@ -12,13 +12,45 @@ submissions have not been rechecked. Accepted requirements live in
 - Public release source: `sam-mcclanahan/starbase430-site`, created from a
   reviewed snapshot with independent Git history. The historical repository,
   unpublished writing, masters, research, and recovery worktrees remain private.
-- Latest deployed source: `e10826c`, the reviewed Outpost navigation release.
-  Later source changes have not been deployed.
+- Latest deployed source: `db54d7f`, the approved November 15 production update.
+  Deployment status is distinct from later documentation-only source commits.
 - GitHub Pages hosts the static site; Cloudflare retains registration and DNS.
   HTTPS is enforced; HTTP and www redirect to the canonical HTTPS apex.
 - Source pushes run checks only. Future website publication requires separate
   authorization, the manually dispatched release workflow, and its protected
   deployment approval. See [hosting](hosting.md) and [release workflow](release-workflow.md).
+
+## November 15 approved production update
+
+Sam explicitly approved candidate `db54d7f` for publication to starbase430.com.
+[Website release 43712728720](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43712728720)
+rebuilt that exact commit, passed all checks, and deployed through the normal
+protected github-pages approval. All 34 publication files matched the reviewed
+candidate before approval and matched the live HTTPS responses afterward.
+
+The live update includes Outpost connections with the Green Team affiliation,
+the Links/Colophon membership copy, the lossless Pablo optimization, and reviewed
+FSE coverage through June 30, 2027. Existing article dates, FSE labels, feed GUIDs,
+three full-entry RSS items, and byte-identical feed aliases are preserved. Relative
+to the previous live build, four files changed and one local PNG was added;
+29 files are unchanged. A verified copy of the prior live build is retained
+outside the public source for rollback.
+
+Publication checks passed 127 tests, the 121-file inventory, privacy, production/
+preview structure, hard budgets, 144 Chromium checks, and 46 axe scans (zero
+failures; 42 retained inconclusive findings). Ten live browser checks covered
+changed pages at desktop/320px, reduced-motion and normal Tesla drawing,
+pause/resume/reset, keyboard movement, and JavaScript-disabled alternatives.
+No script errors or third-party resource requests were found in the focused
+browser smoke checks. Source/private probes returned 404; HTTP/www redirect
+to canonical HTTPS, and HTTPS enforcement remains enabled. DNS and mail were
+not changed. These checks are not WCAG certification or a fresh screen-reader audit.
+
+Current conservative live page totals: Home **26,150 bytes**, Links **22,395**,
+Colophon **27,150**, and the optional Pablo page **376,545**, with **135,455**
+bytes below its hard ceiling. The club's listed **21.11 KB** remains the dated
+submitted Firefox measurement; it has not been replaced with these conservative
+build totals. Future publication still requires its own explicit approval.
 
 November 14 public repository review: corrected the stale About description,
 added the canonical website URL, and set relevant Eleventy, IndieWeb, Small Web,
@@ -120,7 +152,9 @@ The active IndieWeb Webring uses homepage Previous outpost / IndieWeb Webring /
 Next outpost links. The reviewed Outpost styling has green directional edges,
 a silver center control, responsive wrapping/stacking, visible keyboard focus,
 and decorative aria-hidden arrows. Styles load on Home only. Ordinary reading
-and navigation require no JavaScript. Geekring is excluded until acceptance.
+and navigation require no JavaScript. The same Outpost connections panel includes
+Affiliations with the local 88 × 31 Green Team button and visible link text.
+Geekring is excluded until acceptance.
 
 The static CSS nebula/starfield, system fonts, original identity assets, privacy
 goals, and separate MIT software/content rights remain in effect. Pablo's
@@ -135,6 +169,7 @@ reduced-motion, written, PNG, and SVG alternatives.
 | Homepage h-card and GitHub identity link | `6f971fe` | [43486294332](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43486294332) |
 | Active IndieWeb membership navigation | `89593ba` | [43490978466](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43490978466) |
 | Reviewed Outpost navigation styling | `e10826c` | [43498505433](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43498505433) |
+| Approved affiliation/Pablo production update | `db54d7f` | [43712728720](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43712728720) |
 
 All checkpoints above were approved separately. Final launch sign-off was
 recorded at `9b70326`. Earlier preparation, privacy, and domain-cutover history
@@ -154,7 +189,7 @@ confirmed narrow layout and keyboard traversal through all three ring controls
 and out to the footer. These are dated observations, not WCAG certification or
 a fresh assistive-technology review.
 
-Current conservative resource totals at that checkpoint: Home **24,365 bytes**;
+Conservative resource totals at that historical checkpoint: Home **24,365 bytes**;
 optional Pablo illustration **511,433 bytes**, leaving **567 bytes** below the
 512,000-byte hard ceiling. These generated-file totals differ from Firefox's
 browser-selected uncompressed resource measurements.
@@ -170,7 +205,7 @@ archive appearance, crawl scheduling, indexing, and membership are distinct.
 | [IndieWeb Webring](https://xn--sr8hvo.ws/directory) | Active, public profile listed, homepage links published, ring link check passed. | Maintain links and public identity when changing the homepage. |
 | [Tech Makers](https://webring.stavros.io/) | [Application PR #5](https://github.com/skorokithakis/webring/pull/5) submitted November 13 with site URL, RSS, and AI-assistance disclosure; acceptance pending. GitHub subscription and existing participating email/in-app delivery verified. | Monitor PR comments and state. A merge requires live-directory verification before membership links; closure without merge requires reading the explanation. Review December 13 if unanswered; no reminder or polling job was created. |
 | [Galactic Webring](https://darkosparko.nekoweb.org/webrings/galactic-webring/) | Declined due to the maintainer's AI-assistance expectations after reviewing the site. Response reviewed November 14, following Sam's November 13 eligibility inquiry. | Closed; no application or artwork work is planned. Static HTML participation was not answered. The private email and headers remain outside this repository. |
-| [512KB Club](https://512kb.club/) | Membership confirmed November 15 in the official Green Team list, showing starbase430.com at 21.11 KB. Sam approved the homepage membership-button preview November 15; it is not deployed. | Maintain the listing and remeasure Home after future publication. The listed size is historical, not a live counter or a claim about every page. |
+| [512KB Club](https://512kb.club/) | Membership confirmed November 15 in the official Green Team list, showing starbase430.com at 21.11 KB. Sam approved the homepage membership-button preview and its publication November 15; it is live in db54d7f. | Maintain the listing; take a fresh Firefox Home measurement after the November 15 update before proposing a size-record update. The listed size is historical, not a live counter or a claim about every page. |
 | [Geekring](https://geekring.net/list.txt) | Application receipt confirmed; acceptance unconfirmed. | Find our domain and assigned site number in the public membership list before adding member links. |
 | [Marginalia Search](https://marginalia-search.com/) | Both hostnames were unknown at the pre-submission check. [Crawl request #842](https://github.com/MarginaliaSearch/submit-site-to-marginalia-search/issues/842) was submitted. | Confirm actual indexed pages; an issue closure or crawl-list entry alone is insufficient. |
 
@@ -216,7 +251,7 @@ Fetch failures or absence do not establish rejection.
   January 1 and 8, 2027. Success requires actual indexed Starbase 430 pages.
   Domain-information pages, screenshots, and pending/closed requests do not count.
 
-## Pablo optimization approved for source integration
+## Published Pablo optimization
 
 November 14: the reviewed `codex/pablo-lossless-size` branch implements integer-delta
 coordinate encoding and generates the initial portrait from the same decoded
@@ -237,12 +272,12 @@ files match the baseline. This is automated change-based verification, not a
 new WCAG conformance or assistive-technology certification.
 
 Sam approved the local preview on November 14 and authorized pushing the source,
-opening a PR, and merging after required checks pass. The preview remains on
-port 8081. Source integration does not authorize deployment; the live site
-remains at `e10826c`.
+opening a PR, and merging after required checks pass. He separately approved
+publication November 15; the optimization is live in `db54d7f`. Future source
+integration still does not authorize another deployment.
 See [illustration maintenance](pablo-illustration.md#lossless-size-optimization-november-14-2026).
 
-## Local Outpost connections preview
+## Published Outpost connections
 
 November 15: Sam requested a reusable homepage home for confirmed community
 buttons. The existing Webrings panel is now Outpost connections, with separate
@@ -278,8 +313,9 @@ The follow-up checks passed the same 127 tests, 144 Chromium checks, and 46 axe
 scans (zero failures; 42 retained inconclusive findings), plus privacy, inventory,
 structure, and hard budgets. Colophon totals 27,150 conservative uncompressed
 bytes; the new README link targets resolve locally.
-Source integration is approved; website publication and new community
-applications remain separate approvals. The live deployment remains `e10826c`.
+Sam separately approved website publication November 15. These changes are live
+in `db54d7f` via release 43712728720. Future source integration, publication, and
+new community applications retain their separate approvals.
 
 ## Next work and safeguards
 
@@ -289,7 +325,8 @@ no December 2026 leap second and the unchanged 37-second offset. Merged via
 source now supports instants before July 1, 2027, extending the previous January 1
 boundary. No historical offsets, epoch, article timestamps, or labels changed.
 Independent exact boundary vectors and a synthetic 2027 publication/feed test
-cover the extension. This source change has not been deployed.
+cover the extension. It was included in the approved November 15 deployment
+at `db54d7f`.
 
 Validation for this extension passed `npm run check:all`: 126 tests, the
 116-file inventory, privacy-history checks, 11 production and 11 preview
@@ -300,8 +337,8 @@ identical to the pre-change production baseline. Timeline regeneration changed
 no article content; the original 94 ERFA vectors and historical offset segments
 remain unchanged. These checks do not claim WCAG certification.
 
-The illustration optimization is approved for checked source integration;
-website deployment still requires separate approval. Recheck FSE data after
+The approved illustration optimization is now live. Future website deployment
+still requires separate approval. Recheck FSE data after
 the January 2027 Bulletin C and before
 the July 1, 2027 cutoff; the June decision is not assumed. Preserve the chosen epoch, existing dates, and resource thresholds.
 
