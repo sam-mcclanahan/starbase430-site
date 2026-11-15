@@ -65,3 +65,29 @@ Published AVIF/WebP derivatives have no EXIF, XMP, or IPTC metadata according to
 Sharp inspection. The source masters remain outside site assets. The original
 site-button PNG contains an EXIF block limited to sRGB color-space and pixel
 dimensions; it has no recorded person, contact, location, or timestamp fields.
+
+## 512KB Club Green Team button
+
+Membership was verified November 15, 2026: the [official Green Team listing](https://512kb.club/)
+includes starbase430.com at 21.11 KB. This is the historical submitted homepage
+measurement, not a live measurement or an assertion about every page.
+
+- Source: the official 88 × 31 Green Team GIF supplied by Sam. The
+  [club's banner guidance](https://512kb.club/faq/) permits listed members to use
+  its graphics and requires local hosting. The wider SVG banner is not included.
+- Original GIF: 479 bytes, one frame; SHA-256
+  `dc779df74ef7004f5116f65f663b6b69152737d04d80506e5b7e209ef8e3163c`.
+- Derivative: `src/assets/images/community/512kb-club-green-team.png`, 88 × 31,
+  385 bytes; SHA-256
+  `49f79e3f77a83e262dd7bf3640f56e76e2068dca56f8a0c1d2c4a7f754d26da8`.
+- Processing: pinned Sharp, PNG palette encoding, dither 0, compression level 9,
+  effort 10, metadata stripped. No resizing, recoloring, cropping, or animation.
+  Decoded RGBA bytes match the GIF exactly; the original stays outside the repo.
+- Display: native dimensions, lazy loading, and pixel-art rendering within a
+  padded ordinary link. The visible label repeats the image's membership text,
+  so the image has empty alt text to avoid duplicate announcements. The label
+  and destination remain usable with CSS or JavaScript disabled.
+
+The button is third-party membership artwork, not original Starbase 430 identity
+or software covered by MIT. Retain the club's separate usage terms when reusing
+this source; conversion does not grant new rights or imply club endorsement.

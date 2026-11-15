@@ -1,0 +1,13 @@
+{
+  "badges": [
+    {
+      "name": "512KB Club",
+      "detail": "Green Team",
+      "url": "https://512kb.club/",
+      "image": "/assets/images/community/512kb-club-green-team.png",
+      "width": 88,
+      "height": 31,
+      "pixelArt": true
+    }
+  ]
+}

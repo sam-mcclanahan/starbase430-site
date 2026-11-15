@@ -93,6 +93,7 @@ image alternatives and differs from browser-selected resource measurements.
 - [Hosting, local mirrors, and eventual public homelab hosting](docs/hosting.md).
 - [FSE time-standard maintenance](docs/fse-time-standard.md).
 - [Image provenance](docs/image-provenance.md) and [image processing](docs/image-optimization.md).
+- [Affiliations data](src/_data/community.json) and [reusable badge template](src/_includes/partials/community-badges.njk).
 
 `npm run update:fse-timeline` regenerates only the timeline from its reviewed
 `data/fse-timeline.json` dataset. `npm run build:favicons` regenerates icons.

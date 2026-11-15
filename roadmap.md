@@ -1,6 +1,6 @@
 # Release roadmap
 
-Prepared November 13, updated November 14, 2026. **15/15 active launch gates complete, 0 remaining.**
+Prepared November 13, updated November 15, 2026. **15/15 active launch gates complete, 0 remaining.**
 Original item 8 (library article) is deferred until after launch; original numbers
 remain stable. The private historical repository will remain private. A fresh,
 reviewed repository replaces archive visibility conversion as the source route.
@@ -146,8 +146,17 @@ future applications, contact, account changes, and publication remain separate.
 - [x] Measure Home for the 512KB Club and submit the listing.
   November 13: historical Firefox measurement 21.11 kB / 4 requests; corrected
   plain-text v2 self-tested and resent after the first archive body appeared blank.
-- [ ] Confirm official 512KB Club membership. V2 archive-body confirmation is
-  also unverified; neither SMTP acceptance nor an archive entry proves membership.
+- [x] Confirm official 512KB Club membership. November 15: the official Green
+  Team list includes starbase430.com at the submitted 21.11 KB measurement.
+  This establishes membership independently of the mailing-list archive body.
+  Success-only membership monitoring is no longer needed for this destination;
+  external Dot job cancellation has not been verified here.
+- [x] Prepare the Outpost connections homepage panel with Webrings and Affiliations
+  groups, a locally hosted 88 × 31 Green Team button, and an updated
+  Links-page membership description. November 15: Sam approved the panel,
+  Affiliations heading, and Links copy. Added the requested Colophon membership
+  note and README maintenance links; Sam approved those follow-ups and checked
+  source integration. Website deployment remains separately approved.
 - [x] Submit the Geekring application and preserve its administration secret
   privately outside the source repository.
 - [ ] Confirm Geekring acceptance and its public site number, then prepare

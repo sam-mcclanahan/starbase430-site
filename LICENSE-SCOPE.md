@@ -70,3 +70,8 @@ sourced through Wikimedia Commons and marked public domain in the United
 States there. The caption credits NASA and links to the source record.
 Our software license and reserved-content statements do not claim ownership of
 this material or grant additional rights. See [image provenance](docs/image-provenance.md).
+
+The 512KB Club Green Team button is third-party membership artwork used under
+[the club's banner guidance](https://512kb.club/faq/). Our PNG conversion does not
+claim ownership or extend the MIT software grant to that artwork. See
+[image provenance](docs/image-provenance.md#512kb-club-green-team-button).
