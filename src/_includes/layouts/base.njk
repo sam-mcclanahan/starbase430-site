@@ -20,6 +20,13 @@
 .outpost-nav .outpost-nav__hub{border-color:var(--silver);border-radius:.4rem;color:var(--silver)}
 .outpost-nav .outpost-nav__next{border-inline-start:1px solid var(--line);border-inline-end:6px solid var(--accent);border-radius:.4rem 1.75rem 1.75rem .4rem}
 .outpost-nav a:hover{background:var(--deep);text-decoration:underline;text-decoration-thickness:2px}
+.community-badges{display:flex;flex-wrap:wrap;gap:.75rem;list-style:none;padding:0;margin:0}
+.community-badges li{flex:0 1 20rem;min-inline-size:0;max-inline-size:100%}
+.community-badges a{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;min-block-size:56px;padding:.75rem 1rem;border:1px solid var(--line);border-inline-start:4px solid var(--silver);border-radius:.4rem;background:var(--space);color:var(--bright);font-size:.9rem;line-height:1.5;text-decoration:none;overflow-wrap:anywhere}
+.community-badges img{flex:none;max-inline-size:100%;block-size:auto;margin:0}
+.community-badges__pixel{image-rendering:pixelated}
+.community-badges a>span{flex:1 1 9rem;min-inline-size:0}
+.community-badges a:hover{background:var(--deep);text-decoration:underline;text-decoration-thickness:2px}
 @media(max-width:600px){.outpost-nav{flex-direction:column}.outpost-nav a{flex:auto}}
     </style>
 {% endif %}{% if polargraph %}    <style>.polargraph-embed{margin:2rem 0;max-inline-size:100%}.polargraph-embed iframe{display:block;inline-size:100%;max-inline-size:100%;border:1px solid var(--line);border-radius:.5rem;background:var(--panel)}.polargraph-embed figcaption{margin-block-start:.75rem;color:var(--muted);font-size:.9em}</style><script type="module" src="/assets/illustrations/pablo/polargraph-frame.js"></script>

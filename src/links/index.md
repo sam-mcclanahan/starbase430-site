@@ -31,7 +31,7 @@ navKey: links
       </li>
       <li>
         <strong class="resource-list__name"><a href="https://512kb.club/">512KB Club</a></strong>
-        <span>A directory of websites that keep their uncompressed page resources under 512 KB. Its Green Team, under 100 KB, helped shape our own page-weight goal. A place to discover how much personality can fit into a small page.</span>
+        <span>A directory of websites that keep their uncompressed page resources under 512 KB. Its Green Team, under 100 KB, helped shape our own page-weight goal, and our homepage is now listed among its members. A place to discover how much personality can fit into a small page.</span>
       </li>
       <li>
         <strong class="resource-list__name"><a href="https://neocities.org/">Neocities</a></strong>

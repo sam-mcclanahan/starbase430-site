@@ -1,7 +1,8 @@
 # Current project state
 
-Updated November 14, 2026. Verification dates and scope are stated below;
-pending community submissions have not been rechecked. Accepted requirements live in
+Updated November 15, 2026. Verification dates and scope are stated below;
+512KB Club membership was verified November 15; other pending community
+submissions have not been rechecked. Accepted requirements live in
 [project goals](project-goals.md); remaining work lives in the
 [roadmap](../roadmap.md#post-launch-backlog).
 
@@ -160,7 +161,8 @@ browser-selected uncompressed resource measurements.
 
 ## Community submissions and membership
 
-Status below reflects recorded submissions and checks through November 14. Submission,
+Status below reflects dated submissions and checks, including the November 15
+512KB Club confirmation. Submission,
 archive appearance, crawl scheduling, indexing, and membership are distinct.
 
 | Destination | Recorded status | Next confirmation |
@@ -168,14 +170,17 @@ archive appearance, crawl scheduling, indexing, and membership are distinct.
 | [IndieWeb Webring](https://xn--sr8hvo.ws/directory) | Active, public profile listed, homepage links published, ring link check passed. | Maintain links and public identity when changing the homepage. |
 | [Tech Makers](https://webring.stavros.io/) | [Application PR #5](https://github.com/skorokithakis/webring/pull/5) submitted November 13 with site URL, RSS, and AI-assistance disclosure; acceptance pending. GitHub subscription and existing participating email/in-app delivery verified. | Monitor PR comments and state. A merge requires live-directory verification before membership links; closure without merge requires reading the explanation. Review December 13 if unanswered; no reminder or polling job was created. |
 | [Galactic Webring](https://darkosparko.nekoweb.org/webrings/galactic-webring/) | Declined due to the maintainer's AI-assistance expectations after reviewing the site. Response reviewed November 14, following Sam's November 13 eligibility inquiry. | Closed; no application or artwork work is planned. Static HTML participation was not answered. The private email and headers remain outside this repository. |
-| [512KB Club](https://512kb.club/) | Submitted; acceptance unconfirmed. The original archive entry had no visible patch body. The corrected v2 was self-tested with explicit plain-text MIME headers and resent successfully. | Confirm v2 archive body separately if needed; membership requires an actual official site listing. |
+| [512KB Club](https://512kb.club/) | Membership confirmed November 15 in the official Green Team list, showing starbase430.com at 21.11 KB. The homepage membership button is prepared for local preview, not deployed. | Maintain the listing and remeasure Home after future publication. The listed size is historical, not a live counter or a claim about every page. |
 | [Geekring](https://geekring.net/list.txt) | Application receipt confirmed; acceptance unconfirmed. | Find our domain and assigned site number in the public membership list before adding member links. |
 | [Marginalia Search](https://marginalia-search.com/) | Both hostnames were unknown at the pre-submission check. [Crawl request #842](https://github.com/MarginaliaSearch/submit-site-to-marginalia-search/issues/842) was submitted. | Confirm actual indexed pages; an issue closure or crawl-list entry alone is insufficient. |
 
 The submitted 512KB Club measurement was Sam's Firefox 160.0 measurement on
 November 13 at 10:48 AM EST: **21.11 kB, 4 requests**, cache disabled and page
 fully scrolled. It predates the homepage identity and ring additions; retain it
-as historical evidence rather than presenting it as a current measurement.
+as historical evidence rather than presenting it as a current measurement. The official
+listing verified November 15 reports that submitted 21.11 KB value. A blank
+original mailing-list archive body no longer leaves membership in doubt: the
+public directory listing establishes acceptance.
 
 Membership secrets, email credentials, raw mail headers, and private review
 artifacts remain outside the public repository. Do not copy them into status
@@ -203,7 +208,10 @@ Fetch failures or absence do not establish rejection.
 
 - **Geekring and 512KB Club:** November 14, 15, 16, 18, 21, 26, and December 4,
   2026 (1, 2, 3, 5, 8, 13, and 21 days after submission). Check the official
-  membership lists; mailing-list archive appearance does not establish club membership.
+  membership lists; mailing-list archive appearance does not establish club membership. 512KB
+  Club's success condition was met November 15; no further membership checks
+  are needed for that destination. External Dot job cancellation is not verified
+  here. Geekring remains unconfirmed.
 - **Marginalia:** November 20 and 27; December 4, 11, 18, and 25, 2026;
   January 1 and 8, 2027. Success requires actual indexed Starbase 430 pages.
   Domain-information pages, screenshots, and pending/closed requests do not count.
@@ -233,6 +241,37 @@ opening a PR, and merging after required checks pass. The preview remains on
 port 8081. Source integration does not authorize deployment; the live site
 remains at `e10826c`.
 See [illustration maintenance](pablo-illustration.md#lossless-size-optimization-november-14-2026).
+
+## Local Outpost connections preview
+
+November 15: Sam requested a reusable homepage home for confirmed community
+buttons. The existing Webrings panel is now Outpost connections, with separate
+Webrings and Clubs and directories groups. IndieWeb navigation and its existing
+webrings-heading fragment are preserved. The 512KB Club Green Team button is
+locally hosted at its native 88 × 31 pixels, with a visible text link, padded
+click target, responsive wrapping, and existing focus/new-tab behavior. The
+Links page now acknowledges our homepage's confirmed listing.
+
+Confirmed badges live in `src/_data/community.json`; the shared partial is
+`src/_includes/partials/community-badges.njk`. Add only reviewed memberships,
+local assets, descriptive visible labels, and their intrinsic dimensions.
+Document third-party provenance and inventory any new files in the release
+manifest. Home-only styles keep unrelated articles free of badge weight.
+The official GIF was losslessly converted to a 385-byte PNG with identical
+pixels; the original downloads remain outside the source repository.
+
+Validation passed 127 tests, the 121-file source inventory, privacy checks,
+11 production and 11 preview structure checks, all hard page budgets, 144
+Chromium checks, and 46 axe scans (zero failures; the same 42 retained
+inconclusive findings). Focused browser checks at 1440 and 320 pixels verified
+the native button dimensions, padded click target, keyboard order and focus,
+text-spacing reflow, CSS-off/new-tab text, JavaScript-disabled reading, and no
+remote resource requests. Home totals 26,159 conservative uncompressed bytes;
+Links totals 22,395. Pablo's optional page remains 376,545 bytes.
+
+This is a local preview awaiting Sam's review. No source push, merge, website
+publication, or new community application is authorized by this status note.
+The live deployment remains `e10826c`.
 
 ## Next work and safeguards
 

@@ -1,0 +1,10 @@
+<ul class="community-badges">
+  {% for badge in community.badges %}
+    <li>
+      <a href="{{ badge.url | escape }}">
+        <img src="{{ badge.image | escape }}" width="{{ badge.width }}" height="{{ badge.height }}" alt=""{% if badge.pixelArt %} class="community-badges__pixel"{% endif %} loading="lazy" decoding="async">
+        <span>{{ badge.name | escape }} <span aria-hidden="true">·</span> {{ badge.detail | escape }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

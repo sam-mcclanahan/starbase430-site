@@ -40,13 +40,16 @@ navKey: home
   <p><a class="section-link" href="/log/">Browse the Log</a></p>
 </section>
 
-<section class="panel" aria-labelledby="webrings-heading">
+<section class="panel" aria-labelledby="connections-heading">
   <p class="panel__code" aria-hidden="true">OPEN CHANNELS</p>
-  <h2 id="webrings-heading">Webrings</h2>
-  <p>Explore neighboring outposts.</p>
+  <h2 id="connections-heading">Outpost connections</h2>
+  <p>Explore neighboring outposts and the communities we’re part of.</p>
+  <h3 id="webrings-heading">Webrings</h3>
   <nav class="outpost-nav" aria-label="IndieWeb Webring">
     <a class="outpost-nav__previous" href="https://xn--sr8hvo.ws/previous"><span aria-hidden="true">←</span><span>Previous outpost</span></a>
     <a class="outpost-nav__hub" href="https://xn--sr8hvo.ws">IndieWeb Webring</a>
     <a class="outpost-nav__next" href="https://xn--sr8hvo.ws/next"><span>Next outpost</span><span aria-hidden="true">→</span></a>
   </nav>
+  <h3 id="clubs-heading">Clubs and directories</h3>
+  {% include "partials/community-badges.njk" %}
 </section>
