@@ -246,7 +246,7 @@ See [illustration maintenance](pablo-illustration.md#lossless-size-optimization-
 
 November 15: Sam requested a reusable homepage home for confirmed community
 buttons. The existing Webrings panel is now Outpost connections, with separate
-Webrings and Clubs and directories groups. IndieWeb navigation and its existing
+Webrings and Affiliations groups. IndieWeb navigation and its existing
 webrings-heading fragment are preserved. The 512KB Club Green Team button is
 locally hosted at its native 88 × 31 pixels, with a visible text link, padded
 click target, responsive wrapping, and existing focus/new-tab behavior. The
@@ -266,7 +266,7 @@ Chromium checks, and 46 axe scans (zero failures; the same 42 retained
 inconclusive findings). Focused browser checks at 1440 and 320 pixels verified
 the native button dimensions, padded click target, keyboard order and focus,
 text-spacing reflow, CSS-off/new-tab text, JavaScript-disabled reading, and no
-remote resource requests. Home totals 26,159 conservative uncompressed bytes;
+remote resource requests. Home totals 26,150 conservative uncompressed bytes;
 Links totals 22,395. Pablo's optional page remains 376,545 bytes.
 
 This is a local preview awaiting Sam's review. No source push, merge, website

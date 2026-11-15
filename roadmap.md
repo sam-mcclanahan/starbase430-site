@@ -151,8 +151,8 @@ future applications, contact, account changes, and publication remain separate.
   This establishes membership independently of the mailing-list archive body.
   Success-only membership monitoring is no longer needed for this destination;
   external Dot job cancellation has not been verified here.
-- [x] Prepare the Outpost connections homepage panel with Webrings and Clubs and
-  directories groups, a locally hosted 88 × 31 Green Team button, and an updated
+- [x] Prepare the Outpost connections homepage panel with Webrings and Affiliations
+  groups, a locally hosted 88 × 31 Green Team button, and an updated
   Links-page membership description. November 15: local preview awaits Sam's
   review; source publication and website deployment remain separate.
 - [x] Submit the Geekring application and preserve its administration secret
