@@ -99,11 +99,24 @@ public repository; this list carries forward task summaries only.
   leaving 135,455 below the unchanged 512,000-byte ceiling. All approved points,
   static exports, controls, and accessibility alternatives are preserved.
   Before/after visual checks match; Sam approved the preview and checked source integration.
-  Deployment remains unchanged. See [illustration maintenance](docs/pablo-illustration.md#lossless-size-optimization-november-14-2026).
+  Published November 15 in approved candidate `db54d7f`. See [illustration maintenance](docs/pablo-illustration.md#lossless-size-optimization-november-14-2026).
 
 Use the existing automated privacy, accessibility, structure, and budget checks
 for ongoing changes. Focus human review on changed interactions and shared
 patterns rather than restarting a manual checklist for each article.
+
+### November 15 production update
+
+- [x] Prepare candidate `db54d7f`, run all checks, and obtain Sam's preview and
+  explicit starbase430.com publication approval.
+- [x] Publish through the protected workflow and verify the hosted result.
+  [Release 43712728720](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43712728720):
+  all 34 live files match the reviewed candidate, feeds/dates are retained,
+  source/private paths return 404, redirects/HTTPS pass, and focused browser
+  checks pass. DNS/mail and future deployment gates are unchanged.
+- [ ] Refresh the live Home Firefox measurement before proposing a 512KB Club
+  size-record update. Keep the current 21.11 KB listing as dated submission
+  evidence; do not substitute the conservative automated budget total.
 
 ### Planned content, deferred until ready
 
@@ -156,7 +169,8 @@ future applications, contact, account changes, and publication remain separate.
   Links-page membership description. November 15: Sam approved the panel,
   Affiliations heading, and Links copy. Added the requested Colophon membership
   note and README maintenance links; Sam approved those follow-ups and checked
-  source integration. Website deployment remains separately approved.
+  source integration. Sam separately approved publication November 15; these
+  changes are live in `db54d7f` via release 43712728720.
 - [x] Submit the Geekring application and preserve its administration secret
   privately outside the source repository.
 - [ ] Confirm Geekring acceptance and its public site number, then prepare

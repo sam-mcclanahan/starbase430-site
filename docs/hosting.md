@@ -200,3 +200,46 @@ the roadmap for final sign-off status.
 Sam explicitly approved final launch sign-off after hosted verification on
 November 13, 2026. All 15 active launch gates are complete. Post-launch local
 mirror and eventual public homelab serving remain distinct roadmap milestones.
+
+## November 15 production update: db54d7f
+
+Sam explicitly approved the reviewed candidate for starbase430.com. Preparation
+run [43711492683](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43711492683)
+passed with publishing skipped. Publication run
+[43712728720](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43712728720)
+rebuilt `db54d7fa5c45a358f7f290434d93b8ee0d557990`, passed all checks, and
+published after the normal protected-environment review. Before approval,
+all 34 rebuilt files were compared byte-for-byte with the frozen local candidate;
+all 34 live HTTPS responses then matched it, including ordinary changed URLs.
+No workflow, environment-protection, DNS, domain, or mail setting was changed.
+
+The new homepage panel, membership text, and smaller Pablo illustration are live.
+The FSE build-time interval extends to July 1, 2027 exclusive; existing article
+dates and displayed timestamps are unchanged. Three full RSS entries and feed
+aliases remain identical to the prior build. Source/private URL probes return
+404; HTTPS enforcement and HTTP/www canonical redirects pass. A copy of the
+previous live build remains outside public source for rollback.
+
+Publication checks: 127 tests, 121 reviewed files, privacy/structure/budgets,
+144 Chromium checks, and 46 axe scans, with zero failures and 42 retained
+inconclusive findings. Ten focused live browser checks passed changed-page
+rendering at desktop/320px, no-JavaScript alternatives, reduced-motion drawing,
+normal drawing/pause/resume/reset, and keyboard movement. This is change-based
+verification, not a repeated human accessibility checklist or certification.
+
+| Page | Conservative uncompressed bytes |
+| --- | ---: |
+| Home | 26,150 |
+| About | 85,621 |
+| Links | 22,395 |
+| Colophon | 27,150 |
+| Website article | 26,837 |
+| First Step Epoch | 92,652 |
+| Pablo retrospective | 98,724 |
+| Optional Pablo interactive page | 376,545 |
+
+All ordinary pages remain below the 100,000-byte preference; the optional page
+has 135,455 bytes below the unchanged 512,000-byte hard ceiling. These totals
+are not a replacement for the club's browser-selected Firefox measurement.
+Future releases retain explicit publication approval and the same protected
+workflow. Documentation-only follow-up commits do not deploy the site.

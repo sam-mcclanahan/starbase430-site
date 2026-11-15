@@ -50,5 +50,7 @@ before/after browser comparisons at widths of 960 and 320 pixels found identical
 pixels for initial, Reset, reduced-motion completion, CSS-off, and JavaScript-off
 views, with no script errors. Private comparison artifacts remain outside this
 release repository. Full-suite validation is recorded in current status. These
-changes were approved by Sam for source integration on November 14. Website
-deployment remains a separate approval and is unchanged.
+changes were approved by Sam for source integration on November 14 and separately
+for publication November 15. They are live in `db54d7f` via
+[release 43712728720](https://github.com/sam-mcclanahan/starbase430-site/actions/runs/43712728720).
+Future website publication still requires separate approval.
