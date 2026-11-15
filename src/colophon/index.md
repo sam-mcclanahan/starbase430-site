@@ -21,6 +21,7 @@ description: How the Starbase 430 website is being made.
   <p>Starbase 430 takes the shape of a small outpost on the independent web. Green accents, silver borders, rounded frames, and dark reading panels give it the feel of a workshop with a view of space. Small labels and numbered chapter links add a little instrument-panel character while keeping the words and projects at the center.</p>
   <p>Soft nebula colors and dense stars provide the backdrop. CSS gradients create it without background image downloads or animation, and the text uses system fonts already available on your device.</p>
   <p>The layout adapts to the space available. Chapter links sit beside longer pages when there’s room and move into the normal reading flow on smaller screens. Ordinary links and clear headings keep finding your way around straightforward.</p>
+  <p>We keep Starbase 430 deliberately lightweight. Our homepage is listed on the <a href="https://512kb.club/">512KB Club’s Green Team</a>, for pages under 100 KB of uncompressed resources.</p>
 </section>
 
 <section class="content-section content-section--silver" aria-labelledby="site-button-heading">

@@ -153,8 +153,10 @@ future applications, contact, account changes, and publication remain separate.
   external Dot job cancellation has not been verified here.
 - [x] Prepare the Outpost connections homepage panel with Webrings and Affiliations
   groups, a locally hosted 88 × 31 Green Team button, and an updated
-  Links-page membership description. November 15: local preview awaits Sam's
-  review; source publication and website deployment remain separate.
+  Links-page membership description. November 15: Sam approved the panel,
+  Affiliations heading, and Links copy. Added the requested Colophon membership
+  note and README maintenance links for follow-up preview; source publication
+  and website deployment remain separate.
 - [x] Submit the Geekring application and preserve its administration secret
   privately outside the source repository.
 - [ ] Confirm Geekring acceptance and its public site number, then prepare

@@ -170,7 +170,7 @@ archive appearance, crawl scheduling, indexing, and membership are distinct.
 | [IndieWeb Webring](https://xn--sr8hvo.ws/directory) | Active, public profile listed, homepage links published, ring link check passed. | Maintain links and public identity when changing the homepage. |
 | [Tech Makers](https://webring.stavros.io/) | [Application PR #5](https://github.com/skorokithakis/webring/pull/5) submitted November 13 with site URL, RSS, and AI-assistance disclosure; acceptance pending. GitHub subscription and existing participating email/in-app delivery verified. | Monitor PR comments and state. A merge requires live-directory verification before membership links; closure without merge requires reading the explanation. Review December 13 if unanswered; no reminder or polling job was created. |
 | [Galactic Webring](https://darkosparko.nekoweb.org/webrings/galactic-webring/) | Declined due to the maintainer's AI-assistance expectations after reviewing the site. Response reviewed November 14, following Sam's November 13 eligibility inquiry. | Closed; no application or artwork work is planned. Static HTML participation was not answered. The private email and headers remain outside this repository. |
-| [512KB Club](https://512kb.club/) | Membership confirmed November 15 in the official Green Team list, showing starbase430.com at 21.11 KB. The homepage membership button is prepared for local preview, not deployed. | Maintain the listing and remeasure Home after future publication. The listed size is historical, not a live counter or a claim about every page. |
+| [512KB Club](https://512kb.club/) | Membership confirmed November 15 in the official Green Team list, showing starbase430.com at 21.11 KB. Sam approved the homepage membership-button preview November 15; it is not deployed. | Maintain the listing and remeasure Home after future publication. The listed size is historical, not a live counter or a claim about every page. |
 | [Geekring](https://geekring.net/list.txt) | Application receipt confirmed; acceptance unconfirmed. | Find our domain and assigned site number in the public membership list before adding member links. |
 | [Marginalia Search](https://marginalia-search.com/) | Both hostnames were unknown at the pre-submission check. [Crawl request #842](https://github.com/MarginaliaSearch/submit-site-to-marginalia-search/issues/842) was submitted. | Confirm actual indexed pages; an issue closure or crawl-list entry alone is insufficient. |
 
@@ -269,9 +269,16 @@ text-spacing reflow, CSS-off/new-tab text, JavaScript-disabled reading, and no
 remote resource requests. Home totals 26,150 conservative uncompressed bytes;
 Links totals 22,395. Pablo's optional page remains 376,545 bytes.
 
-This is a local preview awaiting Sam's review. No source push, merge, website
-publication, or new community application is authorized by this status note.
-The live deployment remains `e10826c`.
+Sam approved the homepage panel, Affiliations heading, and Links-page copy on
+November 15. At his request, the Colophon now connects Green Team membership to
+our lightweight design, and README maintenance links identify the affiliations
+data and reusable template. These follow-up edits are available in local preview.
+The follow-up checks passed the same 127 tests, 144 Chromium checks, and 46 axe
+scans (zero failures; 42 retained inconclusive findings), plus privacy, inventory,
+structure, and hard budgets. Colophon totals 27,150 conservative uncompressed
+bytes; the new README link targets resolve locally.
+Nothing in this status note authorizes a source push, merge, website publication,
+or new community application. The live deployment remains `e10826c`.
 
 ## Next work and safeguards
 
