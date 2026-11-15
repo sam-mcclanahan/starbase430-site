@@ -272,13 +272,14 @@ Links totals 22,395. Pablo's optional page remains 376,545 bytes.
 Sam approved the homepage panel, Affiliations heading, and Links-page copy on
 November 15. At his request, the Colophon now connects Green Team membership to
 our lightweight design, and README maintenance links identify the affiliations
-data and reusable template. These follow-up edits are available in local preview.
+data and reusable template. Sam approved these follow-up edits November 15
+and requested a source PR and merge after the required checks pass.
 The follow-up checks passed the same 127 tests, 144 Chromium checks, and 46 axe
 scans (zero failures; 42 retained inconclusive findings), plus privacy, inventory,
 structure, and hard budgets. Colophon totals 27,150 conservative uncompressed
 bytes; the new README link targets resolve locally.
-Nothing in this status note authorizes a source push, merge, website publication,
-or new community application. The live deployment remains `e10826c`.
+Source integration is approved; website publication and new community
+applications remain separate approvals. The live deployment remains `e10826c`.
 
 ## Next work and safeguards
 

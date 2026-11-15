@@ -155,8 +155,8 @@ future applications, contact, account changes, and publication remain separate.
   groups, a locally hosted 88 × 31 Green Team button, and an updated
   Links-page membership description. November 15: Sam approved the panel,
   Affiliations heading, and Links copy. Added the requested Colophon membership
-  note and README maintenance links for follow-up preview; source publication
-  and website deployment remain separate.
+  note and README maintenance links; Sam approved those follow-ups and checked
+  source integration. Website deployment remains separately approved.
 - [x] Submit the Geekring application and preserve its administration secret
   privately outside the source repository.
 - [ ] Confirm Geekring acceptance and its public site number, then prepare
