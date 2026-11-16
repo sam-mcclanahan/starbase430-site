@@ -1,6 +1,6 @@
 # Current project state
 
-Updated November 15, 2026. Verification dates and scope are stated below;
+Updated November 16, 2026. Verification dates and scope are stated below;
 512KB Club membership was verified November 15; other pending community
 submissions have not been rechecked. Accepted requirements live in
 [project goals](project-goals.md); remaining work lives in the
@@ -221,11 +221,11 @@ Membership secrets, email credentials, raw mail headers, and private review
 artifacts remain outside the public repository. Do not copy them into status
 notes, issues, or source. No new submission or follow-up is authorized by this table.
 
-November 13: Sam added becoming more active in the Fediverse as a post-launch
-goal, using the existing Mastodon account for project sharing and conversation
-at a sustainable pace. Fediring membership is deferred; the prepared eligibility
-inquiry was not sent. No posts, profile changes, or automation were performed.
-See the [community backlog](../roadmap.md#community-and-discovery).
+November 16: Sam shelved Fediverse participation and Fediring membership for
+the foreseeable future following a separate Codex discussion. Both were removed
+from the active backlog; no follow-up is planned. This supersedes the November 13
+participation goal and deferred membership plan. The eligibility inquiry was not
+sent as part of that earlier work.
 
 Future inquiries follow the [submission guidance](../roadmap.md#future-submission-guidance):
 check workflow eligibility early, disclose assistance accurately, and distinguish
