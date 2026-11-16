@@ -1,6 +1,6 @@
 # Release roadmap
 
-Prepared November 13, updated November 15, 2026. **15/15 active launch gates complete, 0 remaining.**
+Prepared November 13, updated November 16, 2026. **15/15 active launch gates complete, 0 remaining.**
 Original item 8 (library article) is deferred until after launch; original numbers
 remain stable. The private historical repository will remain private. A fresh,
 reviewed repository replaces archive visibility conversion as the source route.
@@ -192,14 +192,6 @@ future applications, contact, account changes, and publication remain separate.
   candidate without an appeal, membership application, or map artwork work.
   Static HTML participation was not answered; private correspondence stays out
   of this repository.
-- [ ] **Become more active in the Fediverse.** Use Sam's existing Mastodon
-  account to share occasional project notes, discoveries, and published Logs,
-  and participate in conversations with makers and independent-web communities.
-  Build meaningful connections at a sustainable pace, without posting quotas
-  or treating activity as a prerequisite solely for webring membership.
-  November 13: Fediring is deferred; the prepared eligibility inquiry remains
-  unsent. Revisit membership when useful. No posts, profile changes, inquiry,
-  application, or automation were made or scheduled as part of this backlog item.
 - [x] Publish the homepage h-card and GitHub `rel="me"` link, verify the reciprocal
   public profile link, and complete domain-based sign-in.
 - [x] Join the IndieWeb Webring, publish its homepage links, verify its live link
@@ -213,6 +205,10 @@ future applications, contact, account changes, and publication remain separate.
 - [ ] Evaluate further IndieAuth and Webmention features only where they add clear
   value. RelMeAuth already supports our membership; a dedicated auth server is
   not required. Identify any companion service before implementation.
+
+November 16: Sam shelved Fediverse participation and Fediring membership for
+the foreseeable future following a separate Codex discussion. Both are removed
+from the active backlog, with no follow-up planned.
 
 Wiby was deprioritized as a weaker design fit. XXIIVV and Merveilles remain
 unpursued research candidates, not commitments. Neocities is not a hosting or
